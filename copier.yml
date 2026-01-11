@@ -12,7 +12,7 @@ _exclude:
 project_name:
   help: Enter the name of your project.
   type: str
-use_megalinter:
-  in_pre_commit:
-    help: Use MegaLinter in pre-commit?
-    type: bool
+use_megalinter_in_pre_commit:
+  default: true
+  help: Use MegaLinter in pre-commit?
+  type: bool
