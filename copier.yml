@@ -9,6 +9,8 @@ _exclude:
   - copier.yaml
   - copier.yml
   - ~*
+_task:
+  - prek install
 project_name:
   help: Enter the name of your project.
   type: str
