@@ -19,8 +19,9 @@
     "EDITMSG",
     "filesonly",
     "ggshield",
+    "prek",
+    "pycache",
     "stefanzweifel",
-    "venv",
-    "pycache"
+    "venv"
   ]
 }
