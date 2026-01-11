@@ -1,0 +1,18 @@
+---
+_exclude:
+  - "*.py[co]"
+  - .DS_Store
+  - .git
+  - .pre-commit-config.yaml
+  - .svn
+  - __pycache__
+  - copier.yaml
+  - copier.yml
+  - ~*
+project_name:
+  help: Enter the name of your project.
+  type: str
+use_megalinter:
+  in_pre_commit:
+    help: Use MegaLinter in pre-commit?
+    type: bool
