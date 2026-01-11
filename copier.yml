@@ -3,7 +3,7 @@ _exclude:
   - "*.py[co]"
   - .DS_Store
   - .git
-  - .pre-commit-config.yaml
+  - .pre-commit-config-copier.yaml
   - .svn
   - __pycache__
   - copier.yaml
