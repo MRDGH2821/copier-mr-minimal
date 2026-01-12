@@ -1,4 +1,5 @@
 ---
+_answers_file: .copier-answers.mr-minimal.yaml
 _exclude:
   - "*.py[co]"
   - .DS_Store
