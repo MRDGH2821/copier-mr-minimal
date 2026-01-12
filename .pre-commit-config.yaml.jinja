@@ -2,6 +2,7 @@
 default_install_hook_types:
   - commit-msg
   - pre-commit
+  - pre-push
 repos:
   - hooks:
       - id: ggshield
@@ -72,7 +73,7 @@ repos:
         priority: 50
         require_serial: true
         stages:
-          - push
+          - pre-push
     repo: https://github.com/oxsecurity/megalinter
     rev: v6.8.0 # Git tag specifying the hook, not mega-linter-runner, version
     {% endif %}
