@@ -38,6 +38,7 @@ repos:
         id: cspell # Spell check changed files
       - always_run: true # This might not be necessary.
         args:
+          - --config .cspell.json
           - --no-must-find-files
           - --no-progress
           - --no-summary
