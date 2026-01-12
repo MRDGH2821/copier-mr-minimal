@@ -15,10 +15,12 @@
   "useGitignore": true,
   "version": "0.2",
   "words": [
+    ".v8rignore",
     "bunx",
     "EDITMSG",
     "filesonly",
     "ggshield",
+    "KICS",
     "mrdgh",
     "prek",
     "pycache",
