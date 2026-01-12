@@ -9,6 +9,7 @@ _exclude:
   - __pycache__
   - copier.yaml
   - copier.yml
+  - megalinter-reports
   - ~*
 _task:
   - prek install
