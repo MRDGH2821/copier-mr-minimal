@@ -17,3 +17,7 @@ _task:
 project_name:
   help: Enter the name of your project.
   type: str
+use_agents:
+  default: false
+  help: Use AGENTS.md?
+  type: bool
