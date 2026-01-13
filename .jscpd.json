@@ -9,7 +9,8 @@
     "**/.rbenv/**",
     "**/.venv/**",
     "**/node_modules/**",
-    "**/report/**"
+    "**/report/**",
+    ".cspell.json"
   ],
   "reporters": ["html", "markdown"],
   "threshold": 0
