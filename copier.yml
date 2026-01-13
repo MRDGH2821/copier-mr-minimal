@@ -11,6 +11,7 @@ _exclude:
   - copier.yml
   - megalinter-reports
   - ~*
+_subdirectory: template
 _task:
   - prek install
 project_name:
