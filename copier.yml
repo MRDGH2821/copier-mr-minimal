@@ -13,7 +13,7 @@ _exclude:
   - ~*
 _subdirectory: template
 _task:
-  - prek install
+  - prek install --install-hooks
 project_name:
   help: Enter the name of your project.
   type: str
