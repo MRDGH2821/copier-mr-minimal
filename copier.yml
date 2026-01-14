@@ -1,7 +1,6 @@
 ---
 _exclude:
   - "*.py[co]"
-  - .ai
   - .DS_Store
   - .git
   - .pre-commit-config-copier.yaml
