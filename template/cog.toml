@@ -22,6 +22,7 @@ scopes = [
   "jscpd",
   "megalinter",
   "pre-commit",
+  "prettier",
   "vscode",
   "zed",
 ]

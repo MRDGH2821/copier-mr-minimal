@@ -10,9 +10,9 @@ post_bump_hooks = []
 post_package_bump_hooks = []
 pre = "alpha.*"
 pre_bump_hooks = [
+  "bun pm version {{version}} --no-git-tag-version",
   "bunx prettier --write .",
   "echo 'bumping from {{latest|0.0.0}} to {{version|0.0.1}}'",
-  "bun pm version {{version}} --no-git-tag-version",
 ]
 pre_package_bump_hooks = []
 scopes = [
@@ -23,6 +23,7 @@ scopes = [
   "jscpd",
   "megalinter",
   "pre-commit",
+  "prettier",
   "version",
   "vscode",
   "zed",
