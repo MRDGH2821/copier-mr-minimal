@@ -1,9 +1,6 @@
 {
-  "version": "v0.1.0",
-  "workspaces": [
-    "./*",
-    "template/*"
-  ],
+  "version": "v0.2.0",
+  "workspaces": ["./*", "template/*"],
   "dependencies": {
     "prettier-plugin-packagejson": "^3.0.0",
     "prettier-plugin-toml": "^2.0.6"

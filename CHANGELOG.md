@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v0.2.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/735a28b2cb7415d3206678e69276f30bb261cca5..v0.2.0) - 2026-02-04
+#### Features
+- (**prettier**) add ignore file - ([7b0441c](https://github.com/MRDGH2821/copier-mr-minimal/commit/7b0441c770526a7658b8e7ea5f1a368bf956cc31)) - MRDGH2821
+#### Bug Fixes
+- (**cocogitto**) use tag with `v` prefix - ([735a28b](https://github.com/MRDGH2821/copier-mr-minimal/commit/735a28b2cb7415d3206678e69276f30bb261cca5)) - MRDGH2821
+#### Miscellaneous Chores
+- add detailed changelog - ([434c82c](https://github.com/MRDGH2821/copier-mr-minimal/commit/434c82c83f9441b134b082be23364ec05fb6f7e6)) - MRDGH2821
+- add prettier plugin & workspaces - ([2488b39](https://github.com/MRDGH2821/copier-mr-minimal/commit/2488b3987cc74759a424f3c4620d9d1d82ab17d5)) - MRDGH2821
+
+- - -
+
 
 ## Unreleased ([988cefe..7b0441c](https://github.com/MRDGH2821/copier-mr-minimal/compare/988cefe..7b0441c))
 #### Features
