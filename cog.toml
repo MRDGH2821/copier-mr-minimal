@@ -10,9 +10,9 @@ post_bump_hooks = []
 post_package_bump_hooks = []
 pre = "alpha.*"
 pre_bump_hooks = [
-  "bun pm version {{version}} --no-git-tag-version",
+  "bun pm version {{version_tag}} --no-git-tag-version",
   "bunx prettier --write .",
-  "echo 'bumping from {{latest|0.0.0}} to {{version|0.0.1}}'",
+  "echo 'bumping from {{latest_tag|0.0.0}} to {{version_tag|0.0.1}}'",
 ]
 pre_package_bump_hooks = []
 scopes = [
