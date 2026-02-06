@@ -21,11 +21,14 @@
     "EDITMSG",
     "filesonly",
     "ggshield",
+    "keepachangelog",
     "KICS",
     "mrdgh",
     "prek",
     "pycache",
+    "semver",
     "stefanzweifel",
+    "tera",
     "venv"
   ]
 }
