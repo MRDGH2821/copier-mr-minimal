@@ -23,6 +23,7 @@ scopes = [
   "megalinter",
   "pre-commit",
   "prettier",
+  "version",
   "vscode",
   "zed",
 ]
