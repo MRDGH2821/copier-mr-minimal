@@ -10,5 +10,6 @@
   ],
   "plugins": ["prettier-plugin-toml", "prettier-plugin-packagejson"],
   "tabWidth": 2,
+  "trailingComma": "none",
   "useTabs": false
 }
