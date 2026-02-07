@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "dependencies": {
+      "devDependencies": {
         "prettier-plugin-packagejson": "^3.0.0",
         "prettier-plugin-toml": "^2.0.6",
       },
