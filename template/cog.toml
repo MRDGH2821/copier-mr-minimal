@@ -1,6 +1,6 @@
 branch_whitelist = []
 disable_bump_commit = false
-disable_changelog = false
+disable_changelog = true
 from_latest_tag = false
 generate_mono_repository_global_tag = true
 generate_mono_repository_package_tags = true
@@ -10,8 +10,9 @@ post_bump_hooks = []
 post_package_bump_hooks = []
 pre = "alpha.*"
 pre_bump_hooks = [
+  "bunx git-cliff -o CHANGELOG.md -c cocogitto --tag {{version_tag}}",
   "bunx prettier --write .",
-  "echo 'bumping from {{latest_tag|0.0.0}} to {{version_tag|0.0.1}}'",
+  "echo 'bumping from {{latest_tag|0.0.0}} to {{version_tag|0.0.1}}'"
 ]
 pre_package_bump_hooks = []
 scopes = [
@@ -25,7 +26,7 @@ scopes = [
   "prettier",
   "version",
   "vscode",
-  "zed",
+  "zed"
 ]
 skip_ci = "[skip ci]"
 skip_untracked = false
