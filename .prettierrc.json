@@ -8,7 +8,7 @@
       }
     }
   ],
-  "plugins": ["prettier-plugin-toml", "prettier-plugin-packagejson"],
+  "plugins": ["prettier-plugin-toml"],
   "tabWidth": 2,
   "trailingComma": "none",
   "useTabs": false
