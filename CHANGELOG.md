@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.4.0](https://github.com/cocogitto/cocogitto/compare/v0.3.0..v0.4.0) - 2026-02-15
+
+### Features
+
+- add treefmt & yamlfix config - ([ebe81d4](https://github.com/cocogitto/cocogitto/commit/ebe81d402f20d51d7c3b2507611c206b0cc8de4a)) - MRDGH2821
+
+### Miscellaneous Chores
+
+- **(prettier)** remove unneeded plugin - ([21abb39](https://github.com/cocogitto/cocogitto/commit/21abb39764106ee3283028a8d0be72ca7608de21)) - MRDGH2821
+
+### Style
+
+- format files - ([63cf11a](https://github.com/cocogitto/cocogitto/commit/63cf11adc8ab9ac3a964945d886554a26d8f07aa)) - MRDGH2821
+
+---
+
 ## [0.3.0](https://github.com/cocogitto/cocogitto/compare/v0.2.0..v0.3.0) - 2026-02-07
 
 ### Features
