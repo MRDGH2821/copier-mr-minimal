@@ -11,6 +11,7 @@
     "**/node_modules/**",
     "**/report/**",
     ".cspell.json",
+    "template/",
     ".markdownlint.json"
   ],
   "reporters": ["html", "markdown"],

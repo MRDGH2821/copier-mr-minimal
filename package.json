@@ -1,4 +1,5 @@
 {
+  "name": "copier-mr-minimal",
   "version": "v0.4.0",
   "workspaces": ["./*", "template/*"],
   "devDependencies": {
