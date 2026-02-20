@@ -1,6 +1,9 @@
 ---
 _exclude:
   - "*.py[co]"
+  - "{% if ci != 'github' %}.github/workflows{% endif %}"
+  - "{% if ci != 'gitlab' %}.gitlab-ci.yml{% endif %}"
+  - "{% if not use_agents %}AGENTS.md{% endif %}"
   - .DS_Store
   - .git
   - .pre-commit-config-copier.yaml
