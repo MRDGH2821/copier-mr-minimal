@@ -4,6 +4,32 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.5.0](https://github.com/cocogitto/cocogitto/compare/v0.4.0..v0.5.0) - 2026-02-20
+
+### Bug Fixes
+
+- fix linter errors - ([f59d94e](https://github.com/cocogitto/cocogitto/commit/f59d94e262d18b4a54d30301f63e6c524dba5445)) - MRDGH2821
+
+### Features
+
+- add gitlab ci - ([1b360a6](https://github.com/cocogitto/cocogitto/commit/1b360a688d80f5d18ec1a967abf08c91da44a75c)) - MRDGH2821
+- add question for ci - ([6f395a3](https://github.com/cocogitto/cocogitto/commit/6f395a3e0ce581ca2f58b46a2828e4489cfbd5f7)) - MRDGH2821
+
+### Refactoring
+
+- **(copier)** conditionally exclude files via config - ([50cd43c](https://github.com/cocogitto/cocogitto/commit/50cd43c0fb1078fd4c76940be2f6c44b679eeec7)) - MRDGH2821
+- reorder hooks & add tombi array sorting directives - ([e5c0ba1](https://github.com/cocogitto/cocogitto/commit/e5c0ba12ad4cd603314abf455850de5a8eeb64da)) - MRDGH2821
+
+### Style
+
+- format file - ([760cdb9](https://github.com/cocogitto/cocogitto/commit/760cdb9bdf1d7d526272ffa963166663bbfff021)) - MRDGH2821
+
+### Ci
+
+- **(megalinter)** add pre run commands - ([35fb6d3](https://github.com/cocogitto/cocogitto/commit/35fb6d3546f53edb75bccf32ce9d24591e4c3b94)) - MRDGH2821
+
+---
+
 ## [0.4.0](https://github.com/cocogitto/cocogitto/compare/v0.3.0..v0.4.0) - 2026-02-15
 
 ### Features
