@@ -18,7 +18,7 @@ priority = 9
 command = "bunx"
 excludes = []
 # tombi: format.rules.array-values-order = "ascending"
-includes = ["*.json", "*.json", "*.md", "*.toml", "*.yaml", "*.yml"]
+includes = ["*.js", "*.json", "*.md", "*.toml", "*.ts", "*.yaml", "*.yml"]
 options = ["prettier", "--log-level", "debug", "--write"]
 priority = 100
 
@@ -54,6 +54,12 @@ includes = ["*.sh"]
 options = ["--indent", "2"]
 priority = 1
 
+[formatter.sort-markdown-tables]
+command = "bunx"
+includes = ["*.md"]
+options = ["@fmma-npm/sort-markdown-tables", "-i"]
+priority = 2
+
 [formatter.sort-package-json]
 command = "bunx"
 includes = ["package.json"]
@@ -81,7 +87,8 @@ priority = 0
 [formatter.yamlfix]
 command = "uvx"
 # tombi: format.rules.array-values-order = "ascending"
-includes = ["*.yaml", "*.yml", "yamlfix"]
+includes = ["*.yaml", "*.yml"]
+options = ["yamlfix"]
 priority = 8
 
 [formatter.yq-key-sort]
