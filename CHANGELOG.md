@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.6.0](https://github.com/cocogitto/cocogitto/compare/v0.5.0..v0.6.0) - 2026-02-24
+
+### Features
+
+- **(treefmt)** add new formatter - ([fcaf442](https://github.com/cocogitto/cocogitto/commit/fcaf4420ebeeb4355d74548407cf5dd3fe2a6850)) - MRDGH2821
+- change syntax of formatters - ([cc4a433](https://github.com/cocogitto/cocogitto/commit/cc4a433a50499a24a04b6c8ba4f5762fdb38a8fc)) - MRDGH2821
+
+---
+
 ## [0.5.0](https://github.com/cocogitto/cocogitto/compare/v0.4.0..v0.5.0) - 2026-02-20
 
 ### Bug Fixes
