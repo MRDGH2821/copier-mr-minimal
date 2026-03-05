@@ -49,4 +49,4 @@ template = "remote"
 
 [git_hooks]
 
-[packages]
+[monorepo.packages]
