@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.7.1](https://github.com/cocogitto/cocogitto/compare/v0.7.0..v0.7.1) - 2026-03-05
+
+### Bug Fixes
+
+- **(cocogitto)** migrate config - ([0943af9](https://github.com/cocogitto/cocogitto/commit/0943af948ed09eceb0692cbe6e4aa0fd5e459122)) - MRDGH2821
+
+---
+
 ## [0.7.0](https://github.com/cocogitto/cocogitto/compare/v0.6.0..v0.7.0) - 2026-02-27
 
 ### Features
