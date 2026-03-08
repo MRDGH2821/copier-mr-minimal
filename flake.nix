@@ -3,38 +3,42 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    alejandra.url = "github:kamadorueda/alejandra/4.0.0";
-    alejandra.inputs.nixpkgs.follows = "nixpkgs";
     treefmt-nix.url = "github:numtide/treefmt-nix";
+    treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    alejandra,
-    treefmt-nix,
-  }: let
-    system = builtins.currentSystem;
-    pkgs = nixpkgs.legacyPackages.${system};
-  in {
-    devShells.${system}.default = pkgs.mkShell {
-      name = "copier-mr-minimal";
-
-      packages = with pkgs; [
-        alejandra.${system}.default
-        bash
-        bun
-        libxml2
-        prettypst
-        shfmt
-        treefmt
-        uv
-        yq-go
+  outputs =
+    { self, nixpkgs, treefmt-nix }:
+    let
+      eachSystem = nixpkgs.lib.genAttrs [
+        "x86_64-linux"
+        "aarch64-linux"
+        "x86_64-darwin"
+        "aarch64-darwin"
       ];
+    in
+    {
+      formatter = eachSystem (
+        system: treefmt-nix.lib.mkWrapper nixpkgs.legacyPackages.${system} ./treefmt.nix
+      );
+
+      devShells = eachSystem (system:
+        let
+          pkgs = nixpkgs.legacyPackages.${system};
+        in
+        {
+          default = pkgs.mkShell {
+            packages = [
+              pkgs.bun
+              pkgs.prettypst
+              pkgs.uv
+              pkgs.yq-go
+              pkgs.nil
+              pkgs.nixd
+              (treefmt-nix.lib.mkWrapper pkgs ./treefmt.nix)
+            ];
+          };
+        }
+      );
     };
-    treefmt-nix.mkWrapper nixpkgs = {
-      projectRootFile = ".git/config";
-      
-    };
-  };
 }
