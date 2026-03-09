@@ -4,6 +4,27 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.8.0](https://github.com/cocogitto/cocogitto/compare/v0.7.1..v0.8.0) - 2026-03-09
+
+### Features
+
+- add treefmt-nix integration - ([d452d4f](https://github.com/cocogitto/cocogitto/commit/d452d4f4b01b4325e0fc6b4b787404ae8128945f)) - MRDGH2821
+- add questions & flake.nix - ([85fceef](https://github.com/cocogitto/cocogitto/commit/85fceef1b9f363db3590ced0d837bddec0b1f15c)) - MRDGH2821
+
+### Miscellaneous Chores
+
+- **(treefmt)** add nixfmt - ([c4f1685](https://github.com/cocogitto/cocogitto/commit/c4f16856f42f1be2b155f4d361240bf21f403861)) - MRDGH2821
+- add flake.nix - ([9da6ba5](https://github.com/cocogitto/cocogitto/commit/9da6ba522e574dacc2ce41ecff8e5369989d98f5)) - MRDGH2821
+- ignore .direnv - ([ba44fea](https://github.com/cocogitto/cocogitto/commit/ba44fea5dbc26da0ca9950e27c115a619efb42d8)) - MRDGH2821
+- remove treefmt-nix - ([4d16bd0](https://github.com/cocogitto/cocogitto/commit/4d16bd0f1382a4335a428ee4fc91c19593602b9d)) - MRDGH2821
+- add shebang - ([0a0d20c](https://github.com/cocogitto/cocogitto/commit/0a0d20c1b922fa6503e72fd3ecd35cea1950420c)) - MRDGH2821
+
+### Style
+
+- format file - ([b455f56](https://github.com/cocogitto/cocogitto/commit/b455f5609568fc01ae348a9df5090b7b75c8f6a1)) - MRDGH2821
+
+---
+
 ## [0.7.1](https://github.com/cocogitto/cocogitto/compare/v0.7.0..v0.7.1) - 2026-03-05
 
 ### Bug Fixes
