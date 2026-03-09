@@ -3,7 +3,10 @@ _exclude:
   - "*.py[co]"
   - "{% if ci != 'github' %}.github/workflows{% endif %}"
   - "{% if ci != 'gitlab' %}.gitlab-ci.yml{% endif %}"
+  - "{% if not use_agents %}.ai{% endif %}"
   - "{% if not use_agents %}AGENTS.md{% endif %}"
+  - "{% if not use_flake %}.envrc{% endif %}"
+  - "{% if not use_flake %}flake.nix{% endif %}"
   - .DS_Store
   - .git
   - .pre-commit-config-copier.yaml
@@ -31,4 +34,8 @@ project_name:
 use_agents:
   default: false
   help: Use AGENTS.md?
+  type: bool
+use_flake:
+  default: false
+  help: Use flake.nix?
   type: bool

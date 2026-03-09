@@ -15,17 +15,25 @@
   "useGitignore": true,
   "version": "0.2",
   "words": [
-    ".v8rignore",
-    "bunx",
-    "cocogitto",
-    "EDITMSG",
-    "filesonly",
-    "ggshield",
+    "Cocogitto",
     "KICS",
-    "mrdgh",
+    "MRDGH",
+    "bunx",
+    "cump",
+    "direnv",
+    "envrc",
+    "ggshield",
+    "inital",
+    "nixpkgs",
+    "otbs",
+    "pkgs",
     "prek",
     "pycache",
+    "shfmt",
     "stefanzweifel",
-    "venv"
+    "tombi",
+    "treefmt",
+    "venv",
+    "yamlfix"
   ]
 }

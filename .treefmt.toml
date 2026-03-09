@@ -8,7 +8,25 @@ priority = 10
 
 [formatter.cspell-sort]
 command = "bash"
-includes = [".cspell.json"]
+# tombi: format.rules.array-values-order = "ascending"
+includes = [
+  ".cSpell.json",
+  ".cspell.config.json",
+  ".cspell.config.jsonc",
+  ".cspell.config.yaml",
+  ".cspell.config.yml",
+  ".cspell.jsonc",
+  ".cspell.yaml",
+  ".cspell.yml",
+  "cSpell.json",
+  "cspell.config.json",
+  "cspell.config.jsonc",
+  "cspell.config.yaml",
+  "cspell.config.yml",
+  "cspell.jsonc",
+  "cspell.yaml",
+  "cspell.yml"
+]
 options = [
   "-c",
   "for file in \"$@\"; do yq -i '.words |= sort_by(downcase) | .ignorePaths |= sort_by(downcase)' \"$file\"; done",
