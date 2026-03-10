@@ -1,6 +1,6 @@
 {
   "name": "copier-mr-minimal",
-  "version": "v0.8.0",
+  "version": "v0.8.1",
   "workspaces": ["./*", "template/*"],
   "devDependencies": {
     "prettier-plugin-toml": "^2.0.6"
