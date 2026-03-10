@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.9.1](https://github.com/cocogitto/cocogitto/compare/v0.9.0..v0.9.1) - 2026-03-10
+
+### Bug Fixes
+
+- **(treefmt)** use glob patterns to match all possible cspell config fiels - ([10e27a9](https://github.com/cocogitto/cocogitto/commit/10e27a9ca98d009342729901b99e18bdc97e86fe)) - MRDGH2821
+
+### Miscellaneous Chores
+
+- **(cspell)** update words - ([611cb8c](https://github.com/cocogitto/cocogitto/commit/611cb8c1f219ec122bbac19d16c8fbd2dd778cce)) - MRDGH2821
+
+---
+
 ## [0.9.0](https://github.com/cocogitto/cocogitto/compare/v0.8.1..v0.9.0) - 2026-03-10
 
 ### Features
