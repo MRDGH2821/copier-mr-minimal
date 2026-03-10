@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.9.0](https://github.com/cocogitto/cocogitto/compare/v0.8.1..v0.9.0) - 2026-03-10
+
+### Features
+
+- **(treefmt)** add typstyle formatter - ([ec6b682](https://github.com/cocogitto/cocogitto/commit/ec6b68288f55e7507b680630b0d64fb01bf80b59)) - MRDGH2821
+
+---
+
 ## [0.8.1](https://github.com/cocogitto/cocogitto/compare/v0.8.0..v0.8.1) - 2026-03-10
 
 ### Bug Fixes
