@@ -28,6 +28,20 @@ options = [
 ]
 priority = 9
 
+[formatter.ignore-files-formatter]
+command = "uvx"
+# tombi: format.rules.array-values-order = "ascending"
+includes = [
+  "**/.gitignore",
+  "**/.prettierignore",
+  "**/.v8rignore",
+  ".gitignore",
+  ".prettierignore",
+  ".v8rignore"
+]
+options = ["git+https://github.com/lorenzwalthert/gitignore-tidy"]
+priority = 1
+
 [formatter.nixfmt]
 command = "nixfmt"
 includes = ["*.nix"]
