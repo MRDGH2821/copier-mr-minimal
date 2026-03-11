@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.10.0](https://github.com/cocogitto/cocogitto/compare/v0.9.1..v0.10.0) - 2026-03-11
+
+### Features
+
+- **(treefmt)** add formatter for ignore files - ([472d864](https://github.com/cocogitto/cocogitto/commit/472d86453873abe9900166cfaa6f9b47d3f771a6)) - MRDGH2821
+
+---
+
 ## [0.9.1](https://github.com/cocogitto/cocogitto/compare/v0.9.0..v0.9.1) - 2026-03-10
 
 ### Bug Fixes
