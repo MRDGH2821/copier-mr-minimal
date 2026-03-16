@@ -15,10 +15,13 @@
   "useGitignore": true,
   "version": "0.2",
   "words": [
+    "anthropics",
     "bunx",
     "cocogitto",
+    "Composio",
     "cump",
     "direnv",
+    "elif",
     "envrc",
     "ggshield",
     "inital",
