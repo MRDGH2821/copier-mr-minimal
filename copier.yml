@@ -7,6 +7,7 @@ _exclude:
   - "{% if not use_agents %}AGENTS.md{% endif %}"
   - "{% if not use_flake %}.envrc{% endif %}"
   - "{% if not use_flake %}flake.nix{% endif %}"
+  - "{% if not use_flake %}flake.nix.jinja{% endif %}"
   - .DS_Store
   - .git
   - .pre-commit-config-copier.yaml
@@ -16,11 +17,12 @@ _exclude:
   - copier.yml
   - megalinter-reports
   - ~*
+_min_copier_version: 9.0.0
 _subdirectory: template
-_task:
-  - cargo install --git https://github.com/cocogitto/cocogitto
-  - prek install --install-hooks
-  - treefmt -vv
+_tasks:
+  - command: 'command -v cargo > /dev/null 2>&1 && cargo install --locked cocogitto || echo "SKIP: cargo not found — install cocogitto manually"'
+  - command: 'command -v prek > /dev/null 2>&1 && prek install --install-hooks || echo "SKIP: prek not found — run ''prek install --install-hooks'' manually"'
+  - command: 'command -v treefmt > /dev/null 2>&1 && treefmt -vv || echo "SKIP: treefmt not found — run formatting manually"'
 ci:
   choices:
     GitHub CI: github
@@ -28,9 +30,14 @@ ci:
   default: github
   help: What Continuous Integration service do you want to use?
   type: str
+git_repo_url:
+  help: Enter the Git repository URL (e.g., https://github.com/user/repo or git@github.com:user/repo.git).
+  type: str
+  validator: "{% if not git_repo_url %} git_repo_url must not be empty. {% elif not (git_repo_url | regex_search('(https://|git@).+(github|gitlab|gitea|bitbucket)')) %} git_repo_url must be a valid Git repository URL. {% endif %}"
 project_name:
   help: Enter the name of your project.
   type: str
+  validator: "{% if not project_name %} project_name must not be empty. {% elif not (project_name | regex_search('^[a-zA-Z][a-zA-Z0-9 ._-]*$')) %} project_name must start with a letter and contain only letters, digits, spaces, dots, hyphens, or underscores. {% endif %}"
 use_agents:
   default: false
   help: Use AGENTS.md?
