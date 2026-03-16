@@ -4,31 +4,70 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
-## [unreleased]
-
-### Miscellaneous Chores
-
-- **(pre-commit)** update hooks - ([6c589df](https://github.com/MRDGH2821/copier-mr-minimal/commit/6c589df209a70a4e19c37d1bc83ae829740dae62)) - MRDGH2821
-
----
-
-## [0.10.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.9.1..v0.10.0) - 2026-03-11
-
-### Features
-
-- **(treefmt)** add formatter for ignore files - ([472d864](https://github.com/MRDGH2821/copier-mr-minimal/commit/472d86453873abe9900166cfaa6f9b47d3f771a6)) - MRDGH2821
-
----
-
-## [0.9.1](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.9.0..v0.9.1) - 2026-03-10
+## [0.11.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.10.0..v0.11.0) - 2026-03-16
 
 ### Bug Fixes
 
-- **(treefmt)** use glob patterns to match all possible cspell config fiels - ([10e27a9](https://github.com/MRDGH2821/copier-mr-minimal/commit/10e27a9ca98d009342729901b99e18bdc97e86fe)) - MRDGH2821
+- **(cocogitto)** fix changelog generation - ([3a21099](https://github.com/MRDGH2821/copier-mr-minimal/commit/3a2109936960acf95eea1a8f2d26a37228d77d1e)) - MRDGH2821
+- **(megalinter)** install prettier plugin - ([de1d09e](https://github.com/MRDGH2821/copier-mr-minimal/commit/de1d09e0687ad126126f35ff33079a8c9df88866)) - MRDGH2821
+- make files executable - ([de2d51d](https://github.com/MRDGH2821/copier-mr-minimal/commit/de2d51d939efc08079759fdc55ccccab043ac02c)) - MRDGH2821
+- fix linter errors - ([c9e6c3a](https://github.com/MRDGH2821/copier-mr-minimal/commit/c9e6c3a569388c7540712706a38dd1323df881dd)) - MRDGH2821
+
+### Documentation
+
+- **(cocogitto)** correct cocogitto skill: cog commit supports multiline MESSAGE for trailers - ([5dfffb5](https://github.com/MRDGH2821/copier-mr-minimal/commit/5dfffb5faea05a72a441ad8230638fe4ba3c849f)) - MRDGH2821
+- **(cocogitto)** document --edit flag limitation in cocogitto skill - ([0a9ac68](https://github.com/MRDGH2821/copier-mr-minimal/commit/0a9ac68c70612610fa912f5bb7a46e31d6b94fc7)) - MRDGH2821
+- **(pre-commit)** remove treefmt hook, add manual treefmt -vv instruction - ([e0d38c6](https://github.com/MRDGH2821/copier-mr-minimal/commit/e0d38c60f3b182d2ef583441a8ad8b1dbcfc4a36)) - MRDGH2821
+- overhaul template AGENTS.md with mandatory action logging - ([1ca6d00](https://github.com/MRDGH2821/copier-mr-minimal/commit/1ca6d0035bda40a74b49b8b6d890fd6d5895407a)) - MRDGH2821
+- add mandatory AI Co-authored-by trailer rule to commit guidelines - ([cc0d977](https://github.com/MRDGH2821/copier-mr-minimal/commit/cc0d977f72efeb6626164f422c1ae1295586c54a)) - MRDGH2821
+- add git-commit skill, replace Prettier with treefmt, add Project Skills table to template - ([0439ca1](https://github.com/MRDGH2821/copier-mr-minimal/commit/0439ca1d69e475f4fc418cbd579a310f8dad9c35)) - MRDGH2821
+- remove manual prek run instructions, hooks run automatically on commit - ([e3d11b4](https://github.com/MRDGH2821/copier-mr-minimal/commit/e3d11b4061b7cb74228f644092b8071ce5708d8a)) - MRDGH2821
+- point commit scope reference to cog.toml instead of pre-commit config - ([bdff5aa](https://github.com/MRDGH2821/copier-mr-minimal/commit/bdff5aa82d3c20fc1e2e006d735e126e834f4ff6)) - MRDGH2821
+
+### Features
+
+- **(cocogitto)** add cocogitto skill for conventional commits via cog CLI - ([00e0000](https://github.com/MRDGH2821/copier-mr-minimal/commit/00e0000739b8cb5eddf319422a0fe82e573d6316)) - MRDGH2821
+- **(copier)** ask for git repo url - ([ee4ac6b](https://github.com/MRDGH2821/copier-mr-minimal/commit/ee4ac6b3e3ae4ac787c0ad6bd760be326283e129)) - MRDGH2821
+- add tool-runner skill for intelligent runtime selection - ([9228559](https://github.com/MRDGH2821/copier-mr-minimal/commit/92285593c16ff06bf00c42972ead42990e879206)) - MRDGH2821
+- add agent skills - ([81f8454](https://github.com/MRDGH2821/copier-mr-minimal/commit/81f84547cdfe71df29167b31db66728dc7e40cd4)) - MRDGH2821
 
 ### Miscellaneous Chores
 
-- **(cspell)** update words - ([611cb8c](https://github.com/MRDGH2821/copier-mr-minimal/commit/611cb8c1f219ec122bbac19d16c8fbd2dd778cce)) - MRDGH2821
+- **(cspell)** update word list - ([51695fe](https://github.com/MRDGH2821/copier-mr-minimal/commit/51695fec3cb330b496000debbe212d551239d82c)) - MRDGH2821
+- **(pre-commit)** update hooks - ([db197da](https://github.com/MRDGH2821/copier-mr-minimal/commit/db197da43fa2463e8958d91961ef09b04bf9cef9)) - MRDGH2821
+- add find-skills skill - ([d353160](https://github.com/MRDGH2821/copier-mr-minimal/commit/d353160f7f6828494adeb64587215c8379c345c4)) - MRDGH2821
+- delete agents_global as no longer needed - ([a64d409](https://github.com/MRDGH2821/copier-mr-minimal/commit/a64d409ca1e174141aed5db8234b931243eb016b)) - MRDGH2821
+- add .lycheeignore - ([fcf2e53](https://github.com/MRDGH2821/copier-mr-minimal/commit/fcf2e538a0cfd4efa8ea7723665830768980af57)) - MRDGH2821
+
+### Refactoring
+
+- **(treefmt)** use glob matching - ([00c8019](https://github.com/MRDGH2821/copier-mr-minimal/commit/00c80196e981c402e8d59daf90d3ac004c38dd1c)) - MRDGH2821
+- use .agents folder instead - ([b9eb7fe](https://github.com/MRDGH2821/copier-mr-minimal/commit/b9eb7fe470e3e2eb9d986c960c67959fab34c669)) - MRDGH2821
+- convert to template - ([1ec7307](https://github.com/MRDGH2821/copier-mr-minimal/commit/1ec73076777d721857820724b1f974c79bedce11)) - MRDGH2821
+
+### Style
+
+- format files - ([52f387a](https://github.com/MRDGH2821/copier-mr-minimal/commit/52f387aefd7e3e3b446d9823cbef4602e8c7b5cf)) - MRDGH2821
+
+---
+
+## [0.10.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.9.1..v0.10.0) - 2026-03-16
+
+### Features
+
+- **(treefmt)** add formatter for ignore files - ([de11990](https://github.com/MRDGH2821/copier-mr-minimal/commit/de11990917a1e5f7adebb7397203a16cecb3ce13)) - MRDGH2821
+
+---
+
+## [0.9.1](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.9.0..v0.9.1) - 2026-03-16
+
+### Bug Fixes
+
+- **(treefmt)** use glob patterns to match all possible cspell config fields - ([d5c223c](https://github.com/MRDGH2821/copier-mr-minimal/commit/d5c223c84fb42a91c6ce93a0ca75f33093be683e)) - MRDGH2821
+
+### Miscellaneous Chores
+
+- **(cspell)** update words - ([fa05d6a](https://github.com/MRDGH2821/copier-mr-minimal/commit/fa05d6a1e3706931f4e2e0f780be758b628f7468)) - MRDGH2821
 
 ---
 
