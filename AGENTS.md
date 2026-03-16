@@ -149,3 +149,11 @@ chore(cspell): add technical terms to dictionary
 - Verify the project structure is correct
 - Test on a clean environment if possible
 - Ensure documentation is updated
+
+## Project Skills
+
+This project includes custom AI agent skills to assist with specific tasks:
+
+| Skill | Purpose | Location |
+|-------|---------|----------|
+| `tool-runner` | Intelligent runtime selection with fallback chains (Bun → Node, bunx → npx). Use when writing shell tasks, package manager commands, or documenting tool availability. | [.agents/skills/tool-runner/SKILL.md](.agents/skills/tool-runner/SKILL.md) |
