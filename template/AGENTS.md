@@ -210,8 +210,6 @@ Co-authored-by: GPT-4o via Cursor <noreply@openai.com>
 
 **Never**:
 
-- Commit AI-generated code without review
-- Use AI-generated code you don't understand
 - Skip testing because "AI wrote it"
 - Forget to write the log entry
 - Rely solely on AI for architectural decisions
@@ -220,18 +218,6 @@ Co-authored-by: GPT-4o via Cursor <noreply@openai.com>
 
 - Use `--help` or `help` subcommand to get help on a command. It can even reveal hints on how to proceed ahead or optimize the number of steps.
 - Check tool documentation before asking the user for configuration details
-
-## Pre-commit Hooks (prek)
-
-### Installation
-
-- Install with `uv tool install prek` and enable the hooks with `prek install --install-hooks`
-- Hooks run automatically on each commit — no need to run manually
-
-### Working with Hooks
-
-- If a pre-commit hook fails, read the error message carefully - it often suggests the fix
-- Some hooks auto-fix issues (like formatters); others require manual intervention
 
 ## Linting and Formatting
 
@@ -277,7 +263,8 @@ chore(cspell): add technical terms to dictionary
 
 **Pre-commit hooks failing on commit:**
 
-- Read the error message carefully - it often suggests the fix
+- Read the error message — it usually points directly to the fix
+- Try to fix the issue and retry the commit; do not skip hooks
 - Fix formatting issues first (treefmt, whitespace)
 - Then address spell checking and linting
 
@@ -295,8 +282,6 @@ chore(cspell): add technical terms to dictionary
 
 ### Getting Help
 
-- Most tools support `--help` flag for detailed usage
-- Check tool documentation before modifying configurations
 - Review existing configuration files for examples
 
 ## Best Practices
