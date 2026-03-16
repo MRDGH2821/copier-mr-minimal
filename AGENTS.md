@@ -99,6 +99,50 @@ docs: update AGENTS.md with guidelines
 chore(cspell): add technical terms to dictionary
 ```
 
+### AI Co-authored-by Trailer (MANDATORY for AI commits)
+
+If an AI agent is authoring or co-authoring the commit, the commit message **MUST** include a `Co-authored-by` trailer identifying the model and the tool used to invoke it.
+
+**Format:**
+
+```
+Co-authored-by: <Model Name> via <Tool> <noreply@provider-domain>
+```
+
+**Provider noreply addresses:**
+
+| Provider | noreply address |
+| --------- | --------------- |
+| Anthropic (Claude) | `noreply@anthropic.com` |
+| OpenAI (GPT / o-series) | `noreply@openai.com` |
+| Google (Gemini) | `noreply@google.com` |
+| Microsoft (Copilot) | `noreply@microsoft.com` |
+| Mistral | `noreply@mistral.ai` |
+| Meta (Llama) | `noreply@meta.com` |
+| xAI (Grok) | `noreply@x.ai` |
+
+**Examples:**
+
+```txt
+feat(precommit): add spell checking to commit messages
+
+Co-authored-by: Claude Sonnet 4.6 via opencode <noreply@anthropic.com>
+```
+
+```txt
+fix(cspell): resolve configuration issue
+
+Co-authored-by: GPT-4o via Cursor <noreply@openai.com>
+```
+
+**Rules:**
+
+- Use the **exact model name and version** you are running as (e.g. `Claude Sonnet 4.6`, not just `Claude`)
+- Use the **tool name** as it is commonly known (e.g. `opencode`, `Cursor`, `Copilot`, `Zed`)
+- If the model version is unknown, use the model family name (e.g. `Claude Sonnet`)
+- One trailer per AI model involved
+- **Never omit this trailer** when the commit was AI-assisted
+
 ## Troubleshooting
 
 ### Common Issues
