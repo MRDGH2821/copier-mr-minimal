@@ -31,12 +31,13 @@ Always run `cog verify` on the full message first — catches scope errors, malf
 
 ### Multiline commits: two different paths
 
-| Situation                                    | Command                               |
-| -------------------------------------------- | ------------------------------------- |
-| Header only (no body, no trailers)           | `cog commit`                          |
-| Body and/or trailers (e.g. `Co-authored-by`) | `git commit -m` with multiline string |
+| Situation                                           | Command                                          |
+| --------------------------------------------------- | ------------------------------------------------ |
+| Header only (no body, no trailers)                  | `cog commit <type> "<msg>" [scope]`              |
+| Trailers only (e.g. `Co-authored-by`, no body text) | `cog commit` with `$'...\n\ntrailer'` in MESSAGE |
+| Body text + trailers (prose paragraphs)             | `git commit -m` heredoc                          |
 
-`cog commit` only accepts a single-line description. It cannot attach a body or footers via CLI args. Use `git commit -m` for those cases.
+`cog commit`'s `MESSAGE` argument accepts a multiline string via `$'...'` ANSI-C quoting. A blank line (`\n\n`) separates the subject from the footer — `cog verify` and git both accept this. Use `git commit -m` heredoc only when you need a prose body paragraph.
 
 ## Commands
 
@@ -65,15 +66,19 @@ cog commit feat "add dark mode" -u          # git add -u (tracked only)
 cog commit feat "add dark mode" -a          # git add .  (all including untracked)
 ```
 
-### Multiline commit with body and/or trailers
+### Trailers only (no prose body) — use `cog commit` with `$'...'`
 
-Use `git commit -m` with `$'...'` syntax (ANSI-C quoting — preserves `\n`):
+Use ANSI-C quoting to embed a blank line and trailer inside the `MESSAGE` arg:
 
 ```bash
-git commit -m $'feat(auth): add OAuth2 support\n\nIntegrates GitHub and Google providers.\nTokens are stored encrypted at rest.\n\nCo-authored-by: Claude Sonnet 4.6 via opencode <noreply@anthropic.com>'
+cog commit feat $'add OAuth2 support\n\nCo-authored-by: Claude Sonnet 4.6 via opencode <noreply@anthropic.com>' auth
 ```
 
-Or a heredoc for readability:
+The `\n\n` creates a blank line between the subject and the footer — standard git trailer format. `cog verify` accepts this.
+
+### Body text + trailers — use `git commit -m` heredoc
+
+When you have a prose body (multiple paragraphs of explanation), `git commit -m` heredoc is cleaner:
 
 ```bash
 git commit -m "$(cat <<'EOF'
@@ -110,12 +115,21 @@ cog check --from-latest-tag  # only since last tag
 2. **Stage** files (`git add` or use `-a`/`-u` flags)
 3. **Choose path**:
    - Header only → `cog commit <type> "<msg>" [scope]`
-   - With body/trailers → `git commit -m` multiline
+   - Trailers only (e.g. `Co-authored-by`) → `cog commit` with `$'...\n\ntrailer'`
+   - Body text + trailers → `git commit -m` heredoc
 4. **Verify** before running if unsure: `cog verify "<message>"`
 
 ## Co-authored-by trailer
 
-This project requires a `Co-authored-by` trailer on every AI-assisted commit. Since `cog commit` cannot attach trailers, always use `git commit -m` when AI is the author:
+This project requires a `Co-authored-by` trailer on every AI-assisted commit.
+
+**Preferred: `cog commit` with `$'...'` (trailers only)**
+
+```bash
+cog commit feat $'add login endpoint\n\nCo-authored-by: Claude Sonnet 4.6 via opencode <noreply@anthropic.com>' auth
+```
+
+**Alternative: `git commit -m` heredoc (when you also have a prose body)**
 
 ```bash
 git commit -m "$(cat <<'EOF'
