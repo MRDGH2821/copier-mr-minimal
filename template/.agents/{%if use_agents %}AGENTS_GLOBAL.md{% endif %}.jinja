@@ -32,7 +32,7 @@ This file provides guidance for AI coding assistants working with this project.
 
 **IMPORTANT**: This project maintains full transparency about AI assistance through work logs.
 
-**All AI-assisted work must be documented** in `.ai/logs/YYYY-MM-DD.md` files:
+**All AI-assisted work must be documented** in `.agents/logs/YYYY-MM-DD.md` files:
 
 - **Naming format**: `YYYY-MM-DD.md` (e.g., `2024-12-15.md`)
 - **Multiple sessions per day**: Append to the existing log file with timestamps
@@ -101,7 +101,7 @@ User asked to implement GitHub profile fetcher with rate limiting
 - ⏳ Manual testing with real API pending
 ```
 
-**Additional Materials**: Place any other relevant documents (prompts, examples, references, generated docs) in the `.ai` folder
+**Additional Materials**: Place any other relevant documents (prompts, examples, references, generated docs) in the `.agents` folder
 
 **Commit Message Format**: Reference the work log in commit messages:
 
@@ -109,7 +109,7 @@ User asked to implement GitHub profile fetcher with rate limiting
 feat(social): implement GitHub profile fetcher
 
 AI-assisted implementation reviewed and tested.
-See .ai/logs/2024-12-15.md for details.
+See .agents/logs/2024-12-15.md for details.
 ```
 
 ## AI Usage and Transparency
@@ -118,7 +118,7 @@ See .ai/logs/2024-12-15.md for details.
 
 ### Documentation Requirements
 
-All AI-assisted work must be documented as described in the "AI-Assisted Work Documentation" section above. Every AI session requires creating or updating the daily log file in `.ai/logs/YYYY-MM-DD.md`.
+All AI-assisted work must be documented as described in the "AI-Assisted Work Documentation" section above. Every AI session requires creating or updating the daily log file in `.agents/logs/YYYY-MM-DD.md`.
 
 ### AI Assistance Guidelines
 
@@ -145,7 +145,7 @@ All AI-assisted work must be documented as described in the "AI-Assisted Work Do
 - Validate AI suggestions against project architecture (if such a document is present)
 - Follow best coding practices and idioms
 - Ensure code passes all tests and linters
-- Document the AI assistance in `.ai/logs/`
+- Document the AI assistance in `.agents/logs/`
 - Include human review notes in the log
 
 **Never**:

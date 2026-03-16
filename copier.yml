@@ -3,7 +3,7 @@ _exclude:
   - "*.py[co]"
   - "{% if ci != 'github' %}.github/workflows{% endif %}"
   - "{% if ci != 'gitlab' %}.gitlab-ci.yml{% endif %}"
-  - "{% if not use_agents %}.ai{% endif %}"
+  - "{% if not use_agents %}.agents{% endif %}"
   - "{% if not use_agents %}AGENTS.md{% endif %}"
   - "{% if not use_flake %}.envrc{% endif %}"
   - "{% if not use_flake %}flake.nix{% endif %}"
