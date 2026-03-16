@@ -154,6 +154,6 @@ chore(cspell): add technical terms to dictionary
 
 This project includes custom AI agent skills to assist with specific tasks:
 
-| Skill | Purpose | Location |
-|-------|---------|----------|
+| Skill         | Purpose                                                                                                                                                                | Location                                                                   |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
 | `tool-runner` | Intelligent runtime selection with fallback chains (Bun → Node, bunx → npx). Use when writing shell tasks, package manager commands, or documenting tool availability. | [.agents/skills/tool-runner/SKILL.md](.agents/skills/tool-runner/SKILL.md) |

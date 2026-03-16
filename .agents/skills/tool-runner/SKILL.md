@@ -15,6 +15,7 @@ metadata:
 ## When to Use
 
 Use this skill when:
+
 - Writing shell tasks or scripts that invoke package managers
 - Documenting tool availability checks in Copier templates
 - Creating CI/CD pipelines with cross-platform tool support
@@ -38,6 +39,7 @@ Always check availability BEFORE attempting to run. Use `command -v` (POSIX-comp
 ### 2. Bun as Primary Runtime
 
 Bun is the preferred primary runtime because:
+
 - **Faster**: 4-5x faster package installation than npm
 - **Drop-in replacement**: Compatible with Node.js/npm ecosystem
 - **Built-in tools**: bunx (like npx), bun test, bun run
@@ -54,12 +56,12 @@ fi
 
 ### 3. Package Manager Selection (in order of preference)
 
-| Tool | Use Case | Fallback |
-|------|----------|----------|
-| `bunx` | Running one-off packages, npm scripts | → `npx` |
-| `bun` | Package installation, dependency management | → `npm` |
-| `pnpm` | Monorepos, workspace projects | → `npm` |
-| `npm` | Universal fallback (always available with Node) | None |
+| Tool   | Use Case                                        | Fallback |
+| ------ | ----------------------------------------------- | -------- |
+| `bunx` | Running one-off packages, npm scripts           | → `npx`  |
+| `bun`  | Package installation, dependency management     | → `npm`  |
+| `pnpm` | Monorepos, workspace projects                   | → `npm`  |
+| `npm`  | Universal fallback (always available with Node) | None     |
 
 ### 4. Shell Guard Syntax (for Copier `_tasks`)
 
@@ -80,6 +82,7 @@ _tasks:
 ```
 
 **Why this pattern?**
+
 - `command -v` is POSIX-compliant (works on Linux, macOS, Windows/Git Bash)
 - Exits gracefully with a helpful message if tool not found
 - Doesn't silently fail or produce confusing errors
@@ -203,16 +206,16 @@ jobs:
 **Without Bun setup** (fallback to Node):
 
 ```yaml
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
+- name: Setup Node
+  uses: actions/setup-node@v4
+  with:
+    node-version: "20"
 
-      - name: Install dependencies
-        run: npm install
+- name: Install dependencies
+  run: npm install
 
-      - name: Run tests
-        run: npm test
+- name: Run tests
+  run: npm test
 ```
 
 ## Commands

@@ -58,7 +58,7 @@ Create `template/_tasks_helper.sh`:
 find_runner() {
     local primary=$1
     local secondary=$2
-    
+
     if command -v "$primary" >/dev/null 2>&1; then
         echo "$primary"
     elif command -v "$secondary" >/dev/null 2>&1; then
@@ -71,12 +71,12 @@ find_runner() {
 run_or_skip() {
     local tool=$1
     shift
-    
+
     if ! runner=$(find_runner "$tool" "${FALLBACK_TOOL:-npm}"); then
         echo "⚠️  SKIP: $tool not found"
         return 0
     fi
-    
+
     echo "→ Using $runner"
     "$runner" "$@"
 }
@@ -96,6 +96,7 @@ _tasks:
 ## Guiding Principle
 
 **Always check, never assume.** Users may have different setups:
+
 - Some only have Node.js installed
 - Some have Bun but prefer npm for portability
 - Some use pnpm in monorepos
