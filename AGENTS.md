@@ -94,13 +94,12 @@ Co-authored-by: GPT-4o via Cursor <noreply@openai.com>
 
 ### Installation
 
-- Install with `uv tool install prek` and run checks via `prek --all-files`
-- Enable the hooks with `prek install --install-hooks` so they run automatically on each commit
+- Install with `uv tool install prek` and enable the hooks with `prek install --install-hooks`
+- Hooks run automatically on each commit — no need to run manually
 
 ### Working with Hooks
 
 - If a pre-commit hook fails, read the error message carefully - it often suggests the fix
-- Run `prek --all-files` before committing to catch issues early
 - Some hooks auto-fix issues (like formatters); others require manual intervention
 
 ## Linting and Formatting
@@ -149,7 +148,7 @@ chore(cspell): add technical terms to dictionary
 
 **Pre-commit hooks failing on commit:**
 
-- Run `prek --all-files` to see all issues at once
+- Read the error message carefully - it often suggests the fix
 - Fix formatting issues first (treefmt, whitespace)
 - Then address spell checking and linting
 
@@ -189,7 +188,6 @@ chore(cspell): add technical terms to dictionary
 
 ### Testing Changes
 
-- Run all pre-commit hooks: `prek --all-files`
 - Verify the project structure is correct
 - Test on a clean environment if possible
 - Ensure documentation is updated
