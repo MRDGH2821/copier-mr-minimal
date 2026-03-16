@@ -107,6 +107,50 @@ Place any other relevant documents (prompts, examples, references, generated doc
 
 ---
 
+## MANDATORY: AI Co-authored-by Trailer
+
+> **Every commit made with AI assistance MUST include a `Co-authored-by` trailer. No exceptions.**
+
+**Format:**
+
+```
+Co-authored-by: <Model Name> via <Tool> <noreply@provider-domain>
+```
+
+**Provider noreply addresses:**
+
+| Provider                | noreply address         |
+| ----------------------- | ----------------------- |
+| Anthropic (Claude)      | `noreply@anthropic.com` |
+| OpenAI (GPT / o-series) | `noreply@openai.com`    |
+| Google (Gemini)         | `noreply@google.com`    |
+| Microsoft (Copilot)     | `noreply@microsoft.com` |
+| Mistral                 | `noreply@mistral.ai`    |
+| Meta (Llama)            | `noreply@meta.com`      |
+| xAI (Grok)              | `noreply@x.ai`          |
+
+**Examples:**
+
+```txt
+feat(precommit): add spell checking to commit messages
+
+Co-authored-by: Claude Sonnet 4.6 via opencode <noreply@anthropic.com>
+```
+
+```txt
+fix(cspell): resolve configuration issue
+
+Co-authored-by: GPT-4o via Cursor <noreply@openai.com>
+```
+
+**Rules:**
+
+- Use the **exact model name and version** you are running as (e.g. `Claude Sonnet 4.6`, not just `Claude`)
+- Use the **tool name** as it is commonly known (e.g. `opencode`, `Cursor`, `Copilot`, `Zed`)
+- If the model version is unknown, use the model family name (e.g. `Claude Sonnet`)
+- One trailer per AI model involved
+- **Never omit this trailer** when the commit was AI-assisted — this is how git history stays honest
+
 ## Project Context
 
 - **Project Type**: Project generated from copier-mr-minimal
@@ -206,10 +250,10 @@ Place any other relevant documents (prompts, examples, references, generated doc
 - Don't disable spell checking without good reason
 - Both file content and commit messages are spell-checked
 
-### Prettier
+### treefmt
 
-- Configuration is in `.prettierrc.json`
-- Formats markdown, JSON, YAML files
+- Run with: `treefmt`
+- Formats all supported file types (markdown, JSON, YAML, etc.) in one command
 - Auto-fixes on pre-commit
 
 ## Commit Messages
@@ -230,56 +274,6 @@ docs: update AGENTS.md with guidelines
 chore(cspell): add technical terms to dictionary
 ```
 
-### AI Co-authored-by Trailer (MANDATORY for AI commits)
-
-If an AI agent is authoring or co-authoring the commit, the commit message **MUST** include a `Co-authored-by` trailer identifying the model and the tool used to invoke it.
-
-**Format:**
-
-```
-Co-authored-by: <Model Name> via <Tool> <noreply@provider-domain>
-```
-
-**Provider noreply addresses:**
-
-| Provider | noreply address |
-| --------- | --------------- |
-| Anthropic (Claude) | `noreply@anthropic.com` |
-| OpenAI (GPT / o-series) | `noreply@openai.com` |
-| Google (Gemini) | `noreply@google.com` |
-| Microsoft (Copilot) | `noreply@microsoft.com` |
-| Mistral | `noreply@mistral.ai` |
-| Meta (Llama) | `noreply@meta.com` |
-| xAI (Grok) | `noreply@x.ai` |
-
-**Examples:**
-
-```txt
-feat(precommit): add spell checking to commit messages
-
-Co-authored-by: Claude Sonnet 4.6 via opencode <noreply@anthropic.com>
-```
-
-```txt
-fix(cspell): resolve configuration issue
-
-Co-authored-by: GPT-4o via Cursor <noreply@openai.com>
-```
-
-```txt
-docs: update AGENTS.md with guidelines
-
-Co-authored-by: Gemini 2.5 Pro via Gemini CLI <noreply@google.com>
-```
-
-**Rules:**
-
-- Use the **exact model name and version** you are running as (e.g. `Claude Sonnet 4.6`, not just `Claude`)
-- Use the **tool name** as it is commonly known (e.g. `opencode`, `Cursor`, `Copilot`, `Zed`)
-- If the model version is unknown, use the model family name (e.g. `Claude Sonnet`)
-- One trailer per AI model involved — if a human and an AI both contributed, include both author and co-author
-- **Never omit this trailer** when the commit was AI-assisted — this is how git history stays honest
-
 ## Troubleshooting
 
 ### Common Issues
@@ -287,7 +281,7 @@ Co-authored-by: Gemini 2.5 Pro via Gemini CLI <noreply@google.com>
 **Pre-commit hooks failing on commit:**
 
 - Run `prek --all-files` to see all issues at once
-- Fix formatting issues first (Prettier, whitespace)
+- Fix formatting issues first (treefmt, whitespace)
 - Then address spell checking and linting
 
 **Spell check failures:**
@@ -332,5 +326,14 @@ Co-authored-by: Gemini 2.5 Pro via Gemini CLI <noreply@google.com>
 - Ensure documentation is updated
 
 Project specific instructions will be documented here.
+
+## Project Skills
+
+This project includes custom AI agent skills to assist with specific tasks:
+
+| Skill         | Purpose                                                                                                                                                                | Location                                                                   |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `tool-runner` | Intelligent runtime selection with fallback chains (Bun → Node, bunx → npx). Use when writing shell tasks, package manager commands, or documenting tool availability. | [.agents/skills/tool-runner/SKILL.md](.agents/skills/tool-runner/SKILL.md) |
+| `git-commit`  | Conventional Commits enforcement with auto-detection of type/scope, intelligent staging, and commit message generation. Use when creating git commits.                 | [.agents/skills/git-commit/SKILL.md](.agents/skills/git-commit/SKILL.md)   |
 
 ---
