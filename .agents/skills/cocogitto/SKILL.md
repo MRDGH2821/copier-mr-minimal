@@ -9,6 +9,10 @@ metadata:
   version: "1.0"
 ---
 
+# Cocogitto
+
+This skill helps you to use cocogitto tool to create conventional commits.
+
 ## When to Use
 
 - Creating any git commit in a project that has `cog.toml`

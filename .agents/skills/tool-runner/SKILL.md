@@ -12,6 +12,8 @@ metadata:
   version: "1.0"
 ---
 
+# Tool runner
+
 ## When to Use
 
 Use this skill when:
@@ -29,7 +31,7 @@ Use this skill when:
 
 **Primary → Secondary → Tertiary (with clear messaging)**
 
-```
+```txt
 bun → node
 bunx → npx → pnpm → npm (in that order)
 ```
@@ -279,7 +281,7 @@ status || exit 1
 
 ### "Which tool should I recommend for X?"
 
-```
+```txt
 Task: Run one-off package/script
   → Use: bunx (if available) or npx
   → Pattern: command -v bunx >/dev/null 2>&1 && bunx ... || npx ...

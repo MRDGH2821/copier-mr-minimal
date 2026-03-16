@@ -8,7 +8,7 @@ This file provides guidance for AI coding assistants working with this project.
 
 **Format:**
 
-```
+```txt
 Co-authored-by: <Model Name> via <Tool> <noreply@provider-domain>
 ```
 

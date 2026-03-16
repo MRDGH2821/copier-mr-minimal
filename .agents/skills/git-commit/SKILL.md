@@ -13,7 +13,7 @@ Create standardized, semantic git commits using the Conventional Commits specifi
 
 ## Conventional Commit Format
 
-```
+```txt
 <type>[optional scope]: <description>
 
 [optional body]
@@ -39,7 +39,7 @@ Create standardized, semantic git commits using the Conventional Commits specifi
 
 ## Breaking Changes
 
-```
+```txt
 # Exclamation mark after type/scope
 feat!: remove deprecated endpoint
 
