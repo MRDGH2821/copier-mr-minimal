@@ -251,9 +251,8 @@ Co-authored-by: GPT-4o via Cursor <noreply@openai.com>
 
 ### treefmt
 
-- Run with: `treefmt`
-- Formats all supported file types (markdown, JSON, YAML, etc.) in one command
-- Auto-fixes on pre-commit
+- Run `treefmt -vv` before every commit to format all supported file types (markdown, JSON, YAML, etc.)
+- Must be run manually — it is not a pre-commit hook
 
 ## Commit Messages
 
