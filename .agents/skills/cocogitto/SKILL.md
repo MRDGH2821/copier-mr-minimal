@@ -70,6 +70,10 @@ cog commit feat "add dark mode" -u          # git add -u (tracked only)
 cog commit feat "add dark mode" -a          # git add .  (all including untracked)
 ```
 
+### Edit flag
+
+`--edit` opens an interactive terminal editor. This may not be accessible to agents as it requires an interactive TTY.
+
 ### Trailers only (no prose body) — use `cog commit` with `$'...'`
 
 Use ANSI-C quoting to embed a blank line and trailer inside the `MESSAGE` arg:
