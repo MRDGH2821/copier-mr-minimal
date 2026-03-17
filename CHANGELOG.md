@@ -4,6 +4,26 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.12.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.11.0..v0.12.0) - 2026-03-17
+
+### Bug Fixes
+
+- remove redundancies from AGENTS.md files - ([aaeccf2](https://github.com/MRDGH2821/copier-mr-minimal/commit/aaeccf2f2dff263c2869580c7358951e07001416)) - MRDGH2821
+
+### Documentation
+
+- remove Project Skills table from AGENTS.md files - ([175f4de](https://github.com/MRDGH2821/copier-mr-minimal/commit/175f4de0e9476a2cee363c70bb6dbc7c48e84690)) - MRDGH2821
+
+### Features
+
+- add skills in template - ([5e113fa](https://github.com/MRDGH2821/copier-mr-minimal/commit/5e113fa9f08bdd012f8634a6721d732b02542ed6)) - MRDGH2821
+
+### Ci
+
+- **(megalinter)** disable devskim - ([c5df380](https://github.com/MRDGH2821/copier-mr-minimal/commit/c5df3801ab33e984155ecfa3db3120379f8905e8)) - MRDGH2821
+
+---
+
 ## [0.11.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.10.0..v0.11.0) - 2026-03-16
 
 ### Bug Fixes
