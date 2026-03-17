@@ -113,7 +113,7 @@ Place any other relevant documents (prompts, examples, references, generated doc
 
 **Format:**
 
-```
+```txt
 Co-authored-by: <Model Name> via <Tool> <noreply@provider-domain>
 ```
 
@@ -307,15 +307,3 @@ chore(cspell): add technical terms to dictionary
 - Ensure documentation is updated
 
 Project specific instructions will be documented here.
-
-## Project Skills
-
-This project includes custom AI agent skills to assist with specific tasks:
-
-| Skill         | Purpose                                                                                                                                                                | Location                                                                   |
-| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| `tool-runner` | Intelligent runtime selection with fallback chains (Bun → Node, bunx → npx). Use when writing shell tasks, package manager commands, or documenting tool availability. | [.agents/skills/tool-runner/SKILL.md](.agents/skills/tool-runner/SKILL.md) |
-| `git-commit`  | Conventional Commits enforcement with auto-detection of type/scope, intelligent staging, and commit message generation. Use when creating git commits.                 | [.agents/skills/git-commit/SKILL.md](.agents/skills/git-commit/SKILL.md)   |
-| `cocogitto`   | Create and validate Conventional Commits using the `cog` CLI. Covers simple commits, breaking changes, multiline messages, and scope validation via `cog.toml`.        | [.agents/skills/cocogitto/SKILL.md](.agents/skills/cocogitto/SKILL.md)     |
-
----
