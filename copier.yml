@@ -20,9 +20,9 @@ _exclude:
 _min_copier_version: 9.0.0
 _subdirectory: template
 _tasks:
-  - command: 'command -v cocogitto > /dev/null 2>&1 && echo "✓ cocogitto is installed" || echo "✗ cocogitto not found — install with: cargo install --locked cocogitto"'
-  - command: 'command -v prek > /dev/null 2>&1 && echo "✓ prek is installed" || echo "✗ prek not found — install with: uv tool install prek"'
-  - command: command -v treefmt > /dev/null 2>&1 && echo "✓ treefmt is installed" || echo "✗ treefmt not found — install via your package manager or nix"
+  - command: command -v cocogitto > /dev/null 2>&1 && echo "✓ cocogitto is installed" || echo "✗ cocogitto not found!"
+  - command: command -v prek > /dev/null 2>&1 && echo "✓ prek is installed" || echo "✗ prek not found!"
+  - command: command -v treefmt > /dev/null 2>&1 && echo "✓ treefmt is installed" || echo "✗ treefmt not found!"
 ci:
   choices:
     GitHub CI: github
