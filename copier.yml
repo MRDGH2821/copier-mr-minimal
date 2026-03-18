@@ -30,10 +30,6 @@ ci:
   default: github
   help: What Continuous Integration service do you want to use?
   type: str
-git_repo_url:
-  help: Enter the Git repository URL (e.g., https://github.com/user/repo).
-  type: str
-  validator: "{% if not (git_repo_url | regex_search('^https://')) %} git_repo_url must be an HTTPS URL (e.g., https://github.com/user/repo). {% endif %}"
 project_name:
   help: Enter the name of your project.
   type: str
