@@ -20,7 +20,7 @@ _exclude:
 _min_copier_version: 9.0.0
 _subdirectory: template
 _tasks:
-  - command: command -v cocogitto > /dev/null 2>&1 && echo "✓ cocogitto is installed" || echo "✗ cocogitto not found!"
+  - command: command -v cog > /dev/null 2>&1 && echo "✓ cocogitto is installed" || echo "✗ cocogitto not found!"
   - command: command -v prek > /dev/null 2>&1 && echo "✓ prek is installed" || echo "✗ prek not found!"
   - command: command -v treefmt > /dev/null 2>&1 && echo "✓ treefmt is installed" || echo "✗ treefmt not found!"
 ci:
