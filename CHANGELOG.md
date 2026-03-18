@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.12.1](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.12.0..v0.12.1) - 2026-03-18
+
+### Bug Fixes
+
+- **(copier)** convert template into regular file - ([4f1c53b](https://github.com/MRDGH2821/copier-mr-minimal/commit/4f1c53b5c77823b3536dff87a8dc88b40c26388e)) - MRDGH2821
+- **(copier)** fix command name - ([9d78970](https://github.com/MRDGH2821/copier-mr-minimal/commit/9d7897076cf5a4f295180836edb50730453bffef)) - MRDGH2821
+- enforce HTTPS-only for git_repo_url validator - ([a558b47](https://github.com/MRDGH2821/copier-mr-minimal/commit/a558b476b1e7955d76dcebb09c0402f2e451327b)) - MRDGH2821
+- modify post-generation tasks to check tool availability only - ([79ff7df](https://github.com/MRDGH2821/copier-mr-minimal/commit/79ff7df5ed91cc047dd6c494062ef1acdff87492)) - MRDGH2821
+
+### Miscellaneous Chores
+
+- **(copier)** modify the outputs - ([fbbc380](https://github.com/MRDGH2821/copier-mr-minimal/commit/fbbc380a4cd893ea2fa71d1f2ca385dcb482bab2)) - MRDGH2821
+- **(megalinter)** add schema link - ([f2680e9](https://github.com/MRDGH2821/copier-mr-minimal/commit/f2680e9476675d3c1de7bca4e02194451a9245d7)) - MRDGH2821
+
+---
+
 ## [0.12.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.11.0..v0.12.0) - 2026-03-17
 
 ### Bug Fixes
