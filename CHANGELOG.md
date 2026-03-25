@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.13.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.12.1..v0.13.0) - 2026-03-25
+
+### Features
+
+- **(treefmt)** use smt to sort markdown tables - ([113080b](https://github.com/MRDGH2821/copier-mr-minimal/commit/113080b6171e404f36a0d9d61cb81c09015201e0)) - MRDGH2821
+
+---
+
 ## [0.12.1](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.12.0..v0.12.1) - 2026-03-18
 
 ### Bug Fixes
