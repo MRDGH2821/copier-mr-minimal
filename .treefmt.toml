@@ -44,7 +44,16 @@ priority = 1
 command = "bunx"
 excludes = []
 # tombi: format.rules.array-values-order = "ascending"
-includes = ["*.js", "*.json", "*.md", "*.toml", "*.ts", "*.yaml", "*.yml"]
+includes = [
+  "*.js",
+  "*.json",
+  "*.jsonc",
+  "*.md",
+  "*.toml",
+  "*.ts",
+  "*.yaml",
+  "*.yml"
+]
 options = ["prettier", "--log-level", "debug", "--write"]
 priority = 100
 
