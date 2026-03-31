@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.14.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.13.0..v0.14.0) - 2026-03-31
+
+### Bug Fixes
+
+- skip skills-lock.json if agents is not used - ([f7ca86f](https://github.com/MRDGH2821/copier-mr-minimal/commit/f7ca86f37418bcc6c6c394752a8c50a8c3d05b9f)) - MRDGH2821
+
+### Features
+
+- **(treefmt)** format jsonc - ([d942a87](https://github.com/MRDGH2821/copier-mr-minimal/commit/d942a873abad20b8cc8a2ee2534bc0c870746588)) - MRDGH2821
+- remove 2 skills - ([b279c37](https://github.com/MRDGH2821/copier-mr-minimal/commit/b279c37b8f8afe84ac3ef3f58e0145d645bc501a)) - MRDGH2821
+
+---
+
 ## [0.13.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.12.1..v0.13.0) - 2026-03-25
 
 ### Features
