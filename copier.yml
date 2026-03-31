@@ -5,6 +5,7 @@ _exclude:
   - "{% if ci != 'gitlab' %}.gitlab-ci.yml{% endif %}"
   - "{% if not use_agents %}.agents{% endif %}"
   - "{% if not use_agents %}AGENTS.md{% endif %}"
+  - "{% if not use_agents %}skills-lock.json{% endif %}"
   - "{% if not use_flake %}.envrc{% endif %}"
   - "{% if not use_flake %}flake.nix{% endif %}"
   - "{% if not use_flake %}flake.nix.jinja{% endif %}"
