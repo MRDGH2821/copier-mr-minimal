@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.15.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.14.0..v0.15.0) - 2026-04-08
+
+### Bug Fixes
+
+- ignore devenv & direnv dirs - ([354d66b](https://github.com/MRDGH2821/copier-mr-minimal/commit/354d66bc53a5b87aebeb2f17cb384cc8aec499c0)) - MRDGH2821
+
+### Features
+
+- **(treefmt)** update schema and formatters - ([a103921](https://github.com/MRDGH2821/copier-mr-minimal/commit/a103921036b27389956f2abaa2d9f7454a8f1835)) - MRDGH2821
+- **(treefmt)** add more file types to format - ([450aa29](https://github.com/MRDGH2821/copier-mr-minimal/commit/450aa29ff7bc3ebdd3c4f3f2c053abbf2c131352)) - MRDGH2821
+
+---
+
 ## [0.14.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.13.0..v0.14.0) - 2026-03-31
 
 ### Bug Fixes
