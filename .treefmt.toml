@@ -42,12 +42,18 @@ command = "bunx"
 excludes = []
 # tombi: format.rules.array-values-order = "ascending"
 includes = [
+  "*.cjs",
+  "*.cts",
   "*.js",
   "*.json",
   "*.jsonc",
+  "*.jsx",
   "*.md",
+  "*.mjs",
+  "*.mts",
   "*.toml",
   "*.ts",
+  "*.tsx",
   "*.yaml",
   "*.yml"
 ]
