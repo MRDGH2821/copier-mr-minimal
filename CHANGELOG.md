@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.15.1](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.15.0..v0.15.1) - 2026-04-17
+
+### Bug Fixes
+
+- set no-positional-arg-support true for prettypst - ([ad974a6](https://github.com/MRDGH2821/copier-mr-minimal/commit/ad974a608ceb20ac4dc0ceb806364a71a63dbbb8)) - MRDGH2821
+
+### Documentation
+
+- add readme - ([3e2f721](https://github.com/MRDGH2821/copier-mr-minimal/commit/3e2f721c79566d5a84e2ffd363533caa60f194a5)) - MRDGH2821
+
+---
+
 ## [0.15.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.14.0..v0.15.0) - 2026-04-08
 
 ### Bug Fixes
