@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.15.3](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.15.2..v0.15.3) - 2026-04-21
+
+### Bug Fixes
+
+- fix bracket - ([ff8c895](https://github.com/MRDGH2821/copier-mr-minimal/commit/ff8c89592dd59efd746e38432ad83184d0a68a57)) - MRDGH2821
+
+### Miscellaneous Chores
+
+- **(cspell)** add words - ([c6817d6](https://github.com/MRDGH2821/copier-mr-minimal/commit/c6817d6e15f8cf7f7dcf8abefef09925e9d7c9ee)) - MRDGH2821
+
+---
+
 ## [0.15.2](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.15.1..v0.15.2) - 2026-04-21
 
 ### Bug Fixes
