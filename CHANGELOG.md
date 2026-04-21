@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.15.2](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.15.1..v0.15.2) - 2026-04-21
+
+### Bug Fixes
+
+- fix copier badge - ([a81978d](https://github.com/MRDGH2821/copier-mr-minimal/commit/a81978d9201b91ea1959fefefb96deab1b8da7b2)) - MRDGH2821
+
+---
+
 ## [0.15.1](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.15.0..v0.15.1) - 2026-04-17
 
 ### Bug Fixes
