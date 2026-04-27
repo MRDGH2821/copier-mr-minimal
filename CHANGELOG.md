@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.16.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.15.3..v0.16.0) - 2026-04-27
+
+### Features
+
+- update skills - ([6f5fb91](https://github.com/MRDGH2821/copier-mr-minimal/commit/6f5fb919173bef09159283ef11c330f60c8c9789)) - MRDGH2821
+- add question for AI skills - ([4db5131](https://github.com/MRDGH2821/copier-mr-minimal/commit/4db51318d6d6c2702b84ff9af804a4ee528a4617)) - MRDGH2821
+
+### Miscellaneous Chores
+
+- notify user with skill suggestions - ([29dc41c](https://github.com/MRDGH2821/copier-mr-minimal/commit/29dc41cb57b89c005ef48a01024e22482bf1c9e3)) - MRDGH2821
+
+---
+
 ## [0.15.3](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.15.2..v0.15.3) - 2026-04-21
 
 ### Bug Fixes
