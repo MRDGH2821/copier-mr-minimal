@@ -24,7 +24,7 @@ _tasks:
   - command: command -v cog > /dev/null 2>&1 && echo "✓ cocogitto is installed" || echo "✗ cocogitto not found!"
   - command: command -v prek > /dev/null 2>&1 && echo "✓ prek is installed" || echo "✗ prek not found!"
   - command: command -v treefmt > /dev/null 2>&1 && echo "✓ treefmt is installed" || echo "✗ treefmt not found!"
-  - "Agent Skills to install: \nbunx add https://github.com/Leonxlnx/taste-skill\n"
+  - command: echo "Agent Skills to install \nbunx add https://github.com/Leonxlnx/taste-skill"
 ci:
   choices:
     GitHub CI: github
