@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.16.2](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.16.1..v0.16.2) - 2026-05-05
+
+### Bug Fixes
+
+- **(treefmt)** fix syntax & options - ([39a2d95](https://github.com/MRDGH2821/copier-mr-minimal/commit/39a2d95cc782397992217f62664d81cfafa785d1)) - MRDGH2821
+
+---
+
 ## [0.16.1](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.16.0..v0.16.1) - 2026-05-01
 
 ### Bug Fixes
