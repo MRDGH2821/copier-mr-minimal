@@ -1,7 +1,7 @@
 ---
 _exclude:
   - "*.py[co]"
-  - "{% if ci != 'github' %}.github/workflows{% endif %}"
+  - "{% if ci != 'github' %}.github{% endif %}"
   - "{% if ci != 'gitlab' %}.gitlab-ci.yml{% endif %}"
   - "{% if not use_agents %}AGENTS.md{% endif %}"
   - "{% if not use_flake %}.envrc{% endif %}"
