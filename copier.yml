@@ -21,10 +21,14 @@ _exclude:
 _min_copier_version: 9.0.0
 _subdirectory: template
 _tasks:
-  - command: command -v cog > /dev/null 2>&1 && echo "✓ cocogitto is installed" || echo "✗ cocogitto not found!"
-  - command: command -v prek > /dev/null 2>&1 && echo "✓ prek is installed" || echo "✗ prek not found!"
-  - command: command -v treefmt > /dev/null 2>&1 && echo "✓ treefmt is installed" || echo "✗ treefmt not found!"
-  - command: echo "Agent Skills to install \nbunx add https://github.com/Leonxlnx/taste-skill"
+  - command: command -v cog > /dev/null 2>&1 && echo "✓ Cocogitto is installed" || echo "✗ Cocogitto not found! Please install from here - https://docs.cocogitto.io/"
+    when: "{{ _copier_operation == 'copy' }}"
+  - command: command -v prek > /dev/null 2>&1 && prek install --install-hooks || echo "✗ Prek not found! Please install from here - https://prek.j178.dev/"
+    when: "{{ _copier_operation == 'copy' }}"
+  - command: command -v treefmt > /dev/null 2>&1 && treefmt || echo "✗ Treefmt not found! Please install from here - https://treefmt.com/"
+    when: "{{ _copier_operation == 'copy' }}"
+  - command: echo "Agent Skills to install bunx add https://github.com/Leonxlnx/taste-skill"
+    when: "{{ _copier_operation == 'copy' }}"
 ci:
   choices:
     GitHub CI: github
