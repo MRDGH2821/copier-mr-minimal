@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.18.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.17.0..v0.18.0) - 2026-05-19
+
+### Features
+
+- update hooks - ([ede3bc2](https://github.com/MRDGH2821/copier-mr-minimal/commit/ede3bc2eebe2e058cd68d7041ce2a33bf5f1600d)) - MRDGH2821
+
+---
+
+## [0.17.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.16.2..v0.17.0) - 2026-05-19
+
+### Features
+
+- don't copy entire github folder if not selected - ([0b7be77](https://github.com/MRDGH2821/copier-mr-minimal/commit/0b7be7712a168e3f65d36c0796275ccf3cef0b88)) - MRDGH2821
+- execute tasks & limit execution scope - ([98eef47](https://github.com/MRDGH2821/copier-mr-minimal/commit/98eef478523eb5827bcadaae60c419ae8a5b6b1e)) - MRDGH2821
+
+---
+
 ## [0.16.2](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.16.1..v0.16.2) - 2026-05-05
 
 ### Bug Fixes
