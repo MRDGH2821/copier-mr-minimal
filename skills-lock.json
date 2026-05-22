@@ -1,32 +1,8 @@
 {
   "skills": {
-    "caveman": {
-      "computedHash": "a818cdc41dcfaa50dd891c5cb5e5705968338de02e7e37949ca56e8c30ad4176",
-      "source": "JuliusBrussee/caveman",
-      "sourceType": "github"
-    },
-    "caveman-commit": {
-      "computedHash": "76994afc39b68f4dbe098df76262b68d9928a23ee0f6aaebb11ba0e0f55bfa13",
-      "source": "JuliusBrussee/caveman",
-      "sourceType": "github"
-    },
-    "caveman-compress": {
-      "computedHash": "300fb8578258161e1752a2a4142a7e9ff178c960bcb83b84422e2987421f33bf",
-      "source": "JuliusBrussee/caveman",
-      "sourceType": "github"
-    },
-    "caveman-help": {
-      "computedHash": "3cd5f7d3f88c8ef7b16a6555dc61f5a11b14151386697609ab6887ab8b5f059d",
-      "source": "JuliusBrussee/caveman",
-      "sourceType": "github"
-    },
-    "caveman-review": {
-      "computedHash": "1dc59e7e896bc9dd449e43116c4c8b2e656b88c3370df91848330c17347af3d0",
-      "source": "JuliusBrussee/caveman",
-      "sourceType": "github"
-    },
     "find-skills": {
-      "computedHash": "d31e234f0c90694a670222cdd1dafa853e051d7066beda389f1097c22dadd461",
+      "computedHash": "9e1c8b3103f92fa8092568a44fe64858de7c5c9dc65ce4bea8f168080e889cfd",
+      "skillPath": "skills/find-skills/SKILL.md",
       "source": "vercel-labs/skills",
       "sourceType": "github"
     }
