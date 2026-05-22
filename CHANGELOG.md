@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.20.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.19.1..v0.20.0) - 2026-05-22
+
+### Features
+
+- **(cocogitto)** add pre bump hook to format changelog - ([94ee82a](https://github.com/MRDGH2821/copier-mr-minimal/commit/94ee82a52c09d44df687961de17154a56a9443c7)) - MRDGH2821
+
+### Style
+
+- format files - ([8c4bf4a](https://github.com/MRDGH2821/copier-mr-minimal/commit/8c4bf4ae8cb868f54970868bfb062089179ebc13)) - MRDGH2821
+
+---
+
 ## [0.19.1](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.19.0..v0.19.1) - 2026-05-22
 
 ### Bug Fixes
