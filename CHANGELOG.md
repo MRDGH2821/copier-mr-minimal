@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.21.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.20.0..v0.21.0) - 2026-05-22
+
+### Features
+
+- **(copier)** add tasks & questions - ([e435ca2](https://github.com/MRDGH2821/copier-mr-minimal/commit/e435ca2b0995671dcc0189375ad46d2b942c1ddd)) - MRDGH2821
+
+### Miscellaneous Chores
+
+- remove caveman skill - ([4366815](https://github.com/MRDGH2821/copier-mr-minimal/commit/436681587cf6d62f02a9b29545d73acc821c69e5)) - MRDGH2821
+
+---
+
 ## [0.20.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.19.1..v0.20.0) - 2026-05-22
 
 ### Features
