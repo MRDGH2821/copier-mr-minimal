@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 ---
+
 ## [0.19.1](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.19.0..v0.19.1) - 2026-05-22
 
 ### Bug Fixes
@@ -14,6 +15,7 @@ All notable changes to this project will be documented in this file. See [conven
 - format files - ([dd5dccf](https://github.com/MRDGH2821/copier-mr-minimal/commit/dd5dccf0a4a435ddcfcfc672116875d9abf65819)) - MRDGH2821
 
 ---
+
 ## [0.19.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.18.0..v0.19.0) - 2026-05-22
 
 ### Bug Fixes
@@ -31,6 +33,7 @@ All notable changes to this project will be documented in this file. See [conven
 - format files - ([5bb1076](https://github.com/MRDGH2821/copier-mr-minimal/commit/5bb1076578cf7ffec6ff20bdb5777b604bbd0e1e)) - MRDGH2821
 
 ---
+
 ## [0.18.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.17.0..v0.18.0) - 2026-05-19
 
 ### Features
@@ -38,6 +41,7 @@ All notable changes to this project will be documented in this file. See [conven
 - update hooks - ([ede3bc2](https://github.com/MRDGH2821/copier-mr-minimal/commit/ede3bc2eebe2e058cd68d7041ce2a33bf5f1600d)) - MRDGH2821
 
 ---
+
 ## [0.17.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.16.2..v0.17.0) - 2026-05-19
 
 ### Features
@@ -46,6 +50,7 @@ All notable changes to this project will be documented in this file. See [conven
 - execute tasks & limit execution scope - ([98eef47](https://github.com/MRDGH2821/copier-mr-minimal/commit/98eef478523eb5827bcadaae60c419ae8a5b6b1e)) - MRDGH2821
 
 ---
+
 ## [0.16.2](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.16.1..v0.16.2) - 2026-05-05
 
 ### Bug Fixes
@@ -53,6 +58,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(treefmt)** fix syntax & options - ([39a2d95](https://github.com/MRDGH2821/copier-mr-minimal/commit/39a2d95cc782397992217f62664d81cfafa785d1)) - MRDGH2821
 
 ---
+
 ## [0.16.1](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.16.0..v0.16.1) - 2026-05-01
 
 ### Bug Fixes
@@ -60,6 +66,7 @@ All notable changes to this project will be documented in this file. See [conven
 - fix syntax - ([a996fe2](https://github.com/MRDGH2821/copier-mr-minimal/commit/a996fe262fe13e0dea43f1f05aa57b0c2e0e2a48)) - MRDGH2821
 
 ---
+
 ## [0.16.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.15.3..v0.16.0) - 2026-04-27
 
 ### Features
@@ -72,6 +79,7 @@ All notable changes to this project will be documented in this file. See [conven
 - notify user with skill suggestions - ([29dc41c](https://github.com/MRDGH2821/copier-mr-minimal/commit/29dc41cb57b89c005ef48a01024e22482bf1c9e3)) - MRDGH2821
 
 ---
+
 ## [0.15.3](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.15.2..v0.15.3) - 2026-04-21
 
 ### Bug Fixes
@@ -83,6 +91,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(cspell)** add words - ([c6817d6](https://github.com/MRDGH2821/copier-mr-minimal/commit/c6817d6e15f8cf7f7dcf8abefef09925e9d7c9ee)) - MRDGH2821
 
 ---
+
 ## [0.15.2](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.15.1..v0.15.2) - 2026-04-21
 
 ### Bug Fixes
@@ -90,6 +99,7 @@ All notable changes to this project will be documented in this file. See [conven
 - fix copier badge - ([a81978d](https://github.com/MRDGH2821/copier-mr-minimal/commit/a81978d9201b91ea1959fefefb96deab1b8da7b2)) - MRDGH2821
 
 ---
+
 ## [0.15.1](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.15.0..v0.15.1) - 2026-04-17
 
 ### Bug Fixes
@@ -101,6 +111,7 @@ All notable changes to this project will be documented in this file. See [conven
 - add readme - ([3e2f721](https://github.com/MRDGH2821/copier-mr-minimal/commit/3e2f721c79566d5a84e2ffd363533caa60f194a5)) - MRDGH2821
 
 ---
+
 ## [0.15.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.14.0..v0.15.0) - 2026-04-08
 
 ### Bug Fixes
@@ -113,6 +124,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(treefmt)** add more file types to format - ([450aa29](https://github.com/MRDGH2821/copier-mr-minimal/commit/450aa29ff7bc3ebdd3c4f3f2c053abbf2c131352)) - MRDGH2821
 
 ---
+
 ## [0.14.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.13.0..v0.14.0) - 2026-03-31
 
 ### Bug Fixes
@@ -125,6 +137,7 @@ All notable changes to this project will be documented in this file. See [conven
 - remove 2 skills - ([b279c37](https://github.com/MRDGH2821/copier-mr-minimal/commit/b279c37b8f8afe84ac3ef3f58e0145d645bc501a)) - MRDGH2821
 
 ---
+
 ## [0.13.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.12.1..v0.13.0) - 2026-03-25
 
 ### Features
@@ -132,6 +145,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(treefmt)** use smt to sort markdown tables - ([113080b](https://github.com/MRDGH2821/copier-mr-minimal/commit/113080b6171e404f36a0d9d61cb81c09015201e0)) - MRDGH2821
 
 ---
+
 ## [0.12.1](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.12.0..v0.12.1) - 2026-03-18
 
 ### Bug Fixes
@@ -147,6 +161,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(megalinter)** add schema link - ([f2680e9](https://github.com/MRDGH2821/copier-mr-minimal/commit/f2680e9476675d3c1de7bca4e02194451a9245d7)) - MRDGH2821
 
 ---
+
 ## [0.12.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.11.0..v0.12.0) - 2026-03-17
 
 ### Bug Fixes
@@ -166,6 +181,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(megalinter)** disable devskim - ([c5df380](https://github.com/MRDGH2821/copier-mr-minimal/commit/c5df3801ab33e984155ecfa3db3120379f8905e8)) - MRDGH2821
 
 ---
+
 ## [0.11.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.10.0..v0.11.0) - 2026-03-16
 
 ### Bug Fixes
@@ -212,6 +228,7 @@ All notable changes to this project will be documented in this file. See [conven
 - format files - ([52f387a](https://github.com/MRDGH2821/copier-mr-minimal/commit/52f387aefd7e3e3b446d9823cbef4602e8c7b5cf)) - MRDGH2821
 
 ---
+
 ## [0.10.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.9.1..v0.10.0) - 2026-03-16
 
 ### Features
@@ -219,6 +236,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(treefmt)** add formatter for ignore files - ([de11990](https://github.com/MRDGH2821/copier-mr-minimal/commit/de11990917a1e5f7adebb7397203a16cecb3ce13)) - MRDGH2821
 
 ---
+
 ## [0.9.1](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.9.0..v0.9.1) - 2026-03-16
 
 ### Bug Fixes
@@ -230,6 +248,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(cspell)** update words - ([fa05d6a](https://github.com/MRDGH2821/copier-mr-minimal/commit/fa05d6a1e3706931f4e2e0f780be758b628f7468)) - MRDGH2821
 
 ---
+
 ## [0.9.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.8.1..v0.9.0) - 2026-03-10
 
 ### Features
@@ -237,6 +256,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(treefmt)** add typstyle formatter - ([ec6b682](https://github.com/MRDGH2821/copier-mr-minimal/commit/ec6b68288f55e7507b680630b0d64fb01bf80b59)) - MRDGH2821
 
 ---
+
 ## [0.8.1](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.8.0..v0.8.1) - 2026-03-10
 
 ### Bug Fixes
@@ -244,6 +264,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(treefmt)** allow missing formatters - ([466c1b4](https://github.com/MRDGH2821/copier-mr-minimal/commit/466c1b48ae44e55f69b27c66e4e5da9dbd075a8a)) - MRDGH2821
 
 ---
+
 ## [0.8.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.7.1..v0.8.0) - 2026-03-09
 
 ### Features
@@ -264,6 +285,7 @@ All notable changes to this project will be documented in this file. See [conven
 - format file - ([b455f56](https://github.com/MRDGH2821/copier-mr-minimal/commit/b455f5609568fc01ae348a9df5090b7b75c8f6a1)) - MRDGH2821
 
 ---
+
 ## [0.7.1](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.7.0..v0.7.1) - 2026-03-05
 
 ### Bug Fixes
@@ -271,6 +293,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(cocogitto)** migrate config - ([0943af9](https://github.com/MRDGH2821/copier-mr-minimal/commit/0943af948ed09eceb0692cbe6e4aa0fd5e459122)) - MRDGH2821
 
 ---
+
 ## [0.7.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.6.0..v0.7.0) - 2026-02-27
 
 ### Features
@@ -278,6 +301,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(treefmt)** add schema link - ([78da12e](https://github.com/MRDGH2821/copier-mr-minimal/commit/78da12e397f8c4ea227f163ec17ce8b3def98569)) - MRDGH2821
 
 ---
+
 ## [0.6.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.5.0..v0.6.0) - 2026-02-24
 
 ### Features
@@ -286,6 +310,7 @@ All notable changes to this project will be documented in this file. See [conven
 - change syntax of formatters - ([cc4a433](https://github.com/MRDGH2821/copier-mr-minimal/commit/cc4a433a50499a24a04b6c8ba4f5762fdb38a8fc)) - MRDGH2821
 
 ---
+
 ## [0.5.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.4.0..v0.5.0) - 2026-02-20
 
 ### Bug Fixes
@@ -311,6 +336,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(megalinter)** add pre run commands - ([35fb6d3](https://github.com/MRDGH2821/copier-mr-minimal/commit/35fb6d3546f53edb75bccf32ce9d24591e4c3b94)) - MRDGH2821
 
 ---
+
 ## [0.4.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.3.0..v0.4.0) - 2026-02-15
 
 ### Features
@@ -326,6 +352,7 @@ All notable changes to this project will be documented in this file. See [conven
 - format files - ([63cf11a](https://github.com/MRDGH2821/copier-mr-minimal/commit/63cf11adc8ab9ac3a964945d886554a26d8f07aa)) - MRDGH2821
 
 ---
+
 ## [0.3.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.2.0..v0.3.0) - 2026-02-07
 
 ### Features
@@ -343,6 +370,7 @@ All notable changes to this project will be documented in this file. See [conven
 - convert prettier & plugins to dev deps - ([20ccb78](https://github.com/MRDGH2821/copier-mr-minimal/commit/20ccb782db6ab5ddeffe2b208dd989c1402fa34f)) - MRDGH2821
 
 ---
+
 ## [0.2.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.1.0..v0.2.0) - 2026-02-04
 
 ### Bug Fixes
@@ -359,6 +387,7 @@ All notable changes to this project will be documented in this file. See [conven
 - add detailed changelog - ([434c82c](https://github.com/MRDGH2821/copier-mr-minimal/commit/434c82c83f9441b134b082be23364ec05fb6f7e6)) - MRDGH2821
 
 ---
+
 ## [0.1.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.0.18..v0.1.0) - 2026-02-04
 
 ### Bug Fixes
@@ -377,6 +406,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(cocogitto)** update config template - ([79e936e](https://github.com/MRDGH2821/copier-mr-minimal/commit/79e936eaf9d80b3f4d65ba351bf222cdef7066e9)) - MRDGH2821
 
 ---
+
 ## [0.0.18](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.0.17..v0.0.18) - 2026-02-03
 
 ### Bug Fixes
@@ -399,6 +429,7 @@ All notable changes to this project will be documented in this file. See [conven
 - sort properties - ([832f0ca](https://github.com/MRDGH2821/copier-mr-minimal/commit/832f0ca806e17b20cbc1937ec2ec0cf480148d0d)) - MRDGH2821
 
 ---
+
 ## [0.0.17](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.0.16..v0.0.17) - 2026-01-14
 
 ### Miscellaneous Chores
@@ -410,6 +441,7 @@ All notable changes to this project will be documented in this file. See [conven
 - segregate global agents setting from project specific ones - ([5f016a0](https://github.com/MRDGH2821/copier-mr-minimal/commit/5f016a0cc000a92700c5a8736a76c15d732ac2ab)) - MRDGH2821
 
 ---
+
 ## [0.0.16](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.0.15..v0.0.16) - 2026-01-13
 
 ### Miscellaneous Chores
@@ -417,6 +449,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(copier)** add .github folder in template - ([9ed081b](https://github.com/MRDGH2821/copier-mr-minimal/commit/9ed081b7cbd3a272040f2967b639da4cf801cb98)) - MRDGH2821
 
 ---
+
 ## [0.0.15](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.0.14..v0.0.15) - 2026-01-13
 
 ### Miscellaneous Chores
@@ -429,6 +462,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(pre-commit)** rename pre-commit config file - ([742090c](https://github.com/MRDGH2821/copier-mr-minimal/commit/742090ced756b8c3077b9f0492e09156b5f18aab)) - MRDGH2821
 
 ---
+
 ## [0.0.14](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.0.13..v0.0.14) - 2026-01-13
 
 ### Documentation
@@ -453,6 +487,7 @@ All notable changes to this project will be documented in this file. See [conven
 - fix linter warnings - ([ed7f889](https://github.com/MRDGH2821/copier-mr-minimal/commit/ed7f889b3e65018a17cd2359952870524e45b065)) - MRDGH2821
 
 ---
+
 ## [0.0.13](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.0.12..v0.0.13) - 2026-01-13
 
 ### Documentation
@@ -464,6 +499,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(pre-commit)** remove redundant hook type to be installed by default - ([ff65fe5](https://github.com/MRDGH2821/copier-mr-minimal/commit/ff65fe5369c32d4c5fd722e76b6adda6a671e1bf)) - MRDGH2821
 
 ---
+
 ## [0.0.12](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.0.11..v0.0.12) - 2026-01-13
 
 ### Miscellaneous Chores
@@ -471,6 +507,7 @@ All notable changes to this project will be documented in this file. See [conven
 - remove megalinter pre-commit hook & question - ([e5b19c3](https://github.com/MRDGH2821/copier-mr-minimal/commit/e5b19c3e1f064b1ff62231b4f5e8278de2013152)) - MRDGH2821
 
 ---
+
 ## [0.0.11](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.0.10..v0.0.11) - 2026-01-12
 
 ### Miscellaneous Chores
@@ -484,6 +521,7 @@ All notable changes to this project will be documented in this file. See [conven
 - sort lines - ([f27e35c](https://github.com/MRDGH2821/copier-mr-minimal/commit/f27e35cde58d0d451e68ad4b6c8a4f4b3381a429)) - MRDGH2821
 
 ---
+
 ## [0.0.10](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.0.9..v0.0.10) - 2026-01-12
 
 ### Bug Fixes
@@ -491,6 +529,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(pre-commit)** provide cspell config as arg - ([bfb2110](https://github.com/MRDGH2821/copier-mr-minimal/commit/bfb21107aee765a7bbfcde03f9a4945c06ac0042)) - MRDGH2821
 
 ---
+
 ## [0.0.9](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.0.8..v0.0.9) - 2026-01-12
 
 ### Bug Fixes
@@ -498,6 +537,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(pre-commit)** use correct args syntax - ([3b17938](https://github.com/MRDGH2821/copier-mr-minimal/commit/3b179384714a6d14d3373ff5c0c96cc5d9bc7913)) - MRDGH2821
 
 ---
+
 ## [0.0.8](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.0.7..v0.0.8) - 2026-01-12
 
 ### Bug Fixes
@@ -509,6 +549,7 @@ All notable changes to this project will be documented in this file. See [conven
 - convert ignore file into template - ([4df4e7d](https://github.com/MRDGH2821/copier-mr-minimal/commit/4df4e7de16e322b056046ce598b0bb8330d61318)) - MRDGH2821
 
 ---
+
 ## [0.0.7](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.0.6..v0.0.7) - 2026-01-12
 
 ### Miscellaneous Chores
@@ -518,6 +559,7 @@ All notable changes to this project will be documented in this file. See [conven
 - add ignore config - ([6ce4548](https://github.com/MRDGH2821/copier-mr-minimal/commit/6ce45480d905416b5c56d4f4bc17f70dee23e8f6)) - MRDGH2821
 
 ---
+
 ## [0.0.6](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.0.5..v0.0.6) - 2026-01-12
 
 ### Bug Fixes
@@ -530,6 +572,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(pre-commit)** remove megalinter commit hook - ([9e00516](https://github.com/MRDGH2821/copier-mr-minimal/commit/9e005164de6bf6ce016c1260ce9fd879dd00c571)) - MRDGH2821
 
 ---
+
 ## [0.0.5](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.0.4..v0.0.5) - 2026-01-12
 
 ### Miscellaneous Chores
@@ -537,6 +580,7 @@ All notable changes to this project will be documented in this file. See [conven
 - add prettier config - ([1b4df33](https://github.com/MRDGH2821/copier-mr-minimal/commit/1b4df3353e0c5466fd0f6c172d2e8a19d55d0eb0)) - MRDGH2821
 
 ---
+
 ## [0.0.4](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.0.3..v0.0.4) - 2026-01-11
 
 ### Miscellaneous Chores
@@ -545,6 +589,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(github)** add funding.yaml - ([a3a21be](https://github.com/MRDGH2821/copier-mr-minimal/commit/a3a21bed0b4d70e542419fdaf9752bfb1146d7be)) - MRDGH2821
 
 ---
+
 ## [0.0.3](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.0.2..v0.0.3) - 2026-01-11
 
 ### Bug Fixes
@@ -552,6 +597,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(copier)** use different file name for pre-commit config - ([d957fab](https://github.com/MRDGH2821/copier-mr-minimal/commit/d957fabc1df77495673015f3e2bcd49dec70e815)) - MRDGH2821
 
 ---
+
 ## [0.0.2](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.0.1..v0.0.2) - 2026-01-11
 
 ### Bug Fixes
@@ -570,6 +616,7 @@ All notable changes to this project will be documented in this file. See [conven
 - **(megalinter)** set top level permissions to read-all - ([c35acea](https://github.com/MRDGH2821/copier-mr-minimal/commit/c35acea726b71fa1b656f3fef75453a439c76939)) - MRDGH2821
 
 ---
+
 ## [0.0.1] - 2026-01-11
 
 ### Miscellaneous Chores
