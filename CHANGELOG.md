@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.22.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.21.0..v0.22.0) - 2026-05-27
+
+### Bug Fixes
+
+- ignore media & binary files - ([715da4a](https://github.com/MRDGH2821/copier-mr-minimal/commit/715da4a2cbe07afdd8299a01e491b4c114df1f63)) - MRDGH2821
+
+### Features
+
+- update skills list - ([d4624d1](https://github.com/MRDGH2821/copier-mr-minimal/commit/d4624d1998f957fdd9c2efec526106bd179ccd3b)) - MRDGH2821
+
+---
+
 ## [0.21.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.20.0..v0.21.0) - 2026-05-22
 
 ### Features
