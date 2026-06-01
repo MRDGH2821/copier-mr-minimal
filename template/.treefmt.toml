@@ -52,7 +52,10 @@ excludes = [
   "*.pdf",
   "*.png",
   "*.pptx",
-  "*.py"
+  "*.py",
+  "*.typ",
+  "*txt",
+  "justfile"
 ]
 includes = ["*"]
 options = ["prettier", "--log-level", "error", "--write"]
