@@ -4,6 +4,34 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.23.1](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.23.0..v0.23.1) - 2026-06-08
+
+### Bug Fixes
+
+- **(megalinter)** add linter fixes - ([e12eac3](https://github.com/MRDGH2821/copier-mr-minimal/commit/e12eac398c9846fd559fbf8aff4c972cf176d788)) - MRDGH2821
+- **(megalinter)** pin tag versions of actions - ([3ac9ed3](https://github.com/MRDGH2821/copier-mr-minimal/commit/3ac9ed3baca04298ad0a7baf38fb6f6317b520f5)) - MRDGH2821
+- **(megalinter)** change prettier lint mode - ([7d1a0b2](https://github.com/MRDGH2821/copier-mr-minimal/commit/7d1a0b2e406a40a57acbf75280be6ed376c9a0c9)) - MRDGH2821
+- **(megalinter)** use npm i --workspaces=false for prettier pre-commands - ([128a42b](https://github.com/MRDGH2821/copier-mr-minimal/commit/128a42b592e9c25a148b36c4eb2202b22f39396d)) - MRDGH2821
+
+### Miscellaneous Chores
+
+- update lock file - ([0973393](https://github.com/MRDGH2821/copier-mr-minimal/commit/09733933ba77fe2c6e98fa0c55cb8d7d91a68912)) - MRDGH2821
+- ignore paths - ([7bceb73](https://github.com/MRDGH2821/copier-mr-minimal/commit/7bceb73c9f934a64d9be67fe5e0b01aa269b6860)) - MRDGH2821
+- remove redundant workspaces - ([28c1e27](https://github.com/MRDGH2821/copier-mr-minimal/commit/28c1e2720878f3bce6f93db13ccdc753f5dc9154)) - MRDGH2821
+
+### Refactoring
+
+- convert package.json into jinja template - ([7207770](https://github.com/MRDGH2821/copier-mr-minimal/commit/72077708c229334cfc642077de21ecd47d40c22a)) - MRDGH2821
+- use global pre command - ([72539d1](https://github.com/MRDGH2821/copier-mr-minimal/commit/72539d13781f00b2a44a3c9835c206032b22a0e7)) - MRDGH2821
+
+### Ci
+
+- **(megalinter)** pin hash versions of actions - ([2ab988a](https://github.com/MRDGH2821/copier-mr-minimal/commit/2ab988a2ac39973a6287ff4f13027f3325c64152)) - MRDGH2821
+- fix prettier plugin installation by using bun - ([f6c3d09](https://github.com/MRDGH2821/copier-mr-minimal/commit/f6c3d0907b67563cb0509c2f9bcb9c9fb6e338d1)) - MRDGH2821
+- remove bun from ci - ([5e65427](https://github.com/MRDGH2821/copier-mr-minimal/commit/5e654273ce8b524b3da393e32c41448dc30fc704)) - MRDGH2821
+
+---
+
 ## [0.23.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.22.2..v0.23.0) - 2026-06-08
 
 ### Features
