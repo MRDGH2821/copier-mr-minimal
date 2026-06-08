@@ -19,6 +19,7 @@
   "version": "0.2",
   "words": [
     "anthropics",
+    "artipacked",
     "bunx",
     "cocogitto",
     "Composio",
@@ -45,6 +46,7 @@
     "tombi",
     "treefmt",
     "venv",
-    "yamlfix"
+    "yamlfix",
+    "zizmor"
   ]
 }

@@ -1,18 +1,20 @@
 ---
 # all, none, or list of linter keys
+ACTION_ZIZMOR_UNSECURED_ENV_VARIABLES:
+  - GITHUB_TOKEN
 APPLY_FIXES: all
 CLEAR_REPORT_FOLDER: true
 IGNORE_GITIGNORED_FILES: true
 JSON_PRETTIER_PRE_COMMANDS:
   - command: npm i
     continue_if_failed: true
-    cwd: root
+    cwd: workspace
     secured_env: true
     tag: default
 SHOW_ELAPSED_TIME: true
 YAML_PRETTIER_PRE_COMMANDS:
   - command: npm i
     continue_if_failed: true
-    cwd: root
+    cwd: workspace
     secured_env: true
     tag: default
