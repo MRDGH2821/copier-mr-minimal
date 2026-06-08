@@ -8,10 +8,13 @@
     "**/vscode-extension/**",
     ".vscode",
     ".zed",
+    "megalinter",
     "megalinter-reports",
-    "package-lock.json"
+    "package-lock.json",
+    "report"
   ],
   "language": "en,en-GB",
+  "noConfigSearch": true,
   "useGitignore": true,
   "version": "0.2",
   "words": [
@@ -27,10 +30,12 @@
     "ggshield",
     "inital",
     "KICS",
+    "megalinter",
     "mrdgh",
     "nixfmt",
     "nixpkgs",
     "otbs",
+    "oxsecurity",
     "pkgs",
     "prek",
     "pycache",
