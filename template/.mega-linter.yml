@@ -5,6 +5,7 @@ ACTION_ZIZMOR_UNSECURED_ENV_VARIABLES:
 APPLY_FIXES: all
 CLEAR_REPORT_FOLDER: true
 IGNORE_GITIGNORED_FILES: true
+JSON_PRETTIER_CLI_LINT_MODE: project
 JSON_PRETTIER_PRE_COMMANDS:
   - command: npm i
     continue_if_failed: true
@@ -12,6 +13,7 @@ JSON_PRETTIER_PRE_COMMANDS:
     secured_env: true
     tag: default
 SHOW_ELAPSED_TIME: true
+YAML_PRETTIER_CLI_LINT_MODE: project
 YAML_PRETTIER_PRE_COMMANDS:
   - command: npm i
     continue_if_failed: true
