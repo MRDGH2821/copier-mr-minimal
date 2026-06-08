@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.23.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.22.2..v0.23.0) - 2026-06-08
+
+### Features
+
+- **(megalinter)** update config - ([010f81e](https://github.com/MRDGH2821/copier-mr-minimal/commit/010f81e5fed7d6f4b9c3731075a03b6ce24e7c29)) - MRDGH2821
+- **(pre-commit)** update hooks - ([2eb9363](https://github.com/MRDGH2821/copier-mr-minimal/commit/2eb936327287c14494b8af998c9d65a57c94fe0b)) - MRDGH2821
+
+---
+
 ## [0.22.2](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.22.1..v0.22.2) - 2026-06-05
 
 ### Bug Fixes
