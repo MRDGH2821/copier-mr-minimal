@@ -28,7 +28,7 @@ jobs:
     steps:
       # Git Checkout
       - name: Checkout Code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v6.0.3
         with:
           # If you use VALIDATE_ALL_CODEBASE = true, you can remove this line to
           # improve performance
@@ -92,11 +92,11 @@ jobs:
         name: MegaLinter
         # You can override MegaLinter flavor used to have faster performances
         # More info at https://megalinter.io/latest/flavors/
-        uses: oxsecurity/megalinter@v9
+        uses: oxsecurity/megalinter@v9.5.0
       # Upload MegaLinter artifacts
       - if: success() || failure()
         name: Archive production artifacts
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@v7.0.1
         with:
           include-hidden-files: "true"
           name: MegaLinter reports
@@ -115,7 +115,7 @@ jobs:
             github.event.pull_request.head.repo.full_name == github.repository
           ) && !contains(github.event.head_commit.message, 'skip fix')
         name: Create Pull Request with applied fixes
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8.1.1
         with:
           commit-message: "chore(megalinter): apply linters automatic fixes"
           labels: bot
@@ -161,7 +161,7 @@ jobs:
             github.event.pull_request.head.repo.full_name == github.repository
           ) && !contains(github.event.head_commit.message, 'skip fix')
         name: Commit and push applied linter fixes
-        uses: stefanzweifel/git-auto-commit-action@v7
+        uses: stefanzweifel/git-auto-commit-action@v7.1.0
         with:
           branch: |-
             ${{
