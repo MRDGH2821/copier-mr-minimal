@@ -7,7 +7,7 @@ CLEAR_REPORT_FOLDER: true
 IGNORE_GITIGNORED_FILES: true
 JSON_PRETTIER_CLI_LINT_MODE: project
 JSON_PRETTIER_PRE_COMMANDS:
-  - command: npm i
+  - command: npm i --workspaces=false
     continue_if_failed: true
     cwd: workspace
     secured_env: true
@@ -15,7 +15,7 @@ JSON_PRETTIER_PRE_COMMANDS:
 SHOW_ELAPSED_TIME: true
 YAML_PRETTIER_CLI_LINT_MODE: project
 YAML_PRETTIER_PRE_COMMANDS:
-  - command: npm i
+  - command: npm i --workspaces=false
     continue_if_failed: true
     cwd: workspace
     secured_env: true
