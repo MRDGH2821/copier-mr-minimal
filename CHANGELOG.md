@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.24.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.23.1..v0.24.0) - 2026-06-09
+
+### Bug Fixes
+
+- fix template - ([1f7d3d2](https://github.com/MRDGH2821/copier-mr-minimal/commit/1f7d3d2c21732dda558c5c05f283abc7853aa1fe)) - MRDGH2821
+- ignore more globs - ([e19a238](https://github.com/MRDGH2821/copier-mr-minimal/commit/e19a238d4f5fdb259c25338cca3a628ab83665ce)) - MRDGH2821
+
+### Features
+
+- bring formatter behaviour closer to shfmt - ([36063e3](https://github.com/MRDGH2821/copier-mr-minimal/commit/36063e3bab1eb752c754dfb49aa56a9865619ae3)) - MRDGH2821
+
+---
+
 ## [0.23.1](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.23.0..v0.23.1) - 2026-06-08
 
 ### Bug Fixes
