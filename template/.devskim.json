@@ -1,3 +1,10 @@
 {
-  "Globs": ["**/.git/**", "**/megalinter-reports/**", "**/skills-lock.json"]
+  "Globs": [
+    "**/.git/**",
+    "**/megalinter-reports/**",
+    "**/skills-lock.json",
+    "**/node_modules/**",
+    "**/.venv/**",
+    "**/target/**"
+  ]
 }
