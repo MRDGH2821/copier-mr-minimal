@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.25.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.24.0..v0.25.0) - 2026-06-09
+
+### Features
+
+- **(megalinter)** remove devskim - ([8cbb1cb](https://github.com/MRDGH2821/copier-mr-minimal/commit/8cbb1cbb7966b2a34a0543ea1c9c26500843b0b4)) - MRDGH2821
+
+---
+
 ## [0.24.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.23.1..v0.24.0) - 2026-06-09
 
 ### Bug Fixes
