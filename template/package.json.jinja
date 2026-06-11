@@ -1,5 +1,5 @@
 {
-  "name": {{ project_name | quote }},
+  "name": "{{ project_name | lower | replace(' ', '-') }}",
   "version": "0.1.0",
   "devDependencies": {
     "@prettier/plugin-xml": "^3.4.2",
