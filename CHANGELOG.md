@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.25.2](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.25.1..v0.25.2) - 2026-06-11
+
+### Bug Fixes
+
+- make the name package.json compatible - ([65b422a](https://github.com/MRDGH2821/copier-mr-minimal/commit/65b422af9168a1be74eeed3e1ef4b5559d1b8b46)) - MRDGH2821
+
+---
+
 ## [0.25.1](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.25.0..v0.25.1) - 2026-06-09
 
 ### Bug Fixes
