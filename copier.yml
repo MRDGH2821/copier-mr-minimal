@@ -28,11 +28,11 @@ _tasks:
   - command: command -v treefmt > /dev/null 2>&1 && echo "✓ Treefmt is installed" || echo "✗ Treefmt not found! Please install from here - https://treefmt.com/"
     when: "{{ _copier_operation == 'copy' }}"
   - command: bunx skills add https://github.com/Leonxlnx/taste-skill
-    when: "{{ use_taste_skill && _copier_operation == 'copy'}}"
+    when: "{{ use_taste_skill and _copier_operation == 'copy' }}"
   - command: bunx skills experimental_install
-    when: "{{ use_skills && _copier_operation == 'copy'}}"
+    when: "{{ use_skills and _copier_operation == 'copy' }}"
   - command: uvx --from lic-cli lic
-    when: "{{ _copier_operation == 'copy'}}"
+    when: "{{ _copier_operation == 'copy' }}"
 ci:
   choices:
     GitHub CI: github
