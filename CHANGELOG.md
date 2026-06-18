@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.27.1](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.27.0..v0.27.1) - 2026-06-18
+
+### Bug Fixes
+
+- **(copier)** fix syntax - ([aa061ba](https://github.com/MRDGH2821/copier-mr-minimal/commit/aa061ba588b4b13531124f40d1897c93f882c29e)) - MRDGH2821
+
+---
+
 ## [0.27.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.26.0..v0.27.0) - 2026-06-18
 
 ### Bug Fixes
