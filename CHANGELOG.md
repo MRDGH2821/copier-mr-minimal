@@ -4,6 +4,27 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.27.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.26.0..v0.27.0) - 2026-06-18
+
+### Bug Fixes
+
+- add skills only on copy - ([d6f32d7](https://github.com/MRDGH2821/copier-mr-minimal/commit/d6f32d7fb24f3d9fd579fe0824ab54452f0d7d4a)) - MRDGH2821
+
+### Features
+
+- add licence - ([5ade603](https://github.com/MRDGH2821/copier-mr-minimal/commit/5ade60333a45075cd018971775972e8c5c17d3e0)) - MRDGH2821
+
+### Miscellaneous Chores
+
+- update pre-commit hooks - ([92ec254](https://github.com/MRDGH2821/copier-mr-minimal/commit/92ec25472e1e194f453a5410c8e85b1905e44f8e)) - MRDGH2821
+- add licence - ([32c03cb](https://github.com/MRDGH2821/copier-mr-minimal/commit/32c03cb0ad3475373f2f742ee107cb254c7a69a8)) - MRDGH2821
+
+### Build
+
+- update lock file - ([dc04fb6](https://github.com/MRDGH2821/copier-mr-minimal/commit/dc04fb6b9c82e7b87a90fe4463bf2f2d83d1aa14)) - MRDGH2821
+
+---
+
 ## [0.26.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.25.2..v0.26.0) - 2026-06-11
 
 ### Features
