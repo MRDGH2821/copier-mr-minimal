@@ -15,3 +15,7 @@ copier update
 ```
 
 Copier will warn you about scripts. Review them in [copier.yml](./copier.yml)
+
+## License
+
+[MIT](./LICENSE)
