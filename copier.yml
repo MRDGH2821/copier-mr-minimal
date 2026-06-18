@@ -31,6 +31,8 @@ _tasks:
     when: "{{ use_taste_skill && _copier_operation == 'copy'}}"
   - command: bunx skills experimental_install
     when: "{{ use_skills && _copier_operation == 'copy'}}"
+  - command: uvx --from lic-cli lic
+    when: "{{ _copier_operation == 'copy'}}"
 ci:
   choices:
     GitHub CI: github
