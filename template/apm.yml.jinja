@@ -8,9 +8,9 @@ dependencies:
     - git: github/awesome-copilot
       skills:
         - git-commit
-    {{ if use_taste_skill }}
+    {% if use_taste_skill %}
     - git: Leonxlnx/taste-skill
-    {{ endif }}
+    {% endif %}
   mcp: []
 includes: auto
 name: {{ project_name }}
