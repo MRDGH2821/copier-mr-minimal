@@ -4,6 +4,26 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.28.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.27.1..v0.28.0) - 2026-06-30
+
+### Bug Fixes
+
+- fix syntax - ([3371b12](https://github.com/MRDGH2821/copier-mr-minimal/commit/3371b1261b48fab5c48ec7fe48623a5939a4f0f5)) - MRDGH2821
+- fix file name - ([7cb8ab5](https://github.com/MRDGH2821/copier-mr-minimal/commit/7cb8ab57bb9bf2ffd68d118e3d3cc46c29c8a515)) - MRDGH2821
+
+### Features
+
+- migrate to apm for skills management - ([029c9b1](https://github.com/MRDGH2821/copier-mr-minimal/commit/029c9b1a63a87810537418bb1e72cbda4a6aa69c)) - MRDGH2821
+- add ls-lint config - ([184a6d4](https://github.com/MRDGH2821/copier-mr-minimal/commit/184a6d423721c06dc0fcd447386eee20265b3793)) - MRDGH2821
+
+### Miscellaneous Chores
+
+- use licencify to add licence - ([e0b70b9](https://github.com/MRDGH2821/copier-mr-minimal/commit/e0b70b99de7244d6cd556878d3af1056c6ace13d)) - MRDGH2821
+- add ls lint config - ([70df2b5](https://github.com/MRDGH2821/copier-mr-minimal/commit/70df2b54be8c331332f0ac88fe9381217ec4ef28)) - MRDGH2821
+- remove licence text - ([95f930d](https://github.com/MRDGH2821/copier-mr-minimal/commit/95f930d77a977b4c2f425f2bb093fd4e38d385cf)) - MRDGH2821
+
+---
+
 ## [0.27.1](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.27.0..v0.27.1) - 2026-06-18
 
 ### Bug Fixes
