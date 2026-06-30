@@ -1,0 +1,34 @@
+---
+apm_version: 0.23.0
+dependencies:
+  - content_hash: sha256:d04e46f81c07e8207c0c12bf9679904b4608c48a63292ec61a599a944ffa9d1b
+    deployed_file_hashes:
+      .agents/skills/git-commit/SKILL.md: sha256:554d1a3c6d95f15bc1170160659ecdc9a9958b64f377f3988941b672c249b13f
+    deployed_files:
+      - .agents/skills/git-commit
+      - .agents/skills/git-commit/SKILL.md
+    host: github.com
+    name: awesome-copilot
+    package_type: skill_bundle
+    repo_url: github/awesome-copilot
+    resolved_commit: df58232729375f0cc3c03756fc5b869470a9c2a9
+    skill_subset:
+      - git-commit
+    version: unknown
+  - content_hash: sha256:da9027bce1018aab91d6f4582683107511774979a6db8b80435d03d9e9de334b
+    deployed_file_hashes:
+      .agents/skills/find-skills/SKILL.md: sha256:deddc03b4b5f50755b97fcdb737a786676992ef7e9be614d2cd2c71e0320bebf
+    deployed_files:
+      - .agents/skills/find-skills
+      - .agents/skills/find-skills/SKILL.md
+    host: github.com
+    name: skills
+    package_type: skill_bundle
+    repo_url: vercel-labs/skills
+    resolved_commit: 2adcfe5a4cce0ce5f4d5547a997b2a161ec5d127
+    resolved_ref: v1.5.14
+    skill_subset:
+      - find-skills
+    version: 0.0.0
+generated_at: "2026-06-30T01:46:57.168537+00:00"
+lockfile_version: "1"

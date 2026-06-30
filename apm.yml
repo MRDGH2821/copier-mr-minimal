@@ -1,0 +1,20 @@
+---
+author: MRDGH2821
+dependencies:
+  apm:
+    - git: vercel-labs/skills
+      ref: v1.5.14
+      skills:
+        - find-skills
+    - git: github/awesome-copilot
+      skills:
+        - git-commit
+  mcp: []
+description: Copier template for my projects
+includes: auto
+name: copier-mr-minimal
+scripts: {}
+targets:
+  - cursor
+  - opencode
+version: 0.27.1

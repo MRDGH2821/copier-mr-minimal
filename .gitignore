@@ -10,6 +10,7 @@
 .venv/
 __MACOSX
 __pycache__
+apm_modules/
 dist/
 megalinter-reports/
 node_modules/
