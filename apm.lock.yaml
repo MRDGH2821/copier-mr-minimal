@@ -1,7 +1,7 @@
 ---
-apm_version: 0.23.0
+apm_version: 0.23.1
 dependencies:
-  - content_hash: sha256:d04e46f81c07e8207c0c12bf9679904b4608c48a63292ec61a599a944ffa9d1b
+  - content_hash: sha256:d8c6d01357069739bf78fcf6a12c015136fef78709111d1fe0024edc4948c3b9
     deployed_file_hashes:
       .agents/skills/git-commit/SKILL.md: sha256:554d1a3c6d95f15bc1170160659ecdc9a9958b64f377f3988941b672c249b13f
     deployed_files:
@@ -11,7 +11,7 @@ dependencies:
     name: awesome-copilot
     package_type: skill_bundle
     repo_url: github/awesome-copilot
-    resolved_commit: df58232729375f0cc3c03756fc5b869470a9c2a9
+    resolved_commit: 8c68eba69048c2f87389ab9fa99d28f694a11846
     skill_subset:
       - git-commit
     version: unknown
@@ -29,6 +29,6 @@ dependencies:
     resolved_ref: v1.5.14
     skill_subset:
       - find-skills
-    version: 0.0.0
-generated_at: "2026-06-30T01:46:57.168537+00:00"
+    version: unknown
+generated_at: "2026-07-02T13:02:40.664854+00:00"
 lockfile_version: "1"
