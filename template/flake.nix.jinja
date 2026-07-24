@@ -1,25 +1,35 @@
 {
   description = "{{ project_name }} dev shell";
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-  outputs = {nixpkgs, ...}: let
-    system = "x86_64-linux";
-    pkgs = import nixpkgs {inherit system;};
-  in {
-    formatter.${system} = pkgs.treefmt;
-    devShells.${system}.default = pkgs.mkShell {
-      packages = with pkgs; [
-        alejandra
-        bun
-        libxml2
-        nil
-        nixd
-        nixfmt
-        prettypst
-        shfmt
-        treefmt
-        uv
-        yq-go
-      ];
+  inputs = {
+    blueprint = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:numtide/blueprint";
+    };
+    git-hooks = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:cachix/git-hooks.nix";
+    };
+    llm-agents = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:numtide/llm-agents.nix";
+    };
+    nixpkgs.url = "github:NixOS/nixpkgs?ref=nixos-unstable";
+    pedantix = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:swarsel/pedantix";
+    };
+    treefmt = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:numtide/treefmt-nix";
     };
   };
+  nixConfig = {
+    extra-substituters = ["https://cache.numtide.com"];
+    extra-trusted-public-keys = ["niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g="];
+  };
+  outputs = inputs:
+    inputs.blueprint {
+      inherit inputs;
+      prefix = "nix/";
+    };
 }

@@ -1,12 +1,10 @@
+# keep-sorted start
 *.local
 .DS_Store
 .devenv
 .direnv
-.env
-.env.*
-!.env.sample
 .git
-.mcp.json
+.pre-commit-config.yaml
 .svn
 .venv/
 __MACOSX
@@ -14,5 +12,23 @@ __pycache__
 dist/
 megalinter-reports/
 node_modules/
-opencode.json
+report/
 target/
+# keep-sorted end
+
+# agents
+.agent/skills
+.agents/skills
+.cursor/skills
+.github/skills
+.mcp.json
+.opencode/skills
+.vscode/mcp.json
+/.agents/skills
+apm_modules/
+opencode.json
+
+# env files
+.env
+.env.*
+!.env.sample

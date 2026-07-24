@@ -5,7 +5,7 @@ Redesign me flake.nix devshell from groundup and integrate as follows.
 ## Packages
 
 Add this to flake.nix:
-https://github.com/numtide/llm-agents.nix
+<https://github.com/numtide/llm-agents.nix>
 
 And configure the following in it:
 
@@ -22,7 +22,7 @@ Also use the binary cache.
 ## Formatter
 
 Add this to flake.nix:
-https://github.com/numtide/treefmt-nix
+<https://github.com/numtide/treefmt-nix>
 
 Create treefmt.nix and enable the given:
 
@@ -59,23 +59,23 @@ Create treefmt.nix and enable the given:
 31. yamllint
 32. zizmor
 
-Some formatters may not be present, so port them from [.treefmt.toml](../../.treefmt.toml)
+Some formatters may not be present, so port them from `.treefmt.toml`
 
 ## Git Hooks
 
 Add this to flake.nix:
-https://github.com/cachix/git-hooks.nix
+<https://github.com/cachix/git-hooks.nix>
 
-And migrate [.pre-commit-config.yaml](../../.pre-commit-config.yaml) to git-hooks.nix
+And migrate `.pre-commit-config.yaml` to git-hooks.nix
 
 ## MCP
 
 I want MCP configuration in devshell using the MCP servers Nix module.
-So follow the instructions given in - https://github.com/natsukium/mcp-servers-nix/blob/main/docs/module-usage.md#using-flakes
+So follow the instructions given in - <https://github.com/natsukium/mcp-servers-nix/blob/main/docs/module-usage.md#using-flakes>
 
 Then configure this mcp:
 
-1. https://github.com/utensils/mcp-nixos
+1. <https://github.com/utensils/mcp-nixos>
 
 The target harnesses are:
 
@@ -86,11 +86,11 @@ The target harnesses are:
 
 ## Agent skills
 
-Add this to flake.nix - https://github.com/Kyure-A/agent-skills-nix
+Add this to flake.nix - <https://github.com/Kyure-A/agent-skills-nix>
 
 And configure the following in it:
 
-1. https://www.skills.sh/github/awesome-copilot/git-commit
+1. <https://www.skills.sh/github/awesome-copilot/git-commit>
 
 The target harnesses are:
 

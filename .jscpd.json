@@ -10,9 +10,7 @@
     "**/.venv/**",
     "**/node_modules/**",
     "**/report/**",
-    ".cspell.json",
-    ".markdownlint.json",
-    "template/"
+    "template/**"
   ],
   "reporters": ["html", "markdown"],
   "threshold": 0
