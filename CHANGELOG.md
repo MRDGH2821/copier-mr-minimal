@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.29.1](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.29.0..v0.29.1) - 2026-07-24
+
+### Bug Fixes
+
+- update target list - ([9c2cef0](https://github.com/MRDGH2821/copier-mr-minimal/commit/9c2cef030ac335ea9f7e4db6e1c7b877e9e2fba7)) - MRDGH2821
+
+### Miscellaneous Chores
+
+- update lock file - ([a4d52ee](https://github.com/MRDGH2821/copier-mr-minimal/commit/a4d52ee943d3661a754931b9f5f039884ee60657)) - MRDGH2821
+
+---
+
 ## [0.29.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.28.0..v0.29.0) - 2026-07-24
 
 ### Bug Fixes
