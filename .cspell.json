@@ -49,6 +49,7 @@
     "nixpkgs",
     "numtide",
     "otbs",
+    "oxfmt",
     "oxsecurity",
     "pkgs",
     "prek",
