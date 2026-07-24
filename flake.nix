@@ -7,20 +7,22 @@
   };
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    systems.url = "github:nix-systems/default";
-    treefmt-nix.url = "github:numtide/treefmt-nix";
-    treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
-    git-hooks.url = "github:cachix/git-hooks.nix";
+    # keep-sorted start
+    agent-skills.inputs.nixpkgs.follows = "nixpkgs";
+    agent-skills.url = "github:Kyure-A/agent-skills-nix";
     git-hooks.inputs.nixpkgs.follows = "nixpkgs";
-    llm-agents.url = "github:numtide/llm-agents.nix";
+    git-hooks.url = "github:cachix/git-hooks.nix";
     llm-agents.inputs.nixpkgs.follows = "nixpkgs";
     llm-agents.inputs.systems.follows = "systems";
     llm-agents.inputs.treefmt-nix.follows = "treefmt-nix";
-    mcp-servers-nix.url = "github:natsukium/mcp-servers-nix";
+    llm-agents.url = "github:numtide/llm-agents.nix";
     mcp-servers-nix.inputs.nixpkgs.follows = "nixpkgs";
-    agent-skills.url = "github:Kyure-A/agent-skills-nix";
-    agent-skills.inputs.nixpkgs.follows = "nixpkgs";
+    mcp-servers-nix.url = "github:natsukium/mcp-servers-nix";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    systems.url = "github:nix-systems/default";
+    treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
+    treefmt-nix.url = "github:numtide/treefmt-nix";
+    # keep-sorted end
     awesome-copilot = {
       url = "github:github/awesome-copilot";
       flake = false;
@@ -29,10 +31,12 @@
 
   outputs = {
     self,
-    systems,
-    nixpkgs,
+    # keep-sorted start
     git-hooks,
+    nixpkgs,
+    systems,
     treefmt-nix,
+    # keep-sorted end
     ...
   } @ inputs: let
     forEachSystem = f: nixpkgs.lib.genAttrs (import systems) (system: f nixpkgs.legacyPackages.${system});
