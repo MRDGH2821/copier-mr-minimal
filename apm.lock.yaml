@@ -108,25 +108,7 @@ deployments:
     runtime: copilot
     scope: project
     target: mcp
-    value: jscpd
-  - active_owner: .
-    content_hash:
-    kind: uri
-    owners:
-      - .
-    runtime: copilot
-    scope: project
-    target: mcp
     value: nixos
-  - active_owner: .
-    content_hash:
-    kind: uri
-    owners:
-      - .
-    runtime: cursor
-    scope: project
-    target: mcp
-    value: jscpd
   - active_owner: .
     content_hash:
     kind: uri
@@ -144,24 +126,10 @@ deployments:
     runtime: opencode
     scope: project
     target: mcp
-    value: jscpd
-  - active_owner: .
-    content_hash:
-    kind: uri
-    owners:
-      - .
-    runtime: opencode
-    scope: project
-    target: mcp
     value: nixos
-generated_at: "2026-07-24T12:23:00.232629+00:00"
+generated_at: "2026-07-24T13:22:01.472145+00:00"
 lockfile_version: "1"
 mcp_configs:
-  jscpd:
-    name: jscpd
-    registry: false
-    transport: http
-    url: http://localhost:3131/mcp
   nixos:
     args:
       - mcp-nixos
@@ -170,15 +138,11 @@ mcp_configs:
     registry: false
     transport: stdio
 mcp_servers:
-  - jscpd
   - nixos
 mcp_target_servers:
   copilot:
-    - jscpd
     - nixos
   cursor:
-    - jscpd
     - nixos
   opencode:
-    - jscpd
     - nixos
