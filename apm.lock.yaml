@@ -15,22 +15,21 @@ dependencies:
     skill_subset:
       - git-commit
     version: unknown
-  - content_hash: sha256:770e83ae9f588d6764b76e1429cb5d8bb6a86b4b32ba8f752e72d78d391c82e2
-    declared_license: MIT
+  - content_hash: sha256:1cd37f37cb9e137eb1e8311fce2d349da3f3c58bf20de28336a1c5c526a4b170
     deployed_file_hashes:
-      .agents/skills/git-surgeon/SKILL.md: sha256:086445cd0424c46022c7c23912c82ebb43d168e11b3a13141669149bdba6f8bc
+      .agents/skills/dry-refactoring/SKILL.md: sha256:81c7480e1134aa13d2de2669de3276a48faed7a7c19e66a4670db5cb92dc98dc
     deployed_files:
-      - .agents/skills/git-surgeon
-      - .agents/skills/git-surgeon/SKILL.md
+      - .agents/skills/dry-refactoring
+      - .agents/skills/dry-refactoring/SKILL.md
     host: github.com
-    name: git-surgeon
-    package_type: marketplace_plugin
-    repo_url: raine/git-surgeon
-    resolved_commit: c62443cca3adb11d907d3968f5f423b83936d0b3
-    resolved_ref: v0.1.17
+    name: jscpd
+    package_type: skill_bundle
+    repo_url: kucherenko/jscpd
+    resolved_commit: 64258a9af460fc554c1ad884f976787378721d90
+    resolved_ref: v5.0.12
     skill_subset:
-      - git-surgeon
-    version: 0.1.0
+      - dry-refactoring
+    version: unknown
   - content_hash: sha256:bd08e34ee9cce2f9fb6c2b9483368375f7dce3e7e9146a68a331993041231d03
     deployed_file_hashes:
       .agents/skills/find-skills/SKILL.md: sha256:c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f
@@ -47,6 +46,24 @@ dependencies:
       - find-skills
     version: unknown
 deployments:
+  - active_owner: kucherenko/jscpd
+    content_hash:
+    kind: project-relative
+    owners:
+      - kucherenko/jscpd
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/dry-refactoring
+  - active_owner: kucherenko/jscpd
+    content_hash: sha256:81c7480e1134aa13d2de2669de3276a48faed7a7c19e66a4670db5cb92dc98dc
+    kind: project-relative
+    owners:
+      - kucherenko/jscpd
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/dry-refactoring/SKILL.md
   - active_owner: vercel-labs/skills
     content_hash:
     kind: project-relative
@@ -83,24 +100,15 @@ deployments:
     scope: project
     target: antigravity
     value: .agents/skills/git-commit/SKILL.md
-  - active_owner: raine/git-surgeon
+  - active_owner: .
     content_hash:
-    kind: project-relative
+    kind: uri
     owners:
-      - raine/git-surgeon
-    runtime:
+      - .
+    runtime: copilot
     scope: project
-    target: antigravity
-    value: .agents/skills/git-surgeon
-  - active_owner: raine/git-surgeon
-    content_hash: sha256:086445cd0424c46022c7c23912c82ebb43d168e11b3a13141669149bdba6f8bc
-    kind: project-relative
-    owners:
-      - raine/git-surgeon
-    runtime:
-    scope: project
-    target: antigravity
-    value: .agents/skills/git-surgeon/SKILL.md
+    target: mcp
+    value: jscpd
   - active_owner: .
     content_hash:
     kind: uri
@@ -118,6 +126,15 @@ deployments:
     runtime: cursor
     scope: project
     target: mcp
+    value: jscpd
+  - active_owner: .
+    content_hash:
+    kind: uri
+    owners:
+      - .
+    runtime: cursor
+    scope: project
+    target: mcp
     value: nixos
   - active_owner: .
     content_hash:
@@ -127,10 +144,24 @@ deployments:
     runtime: opencode
     scope: project
     target: mcp
+    value: jscpd
+  - active_owner: .
+    content_hash:
+    kind: uri
+    owners:
+      - .
+    runtime: opencode
+    scope: project
+    target: mcp
     value: nixos
-generated_at: "2026-07-24T11:06:30.910308+00:00"
+generated_at: "2026-07-24T12:23:00.232629+00:00"
 lockfile_version: "1"
 mcp_configs:
+  jscpd:
+    name: jscpd
+    registry: false
+    transport: http
+    url: http://localhost:3131/mcp
   nixos:
     args:
       - mcp-nixos
@@ -139,11 +170,15 @@ mcp_configs:
     registry: false
     transport: stdio
 mcp_servers:
+  - jscpd
   - nixos
 mcp_target_servers:
   copilot:
+    - jscpd
     - nixos
   cursor:
+    - jscpd
     - nixos
   opencode:
+    - jscpd
     - nixos

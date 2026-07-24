@@ -9,10 +9,10 @@ dependencies:
     - git: github/awesome-copilot
       skills:
         - git-commit
-    - git: raine/git-surgeon
-      ref: v0.1.17
+    - git: kucherenko/jscpd
+      ref: v5.0.12
       skills:
-        - git-surgeon
+        - dry-refactoring
   mcp:
     - args:
         - mcp-nixos

@@ -12,6 +12,7 @@ __pycache__
 dist/
 megalinter-reports/
 node_modules/
+report/
 target/
 # keep-sorted end
 
