@@ -9,6 +9,10 @@ dependencies:
     - git: github/awesome-copilot
       skills:
         - git-commit
+    - git: raine/git-surgeon
+      ref: v0.1.17
+      skills:
+        - git-surgeon
   mcp:
     - args:
         - mcp-nixos

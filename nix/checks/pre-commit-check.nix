@@ -16,6 +16,7 @@ inputs.git-hooks.lib.${pkgs.stdenv.hostPlatform.system}.run {
       enable = true;
       entry = "${pkgs.lib.getExe pkgs.betterleaks}";
       name = "betterleaks";
+      pass_filenames = false;
       stages = ["pre-commit"];
     };
     check-merge-conflicts.enable = true;
@@ -41,7 +42,6 @@ inputs.git-hooks.lib.${pkgs.stdenv.hostPlatform.system}.run {
       args = [
         "--config"
         ".cspell.json"
-        "--files"
         "--no-must-find-files"
         "--no-progress"
         "--no-summary"

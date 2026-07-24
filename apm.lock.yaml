@@ -15,6 +15,22 @@ dependencies:
     skill_subset:
       - git-commit
     version: unknown
+  - content_hash: sha256:770e83ae9f588d6764b76e1429cb5d8bb6a86b4b32ba8f752e72d78d391c82e2
+    declared_license: MIT
+    deployed_file_hashes:
+      .agents/skills/git-surgeon/SKILL.md: sha256:086445cd0424c46022c7c23912c82ebb43d168e11b3a13141669149bdba6f8bc
+    deployed_files:
+      - .agents/skills/git-surgeon
+      - .agents/skills/git-surgeon/SKILL.md
+    host: github.com
+    name: git-surgeon
+    package_type: marketplace_plugin
+    repo_url: raine/git-surgeon
+    resolved_commit: c62443cca3adb11d907d3968f5f423b83936d0b3
+    resolved_ref: v0.1.17
+    skill_subset:
+      - git-surgeon
+    version: 0.1.0
   - content_hash: sha256:bd08e34ee9cce2f9fb6c2b9483368375f7dce3e7e9146a68a331993041231d03
     deployed_file_hashes:
       .agents/skills/find-skills/SKILL.md: sha256:c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f
@@ -67,6 +83,24 @@ deployments:
     scope: project
     target: antigravity
     value: .agents/skills/git-commit/SKILL.md
+  - active_owner: raine/git-surgeon
+    content_hash:
+    kind: project-relative
+    owners:
+      - raine/git-surgeon
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/git-surgeon
+  - active_owner: raine/git-surgeon
+    content_hash: sha256:086445cd0424c46022c7c23912c82ebb43d168e11b3a13141669149bdba6f8bc
+    kind: project-relative
+    owners:
+      - raine/git-surgeon
+    runtime:
+    scope: project
+    target: antigravity
+    value: .agents/skills/git-surgeon/SKILL.md
   - active_owner: .
     content_hash:
     kind: uri
@@ -94,7 +128,7 @@ deployments:
     scope: project
     target: mcp
     value: nixos
-generated_at: "2026-07-24T09:49:35.149265+00:00"
+generated_at: "2026-07-24T11:06:30.910308+00:00"
 lockfile_version: "1"
 mcp_configs:
   nixos:

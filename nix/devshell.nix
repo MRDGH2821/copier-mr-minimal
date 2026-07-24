@@ -4,21 +4,19 @@
   ...
 }: let
   pre-commit-check = import ./checks/pre-commit-check.nix {inherit inputs pkgs;};
+  llm-pkgs = inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system};
 in
   pkgs.mkShell {
     inherit (pre-commit-check) shellHook;
-    packages = with pkgs; [
-      inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}
-      [
-        antigravity-cli
-        apm
-        copilot-cli
-        cursor-agent
-        git-surgeon
-        opencode
-        rtk
-      ]
-      nil
-      nixd
+    packages = [
+      llm-pkgs.antigravity-cli
+      llm-pkgs.apm
+      llm-pkgs.copilot-cli
+      llm-pkgs.cursor-agent
+      llm-pkgs.git-surgeon
+      llm-pkgs.opencode
+      llm-pkgs.rtk
+      pkgs.nil
+      pkgs.nixd
     ];
   }
