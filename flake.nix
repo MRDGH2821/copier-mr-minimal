@@ -10,6 +10,8 @@
     # keep-sorted start
     agent-skills.inputs.nixpkgs.follows = "nixpkgs";
     agent-skills.url = "github:Kyure-A/agent-skills-nix";
+    blueprint.inputs.nixpkgs.follows = "nixpkgs";
+    blueprint.inputs.systems.follows = "systems";
     blueprint.url = "github:numtide/blueprint";
     git-hooks.inputs.nixpkgs.follows = "nixpkgs";
     git-hooks.url = "github:cachix/git-hooks.nix";
