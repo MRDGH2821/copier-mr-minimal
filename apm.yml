@@ -25,6 +25,7 @@ includes: auto
 name: copier-mr-minimal
 scripts: {}
 targets:
+  - agent-skills
   - antigravity
   - copilot
   - cursor
