@@ -24,7 +24,7 @@ in
       cspell-commit-msg = {
         enable = true;
         name = "Check commit message spelling";
-        entry = "${pkgs.cspell}/bin/cspell";
+        entry = "${pkgs.lib.getExe pkgs.cspell}";
         args = [
           "--config"
           ".cspell.json"
@@ -37,14 +37,21 @@ in
         always_run = true;
         stages = ["commit-msg"];
       };
-      ggshield = {
+      ripsecrets = {
         enable = true;
-        name = "ggshield";
-        entry = "${pkgs.writeShellScriptBin "ggshield-hook" ''
-          export PYTHONPATH="${pkgs.python313Packages.packaging}/${pkgs.python313.sitePackages}:$PYTHONPATH"
-          exec ${pkgs.ggshield}/bin/ggshield secret scan pre-commit "$@"
-        ''}/bin/ggshield-hook";
+      };
+      betterleaks = {
+        enable = true;
+        name = "betterleaks";
+        entry = "${pkgs.lib.getExe pkgs.betterleaks}";
         stages = ["pre-commit"];
+        args = [
+          "git"
+          "--pre-commit"
+          "--redact"
+          "--staged"
+          "--verbose"
+        ];
       };
       forbidden-files = {
         enable = true;
@@ -56,7 +63,11 @@ in
       cocogitto = {
         enable = true;
         name = "Cocogitto commits check";
-        entry = "${pkgs.cocogitto}/bin/cog verify --file";
+        entry = "${pkgs.lib.getExe pkgs.cocogitto}";
+        args = [
+          "verify"
+          "--file"
+        ];
         stages = ["commit-msg"];
       };
     };
