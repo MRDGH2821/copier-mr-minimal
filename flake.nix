@@ -108,17 +108,6 @@
       pkgs: let
         llmAgentPkgs = inputs.llm-agents.packages.${pkgs.system};
 
-        mcpClaudeConfig = inputs.mcp-servers-nix.lib.mkConfig pkgs {
-          flavor = "claude-code";
-          programs = {
-            filesystem = {
-              enable = true;
-              args = ["."];
-            };
-            nixos.enable = true;
-          };
-        };
-
         mcpOpencodeConfig = inputs.mcp-servers-nix.lib.mkConfig pkgs {
           flavor = "opencode";
           fileName = "opencode.json";
@@ -130,18 +119,6 @@
             nixos.enable = true;
           };
           settings."$schema" = "https://opencode.ai/config.json";
-        };
-
-        mcpVscodeConfig = inputs.mcp-servers-nix.lib.mkConfig pkgs {
-          flavor = "vscode-workspace";
-          fileName = "mcp.json";
-          programs = {
-            filesystem = {
-              enable = true;
-              args = ["."];
-            };
-            nixos.enable = true;
-          };
         };
 
         agentLib = inputs.agent-skills.lib.agent-skills;
@@ -200,10 +177,10 @@
       in {
         default = pkgs.mkShell {
           shellHook = ''
-            ln -sfn ${mcpClaudeConfig} .mcp.json
+
             ln -sfn ${mcpOpencodeConfig} opencode.json
             mkdir -p .vscode
-            ln -sfn ${mcpVscodeConfig} .vscode/mcp.json
+
             ${shellHook}
             ${skillsShellHook}
           '';
