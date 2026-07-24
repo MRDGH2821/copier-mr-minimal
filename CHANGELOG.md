@@ -4,6 +4,87 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.29.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.28.0..v0.29.0) - 2026-07-24
+
+### Bug Fixes
+
+- **(jscpd)** fix paths - ([7bc0dbd](https://github.com/MRDGH2821/copier-mr-minimal/commit/7bc0dbd1e9913740d18894a54fab630f1d8765c7)) - MRDGH2821
+- **(nix)** use stdenv.hostPlatform.system instead of deprecated pkgs.system - ([8e29023](https://github.com/MRDGH2821/copier-mr-minimal/commit/8e2902358cec3168af3a6a0558b9805608a408bc)) - MRDGH2821
+- **(nix)** resolve nix flake check evaluation and hook errors - ([1791b06](https://github.com/MRDGH2821/copier-mr-minimal/commit/1791b069b7fb4fb00d4bd510fdc6cb98109b4350)) - MRDGH2821
+- set versions to 0.0.0 - ([db20656](https://github.com/MRDGH2821/copier-mr-minimal/commit/db20656f16fae4f56274782e4a52c3b7baf90f56)) - MRDGH2821
+- for formatting command - ([e5a43df](https://github.com/MRDGH2821/copier-mr-minimal/commit/e5a43df8b63420203f7ec571ae0f1ae7cc206902)) - MRDGH2821
+
+### Documentation
+
+- **(nix)** document stdenv.hostPlatform.system evaluation warning fix - ([be6210a](https://github.com/MRDGH2821/copier-mr-minimal/commit/be6210a1ad9b9ed84545784ab35f67becc674096)) - MRDGH2821
+- add nix-devshell-redesign doc - ([becc32d](https://github.com/MRDGH2821/copier-mr-minimal/commit/becc32d55be0f8d92edb1bc413a7eebd954ed7d4)) - MRDGH2821
+- add plan for redesign - ([1029e61](https://github.com/MRDGH2821/copier-mr-minimal/commit/1029e61878b2d55f58765206db05edd3f1c97569)) - MRDGH2821
+- remove path ref - ([1ab29b5](https://github.com/MRDGH2821/copier-mr-minimal/commit/1ab29b5c274843ed91d95d1a0297611b61b97743)) - MRDGH2821
+
+### Features
+
+- **(cocogitto)** bump apm.yml version in pre bump hooks - ([00b4e88](https://github.com/MRDGH2821/copier-mr-minimal/commit/00b4e88d12f95674cae4872d49e900c219d0c331)) - MRDGH2821
+- **(nix)** redesign devshell with prek, mcp, and agent skills - ([75d70d5](https://github.com/MRDGH2821/copier-mr-minimal/commit/75d70d55266e98833c0caee1b56ee93828eb5673)) - MRDGH2821
+- **(nix)** add formatter and formatting check for blueprint - ([446d65c](https://github.com/MRDGH2821/copier-mr-minimal/commit/446d65c3556a7eb3b0649c8630f74de1778cf736)) - MRDGH2821
+- **(nix)** add pre-commit-check module for blueprint - ([dcdf207](https://github.com/MRDGH2821/copier-mr-minimal/commit/dcdf207928412d09829a034ce5ac760dee62db8a)) - MRDGH2821
+- **(nix)** add mcp and skills modules for blueprint - ([6382e04](https://github.com/MRDGH2821/copier-mr-minimal/commit/6382e04963f1e3c8a33eb98b8ba92ffd9413982b)) - MRDGH2821
+- **(nix)** add formatting check for blueprint from nix/formatter.nix - ([89d1281](https://github.com/MRDGH2821/copier-mr-minimal/commit/89d12818dc6782c9c054e7e31ea56d8a7e54627e)) - MRDGH2821
+- remove plugins - ([ca3a892](https://github.com/MRDGH2821/copier-mr-minimal/commit/ca3a892646f3f6bfbf5b82b4cf9ca750f3506ae5)) - MRDGH2821
+- add pedantix - ([7f93558](https://github.com/MRDGH2821/copier-mr-minimal/commit/7f93558650beaf26f7ab29f67b4b90b5133d4335)) - MRDGH2821
+- redesign layout - ([ba525b3](https://github.com/MRDGH2821/copier-mr-minimal/commit/ba525b384966574aedd2574c30a85465b1ce8050)) - MRDGH2821
+- add new skill - ([bb3c90e](https://github.com/MRDGH2821/copier-mr-minimal/commit/bb3c90e2902e77fd340f21869889f8fec096c641)) - MRDGH2821
+- always use flakes - ([de7e873](https://github.com/MRDGH2821/copier-mr-minimal/commit/de7e87342f2f7ca072a85a6a1bdac03ff7e61533)) - MRDGH2821
+
+### Miscellaneous Chores
+
+- **(cspell)** add words - ([66d4e56](https://github.com/MRDGH2821/copier-mr-minimal/commit/66d4e56f5f88cb1b983ba2c7c688d460c8e88669)) - MRDGH2821
+- **(cspell)** add words - ([a69117e](https://github.com/MRDGH2821/copier-mr-minimal/commit/a69117e7828a01fcef0cf18501071becba507788)) - MRDGH2821
+- **(cspell)** update word list - ([189f7c8](https://github.com/MRDGH2821/copier-mr-minimal/commit/189f7c8d98e5c33ce090e5c16aa27d2a4c053b5e)) - MRDGH2821
+- **(cspell)** add words - ([040df59](https://github.com/MRDGH2821/copier-mr-minimal/commit/040df59bf606007784f4be9226f5b337e819356d)) - MRDGH2821
+- **(nix)** remove unneeded packages - ([3c7bb0d](https://github.com/MRDGH2821/copier-mr-minimal/commit/3c7bb0da0333dc7eb6fda5e526423e9d12d27a3a)) - MRDGH2821
+- **(nix)** add specs, plan, and update flake.lock for blueprint integration - ([373c9e8](https://github.com/MRDGH2821/copier-mr-minimal/commit/373c9e8310f041289f3ef3fc5237e5438cae1b4b)) - MRDGH2821
+- **(pre-commit)** update hooks - ([540361f](https://github.com/MRDGH2821/copier-mr-minimal/commit/540361fc1dc9005414899b190224b357204c39d0)) - MRDGH2821
+- **(treefmt)** add priority for yamllint - ([c83464b](https://github.com/MRDGH2821/copier-mr-minimal/commit/c83464b724bae4f3c1650e1ab325491731b285f6)) - MRDGH2821
+- update apm.lock - ([fc73d3c](https://github.com/MRDGH2821/copier-mr-minimal/commit/fc73d3cdfe8776057ae9714bc7d7d8e38b90181d)) - MRDGH2821
+- integrate tools - ([cfad6b0](https://github.com/MRDGH2821/copier-mr-minimal/commit/cfad6b017a4554d5618980da74cd870b8daed068)) - MRDGH2821
+- exclude cspell file - ([e54c6d8](https://github.com/MRDGH2821/copier-mr-minimal/commit/e54c6d895159de37332a4aaeadf040f5ba29b9e6)) - MRDGH2821
+- remove claude & vscode mcp config - ([16444db](https://github.com/MRDGH2821/copier-mr-minimal/commit/16444dbc866696784d23dd46039aa8f747c15294)) - MRDGH2821
+- add `agents` as skill target - ([502bf95](https://github.com/MRDGH2821/copier-mr-minimal/commit/502bf95461da47b3a8cf5455729958330206a41b)) - MRDGH2821
+- remove plugins - ([9906c5b](https://github.com/MRDGH2821/copier-mr-minimal/commit/9906c5b5d40505724be7712ca3b7163be1c37190)) - MRDGH2821
+- add inputs - ([312f2a4](https://github.com/MRDGH2821/copier-mr-minimal/commit/312f2a4a81639c264a01037c51aeb50808c84556)) - MRDGH2821
+- remove declarative mcp & skill configs - ([e947b54](https://github.com/MRDGH2821/copier-mr-minimal/commit/e947b54cc700ed2fc6f63a09e83f691513731fa3)) - MRDGH2821
+- update apm lock file - ([862a978](https://github.com/MRDGH2821/copier-mr-minimal/commit/862a978b1816a8559fee50ae89899216d5895ca0)) - MRDGH2821
+- add mcp & targets - ([ca4dc80](https://github.com/MRDGH2821/copier-mr-minimal/commit/ca4dc80a2977a84412720713925c7305f0002434)) - MRDGH2821
+- remove apm install command - ([2c0c25a](https://github.com/MRDGH2821/copier-mr-minimal/commit/2c0c25a83515c52b49a775ad10fef448ec8ad109)) - MRDGH2821
+- update lock files - ([8c0c9b3](https://github.com/MRDGH2821/copier-mr-minimal/commit/8c0c9b3d5d11a95feffd5ff714ae83d9fbca82fe)) - MRDGH2821
+- add pedantix in treefmt - ([f5601e0](https://github.com/MRDGH2821/copier-mr-minimal/commit/f5601e0c4871a2c3a880d1a1fa528fc0be73d124)) - MRDGH2821
+- remove lycheeignore - ([3c2b676](https://github.com/MRDGH2821/copier-mr-minimal/commit/3c2b67646f24785211b399bf7a4bbb5635092487)) - MRDGH2821
+- merge branch 'feat/nix-devshell-redesign' - ([e5c3c72](https://github.com/MRDGH2821/copier-mr-minimal/commit/e5c3c72666646356e5d80d50d89ee2f9690912a5)) - MRDGH2821
+- update lock files - ([10b4f72](https://github.com/MRDGH2821/copier-mr-minimal/commit/10b4f72ab737a1c827cada9caa176c921e85c2d1)) - MRDGH2821
+
+### Refactoring
+
+- **(nix)** integrate numtide/blueprint and split devshell - ([47bc7b6](https://github.com/MRDGH2821/copier-mr-minimal/commit/47bc7b6ed1ee720bcd0fc3739d5e40400594ce1d)) - MRDGH2821
+- **(treefmt)** use pkgs.lib.getExe - ([0cfa2d4](https://github.com/MRDGH2821/copier-mr-minimal/commit/0cfa2d445148cc56680111fd83ee906b946182e9)) - MRDGH2821
+- port all settings into treefmt.nix - ([f5c0583](https://github.com/MRDGH2821/copier-mr-minimal/commit/f5c058309deefc09f5d28afec91de838b3373dff)) - MRDGH2821
+- move treefmt config - ([c6da9be](https://github.com/MRDGH2821/copier-mr-minimal/commit/c6da9be9de755bd46fd03691975a574454ca9f6d)) - MRDGH2821
+- split treefmt config - ([de5cbe7](https://github.com/MRDGH2821/copier-mr-minimal/commit/de5cbe79560d91a4ca566838164d879ea979c300)) - MRDGH2821
+- simplify flakes - ([17a770c](https://github.com/MRDGH2821/copier-mr-minimal/commit/17a770c09a0b6a9f7b0b82881cd59167acb980a6)) - MRDGH2821
+
+### Style
+
+- format files - ([9620643](https://github.com/MRDGH2821/copier-mr-minimal/commit/962064307e12814ebc66075fa2879101a2251750)) - MRDGH2821
+- sort lines - ([a4de04b](https://github.com/MRDGH2821/copier-mr-minimal/commit/a4de04bb6d4dabe593c86c7444722f6e0d0bdf1b)) - MRDGH2821
+- format files - ([f666820](https://github.com/MRDGH2821/copier-mr-minimal/commit/f6668200d1e181e33603330c21b52db69b12bce4)) - MRDGH2821
+- format files - ([2a8e9fa](https://github.com/MRDGH2821/copier-mr-minimal/commit/2a8e9fa4556d45fc2215fe547916c465584e0ad3)) - MRDGH2821
+- fix linter errors - ([b21bf41](https://github.com/MRDGH2821/copier-mr-minimal/commit/b21bf41bcdf6b0e63392bda894c4d4955d0d9f22)) - MRDGH2821
+
+### Ci
+
+- update action versions - ([d175747](https://github.com/MRDGH2821/copier-mr-minimal/commit/d175747cebc423024e18478c2734cbc711a4e5ab)) - MRDGH2821
+
+---
+
 ## [0.28.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.27.1..v0.28.0) - 2026-06-30
 
 ### Bug Fixes
