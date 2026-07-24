@@ -25,6 +25,7 @@ scopes = [
   "github",
   "jscpd",
   "megalinter",
+  "nix",
   "pre-commit",
   "prettier",
   "treefmt",

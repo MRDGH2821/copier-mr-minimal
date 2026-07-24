@@ -1,13 +1,32 @@
 {
   description = "copier-mr-minimal dev shell";
+
+  nixConfig = {
+    extra-substituters = ["https://cache.numtide.com"];
+    extra-trusted-public-keys = ["niks3.numtide.com-1:DTx8wZduET09hRmMtKdQDxNNthLQETkc/yaX7M4qK0g="];
+  };
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     systems.url = "github:nix-systems/default";
     treefmt-nix.url = "github:numtide/treefmt-nix";
+    treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
     git-hooks.url = "github:cachix/git-hooks.nix";
+    git-hooks.inputs.nixpkgs.follows = "nixpkgs";
     llm-agents.url = "github:numtide/llm-agents.nix";
+    llm-agents.inputs.nixpkgs.follows = "nixpkgs";
+    llm-agents.inputs.systems.follows = "systems";
+    llm-agents.inputs.treefmt-nix.follows = "treefmt-nix";
     mcp-servers-nix.url = "github:natsukium/mcp-servers-nix";
+    mcp-servers-nix.inputs.nixpkgs.follows = "nixpkgs";
+    agent-skills.url = "github:Kyure-A/agent-skills-nix";
+    agent-skills.inputs.nixpkgs.follows = "nixpkgs";
+    awesome-copilot = {
+      url = "github:github/awesome-copilot";
+      flake = false;
+    };
   };
+
   outputs = {
     self,
     systems,
@@ -20,21 +39,72 @@
     treefmtEval = forEachSystem (pkgs: treefmt-nix.lib.evalModule pkgs ./treefmt.nix);
   in {
     formatter = forEachSystem (pkgs: treefmtEval.${pkgs.system}.config.build.wrapper);
+
     checks = forEachSystem (pkgs: {
       formatting = treefmtEval.${pkgs.system}.config.build.check self;
       pre-commit-check = git-hooks.lib.${pkgs.system}.run {
         src = ./.;
+        package = pkgs.prek;
         hooks = {
-          treefmt.enable = true;
-          treefmt.packageOverrides.treefmt = treefmtEval.${pkgs.system}.config.build.wrapper;
+          treefmt = {
+            enable = true;
+            entry = "${treefmtEval.${pkgs.system}.config.build.wrapper}/bin/treefmt";
+          };
           check-merge-conflicts.enable = true;
+          cspell = {
+            enable = true;
+            args = [
+              "--config"
+              ".cspell.json"
+            ];
+          };
+          cspell-commit-msg = {
+            enable = true;
+            name = "Check commit message spelling";
+            entry = "${pkgs.cspell}/bin/cspell";
+            args = [
+              "--config"
+              ".cspell.json"
+              "--no-must-find-files"
+              "--no-progress"
+              "--no-summary"
+              "--files"
+              ".git/COMMIT_EDITMSG"
+            ];
+            always_run = true;
+            stages = ["commit-msg"];
+          };
+          ggshield = {
+            enable = true;
+            name = "ggshield";
+            entry = "${pkgs.writeShellScriptBin "ggshield-hook" ''
+              export PYTHONPATH="${pkgs.python313Packages.packaging}/${pkgs.python313.sitePackages}:$PYTHONPATH"
+              exec ${pkgs.ggshield}/bin/ggshield secret scan pre-commit "$@"
+            ''}/bin/ggshield-hook";
+            stages = ["pre-commit"];
+          };
+          forbidden-files = {
+            enable = true;
+            name = "forbidden files";
+            entry = "found Copier update rejection files; review and remove them before merging.";
+            files = "\\.rej$";
+            language = "fail";
+          };
+          cocogitto = {
+            enable = true;
+            name = "Cocogitto commits check";
+            entry = "${pkgs.cocogitto}/bin/cog verify --file";
+            stages = ["commit-msg"];
+          };
         };
       };
     });
+
     devShells = forEachSystem (
       pkgs: let
         llmAgentPkgs = inputs.llm-agents.packages.${pkgs.system};
-        claudeMcpConfig = inputs.mcp-servers-nix.lib.mkConfig pkgs {
+
+        mcpClaudeConfig = inputs.mcp-servers-nix.lib.mkConfig pkgs {
           flavor = "claude-code";
           programs = {
             filesystem = {
@@ -44,7 +114,8 @@
             nixos.enable = true;
           };
         };
-        opencodeMcpConfig = inputs.mcp-servers-nix.lib.mkConfig pkgs {
+
+        mcpOpencodeConfig = inputs.mcp-servers-nix.lib.mkConfig pkgs {
           flavor = "opencode";
           fileName = "opencode.json";
           programs = {
@@ -56,29 +127,97 @@
           };
           settings."$schema" = "https://opencode.ai/config.json";
         };
-        inherit (self.checks.${pkgs.system}.pre-commit-check) shellHook enabledPackages;
+
+        mcpVscodeConfig = inputs.mcp-servers-nix.lib.mkConfig pkgs {
+          flavor = "vscode-workspace";
+          fileName = "mcp.json";
+          programs = {
+            filesystem = {
+              enable = true;
+              args = ["."];
+            };
+            nixos.enable = true;
+          };
+        };
+
+        agentLib = inputs.agent-skills.lib.agent-skills;
+
+        skillsSources = {
+          awesome-copilot = {
+            path = inputs.awesome-copilot;
+            subdir = "skills";
+          };
+        };
+
+        skillsCatalog = agentLib.discoverCatalog skillsSources;
+
+        skillsSelection = agentLib.selectSkills {
+          catalog = skillsCatalog;
+          allowlist = ["git-commit"];
+          sources = skillsSources;
+        };
+
+        skillsBundle = agentLib.mkBundle {
+          inherit pkgs;
+          selection = skillsSelection;
+        };
+
+        localSkillsTargets = {
+          antigravity =
+            agentLib.defaultLocalTargets.antigravity
+            // {
+              enable = true;
+            };
+          copilot =
+            agentLib.defaultLocalTargets.copilot
+            // {
+              enable = true;
+            };
+          cursor =
+            agentLib.defaultLocalTargets.cursor
+            // {
+              enable = true;
+            };
+          opencode =
+            agentLib.defaultLocalTargets.opencode
+            // {
+              enable = true;
+            };
+        };
+
+        skillsShellHook = agentLib.mkShellHook {
+          inherit pkgs;
+          bundle = skillsBundle;
+          targets = localSkillsTargets;
+        };
+
+        gitHooksCheck = self.checks.${pkgs.system}.pre-commit-check;
+        inherit (gitHooksCheck) shellHook enabledPackages;
       in {
         default = pkgs.mkShell {
           shellHook = ''
-            ln -sfn ${claudeMcpConfig} .mcp.json
-            ln -sfn ${opencodeMcpConfig} opencode.json
+            ln -sfn ${mcpClaudeConfig} .mcp.json
+            ln -sfn ${mcpOpencodeConfig} opencode.json
+            mkdir -p .vscode
+            ln -sfn ${mcpVscodeConfig} .vscode/mcp.json
             ${shellHook}
+            ${skillsShellHook}
           '';
           buildInputs = enabledPackages;
           packages = with pkgs; [
-            alejandra
             bun
-            libxml2
             nil
             nixd
             nixfmt
-            prettypst
-            shfmt
-            treefmt
-            uv
+            prek
             yq-go
-            llmAgentPkgs."claude-code"
+            llmAgentPkgs.rtk
+            llmAgentPkgs.antigravity-cli
+            llmAgentPkgs.copilot-cli
+            llmAgentPkgs.cursor-agent
             llmAgentPkgs.opencode
+            llmAgentPkgs.apm
+            llmAgentPkgs.git-surgeon
           ];
         };
       }
