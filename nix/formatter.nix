@@ -10,4 +10,10 @@
     ];
   };
 in
-  treefmtEval.config.build.wrapper
+  treefmtEval.config.build.wrapper.overrideAttrs (old: {
+    passthru =
+      (old.passthru or {})
+      // {
+        check = treefmtEval.config.build.check inputs.self;
+      };
+  })
