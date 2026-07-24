@@ -186,19 +186,17 @@
           '';
           buildInputs = enabledPackages;
           packages = with pkgs; [
-            bun
-            nil
-            nixd
-            nixfmt
-            prek
-            yq-go
-            llmAgentPkgs.rtk
+            # keep-sorted start
             llmAgentPkgs.antigravity-cli
+            llmAgentPkgs.apm
             llmAgentPkgs.copilot-cli
             llmAgentPkgs.cursor-agent
-            llmAgentPkgs.opencode
-            llmAgentPkgs.apm
             llmAgentPkgs.git-surgeon
+            llmAgentPkgs.opencode
+            llmAgentPkgs.rtk
+            nil
+            nixd
+            # keep-sorted end
           ];
         };
       }
