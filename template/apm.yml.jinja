@@ -2,7 +2,7 @@ author: MRDGH2821
 dependencies:
   apm:
     - git: vercel-labs/skills
-      ref: v1.5.14
+      ref: v1.5.20
       skills:
         - find-skills
     - git: github/awesome-copilot
@@ -11,7 +11,13 @@ dependencies:
     {% if use_taste_skill %}
     - git: Leonxlnx/taste-skill
     {% endif %}
-  mcp: []
+  mcp:
+    - args:
+      - mcp-nixos
+    command: uvx
+    name: nixos
+    registry: false
+    transport: stdio
 includes: auto
 name: {{ project_name }}
 scripts: {}
