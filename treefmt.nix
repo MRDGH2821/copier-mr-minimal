@@ -3,7 +3,10 @@
 
   programs = {
     actionlint.enable = true;
-    alejandra.enable = true;
+    alejandra = {
+      enable = true;
+      priority = 10;
+    };
     beautysh.enable = true;
     deadnix.enable = true;
     djlint.enable = true;
@@ -12,28 +15,67 @@
     dos2unix.enable = true;
     flake-edit.enable = true;
     genemichaels.enable = true;
-    json-sort-cli.enable = true;
     just.enable = true;
     keep-sorted.enable = true;
     nbstripout.enable = true;
     nixf-diagnose.enable = true;
-    nixfmt.enable = false;
+    nixfmt = {
+      enable = true;
+      priority = 1;
+    };
     nixpkgs-fmt.enable = false;
-    prettier.enable = true;
-    ruff-check.enable = true;
-    ruff-format.enable = true;
+    prettier = {
+      enable = true;
+      priority = 100;
+      includes = ["*"];
+      excludes = [
+        # keep-sorted start
+        "*.*ignore"
+        "*.aac"
+        "*.docx"
+        "*.jinja"
+        "*.jpg"
+        "*.lock"
+        "*.mp4"
+        "*.nix"
+        "*.pdf"
+        "*.png"
+        "*.pptx"
+        "*.py"
+        "*.txt"
+        "*.typ"
+        "LICENCE"
+        "LICENSE"
+        "justfile"
+        # keep-sorted end
+      ];
+    };
+    ruff-check = {
+      enable = true;
+      priority = 8;
+    };
+    ruff-format = {
+      enable = true;
+      priority = 9;
+    };
     shellcheck.enable = true;
     shfmt.enable = true;
     sqlfluff.enable = true;
     sqlfluff-lint.enable = true;
     statix.enable = true;
     taplo.enable = true;
-    toml-sort.enable = true;
+    toml-sort = {
+      enable = true;
+      priority = 0;
+    };
     typos = {
       enable = true;
       excludes = ["CHANGELOG.md"];
     };
-    typstyle.enable = true;
+    typstyle = {
+      enable = true;
+      priority = 1;
+    };
     xmllint.enable = true;
     yamllint = {
       enable = true;
@@ -53,19 +95,21 @@
     "allow-missing-formatter" = true;
 
     formatter = {
+      toml-sort = {
+        options = [
+          "--sort-table-keys"
+          "--sort-inline-tables"
+        ];
+      };
       cspell-sort = {
-        command = "${
-          pkgs.writeShellScriptBin "cspell-sort-wrapper" ''
-            tmp=$(mktemp)
-            ${pkgs.yq-go}/bin/yq '.words |= sort_by(downcase) | .ignorePaths |= sort_by(downcase)' "$1" > "$tmp" 2>/dev/null || exit 0
-            if ! cmp -s "$1" "$tmp"; then
-              mv "$tmp" "$1"
-            else
-              rm -f "$tmp"
-            fi
-          ''
-        }/bin/cspell-sort-wrapper";
+        command = "${pkgs.yq-go}/bin/yq";
+        options = [
+          "-i"
+          ".words|= sort_by(downcase)|.ignorePaths|=sort_by(downcase)"
+        ];
+        no-positional-arg-support = true;
         includes = [
+          # keep-sorted start
           "**/.CSpell*"
           "**/.cspell*"
           "**/cSpell*"
@@ -74,17 +118,20 @@
           ".cspell*"
           "cSpell*"
           "cspell*"
+          # keep-sorted end
         ];
         priority = 9;
       };
 
       ignore-files-formatter = {
         command = "${pkgs.uv}/bin/uvx";
+        options = ["git+https://github.com/lorenzwalthert/gitignore-tidy"];
         includes = [
+          # keep-sorted start
           "**/.*ignore"
           ".*ignore"
+          # keep-sorted end
         ];
-        options = ["git+https://github.com/lorenzwalthert/gitignore-tidy"];
         priority = 1;
       };
 
@@ -111,67 +158,51 @@
       };
 
       sort-markdown-tables = {
-        command = "${
-          pkgs.writeShellScriptBin "smt-wrapper" ''
-            if command -v smt >/dev/null 2>&1; then
-              tmp=$(mktemp)
-              cp "$1" "$tmp"
-              smt -i "$tmp" 2>/dev/null || exit 0
-              if ! cmp -s "$1" "$tmp"; then
-                mv "$tmp" "$1"
-              else
-                rm -f "$tmp"
-              fi
-            fi
-          ''
-        }/bin/smt-wrapper";
+        command = "smt";
         includes = ["*.md"];
         priority = 2;
+        options = ["-i"];
       };
 
       sort-package-json = {
         command = "${pkgs.bun}/bin/bunx";
-        includes = ["package.json"];
         options = ["sort-package-json"];
+        includes = ["package.json"];
         priority = 10;
       };
 
       tombi-format = {
-        command = "${pkgs.uv}/bin/uvx";
+        command = "${pkgs.tombi}/bin/tombi";
         includes = ["*.toml"];
-        options = [
-          "tombi"
-          "format"
-        ];
+        options = ["format"];
         priority = 11;
       };
 
       yamlfix = {
-        command = "${pkgs.uv}/bin/uvx";
+        command = "${pkgs.yamlfix}/bin/yamlfix";
         includes = [
+          # keep-sorted start
           "*.yaml"
           "*.yml"
+          # keep-sorted end
         ];
-        options = ["yamlfix"];
         priority = 8;
       };
 
       yq-key-sort = {
-        command = "${
-          pkgs.writeShellScriptBin "yq-key-sort-wrapper" ''
-            tmp=$(mktemp)
-            ${pkgs.yq-go}/bin/yq -P 'sort_keys(..)' "$1" > "$tmp" 2>/dev/null || exit 0
-            if ! cmp -s "$1" "$tmp"; then
-              mv "$tmp" "$1"
-            else
-              rm -f "$tmp"
-            fi
-          ''
-        }/bin/yq-key-sort-wrapper";
+        command = "${pkgs.yq-go}/bin/yq";
+        options = [
+          "-i"
+          "-P"
+          "sort_keys(..)"
+        ];
+        no-positional-arg-support = true;
         includes = [
+          # keep-sorted start
           "*.json"
           "*.yaml"
           "*.yml"
+          # keep-sorted end
         ];
         priority = 0;
       };
