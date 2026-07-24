@@ -42,17 +42,19 @@
     forEachSystem = f: nixpkgs.lib.genAttrs (import systems) (system: f nixpkgs.legacyPackages.${system});
     treefmtEval = forEachSystem (pkgs: treefmt-nix.lib.evalModule pkgs ./treefmt.nix);
   in {
-    formatter = forEachSystem (pkgs: treefmtEval.${pkgs.system}.config.build.wrapper);
+    formatter = forEachSystem (
+      pkgs: treefmtEval.${pkgs.stdenv.hostPlatform.system}.config.build.wrapper
+    );
 
     checks = forEachSystem (pkgs: {
-      formatting = treefmtEval.${pkgs.system}.config.build.check self;
-      pre-commit-check = git-hooks.lib.${pkgs.system}.run {
+      formatting = treefmtEval.${pkgs.stdenv.hostPlatform.system}.config.build.check self;
+      pre-commit-check = git-hooks.lib.${pkgs.stdenv.hostPlatform.system}.run {
         src = ./.;
         package = pkgs.prek;
         hooks = {
           treefmt = {
             enable = true;
-            entry = "${treefmtEval.${pkgs.system}.config.build.wrapper}/bin/treefmt";
+            entry = "${treefmtEval.${pkgs.stdenv.hostPlatform.system}.config.build.wrapper}/bin/treefmt";
           };
           check-merge-conflicts.enable = true;
           cspell = {
@@ -106,7 +108,7 @@
 
     devShells = forEachSystem (
       pkgs: let
-        llmAgentPkgs = inputs.llm-agents.packages.${pkgs.system};
+        llmAgentPkgs = inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system};
 
         mcpOpencodeConfig = inputs.mcp-servers-nix.lib.mkConfig pkgs {
           flavor = "opencode";
@@ -172,7 +174,7 @@
           targets = localSkillsTargets;
         };
 
-        gitHooksCheck = self.checks.${pkgs.system}.pre-commit-check;
+        gitHooksCheck = self.checks.${pkgs.stdenv.hostPlatform.system}.pre-commit-check;
         inherit (gitHooksCheck) shellHook enabledPackages;
       in {
         default = pkgs.mkShell {

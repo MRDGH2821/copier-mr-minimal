@@ -56,6 +56,7 @@
     "rignore",
     "shfmt",
     "statix",
+    "stdenv",
     "stefanzweifel",
     "substituters",
     "taplo",
