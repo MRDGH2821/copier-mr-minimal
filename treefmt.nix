@@ -70,7 +70,12 @@
     };
     typos = {
       enable = true;
-      excludes = ["CHANGELOG.md"];
+      excludes = [
+        # keep-sorted start
+        "**/.cspell.json"
+        "CHANGELOG.md"
+        # keep-sorted end
+      ];
     };
     typstyle = {
       enable = true;
