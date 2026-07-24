@@ -114,7 +114,7 @@
         ];
       };
       cspell-sort = {
-        command = "${pkgs.yq-go}/bin/yq";
+        command = "${pkgs.lib.getExe pkgs.yq-go}";
         options = [
           "-i"
           ".words|= sort_by(downcase)|.ignorePaths|=sort_by(downcase)"
@@ -135,7 +135,7 @@
       };
 
       prettypst-default = {
-        command = "${pkgs.prettypst}/bin/prettypst";
+        command = "${pkgs.lib.getExe pkgs.prettypst}";
         includes = ["*.typ"];
         no-positional-arg-support = true;
         options = [
@@ -146,7 +146,7 @@
       };
 
       prettypst-otbs = {
-        command = "${pkgs.prettypst}/bin/prettypst";
+        command = "${pkgs.lib.getExe pkgs.prettypst}";
         includes = ["*.typ"];
         no-positional-arg-support = true;
         options = [
@@ -164,7 +164,7 @@
       };
 
       tombi-format = {
-        command = "${pkgs.tombi}/bin/tombi";
+        command = "${pkgs.lib.getExe pkgs.tombi}";
         includes = ["*.toml"];
         options = [
           "format"
@@ -174,7 +174,7 @@
       };
 
       yamlfix = {
-        command = "${pkgs.yamlfix}/bin/yamlfix";
+        command = "${pkgs.lib.getExe pkgs.yamlfix}";
         includes = [
           # keep-sorted start
           "*.yaml"
@@ -185,7 +185,7 @@
       };
 
       yq-key-sort = {
-        command = "${pkgs.yq-go}/bin/yq";
+        command = "${pkgs.lib.getExe pkgs.yq-go}";
         options = [
           "-i"
           "-P"
