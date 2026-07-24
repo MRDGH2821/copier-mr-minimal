@@ -91,6 +91,7 @@
     xmllint.enable = true;
     yamllint = {
       enable = true;
+      priority = 9;
       settings = {
         extends = "default";
         rules = {
