@@ -32,6 +32,7 @@
   outputs = {
     self,
     # keep-sorted start
+    agent-skills,
     git-hooks,
     nixpkgs,
     systems,
@@ -123,7 +124,7 @@
           settings."$schema" = "https://opencode.ai/config.json";
         };
 
-        agentLib = inputs.agent-skills.lib.agent-skills;
+        agentLib = agent-skills.lib.agent-skills;
 
         skillsSources = {
           awesome-copilot = {
@@ -146,6 +147,11 @@
         };
 
         localSkillsTargets = {
+          agents =
+            agentLib.defaultLocalTargets.agents
+            // {
+              enable = true;
+            };
           antigravity =
             agentLib.defaultLocalTargets.antigravity
             // {

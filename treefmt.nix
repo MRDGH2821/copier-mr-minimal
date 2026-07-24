@@ -98,7 +98,7 @@
 
   settings = {
     "allow-missing-formatter" = true;
-
+    excludes = ["**/skills/**"];
     formatter = {
       toml-sort = {
         options = [
