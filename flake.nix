@@ -15,6 +15,8 @@
     llm-agents.inputs.nixpkgs.follows = "nixpkgs";
     llm-agents.url = "github:numtide/llm-agents.nix";
     nixpkgs.url = "github:NixOS/nixpkgs?ref=nixos-unstable";
+    pedantix.inputs.nixpkgs.follows = "nixpkgs";
+    pedantix.url = "github:swarsel/pedantix";
     treefmt.inputs.nixpkgs.follows = "nixpkgs";
     treefmt.url = "github:numtide/treefmt-nix";
     # keep-sorted end
