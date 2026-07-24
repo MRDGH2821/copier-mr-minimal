@@ -1,18 +1,17 @@
 {
   pkgs,
   inputs,
-  system,
   ...
 }: let
-  treefmtWrapper = (inputs.treefmt-nix.lib.evalModule pkgs ./../treefmt.nix).config.build.wrapper;
+  treefmtEval = inputs.treefmt.lib.evalModule pkgs ../treefmt.nix;
 in
-  inputs.git-hooks.lib.${system}.run {
-    src = ./../..;
+  inputs.git-hooks.lib.${pkgs.stdenv.hostPlatform.system}.run {
+    src = inputs.self;
     package = pkgs.prek;
     hooks = {
       treefmt = {
         enable = true;
-        package = treefmtWrapper;
+        package = treefmtEval.config.build.wrapper;
       };
       check-merge-conflicts.enable = true;
       cspell = {

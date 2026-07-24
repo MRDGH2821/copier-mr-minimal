@@ -1,6 +1,8 @@
 {
-  pkgs,
   inputs,
+  pkgs,
   ...
-}:
-(inputs.treefmt-nix.lib.evalModule pkgs ./treefmt.nix).config.build.wrapper
+}: let
+  treefmtEval = inputs.treefmt.lib.evalModule pkgs ./treefmt.nix;
+in
+  treefmtEval.config.build.wrapper
