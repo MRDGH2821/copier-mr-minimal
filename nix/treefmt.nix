@@ -1,6 +1,4 @@
 {pkgs, ...}: {
-  projectRootFile = "flake.nix";
-
   programs = {
     actionlint.enable = true;
     alejandra = {
@@ -17,10 +15,6 @@
     genemichaels.enable = true;
     just.enable = true;
     keep-sorted.enable = true;
-    oxfmt = {
-      enable = true;
-      priority = 80;
-    };
     nbstripout.enable = true;
     nixf-diagnose.enable = true;
     nixfmt = {
@@ -28,10 +22,20 @@
       priority = 1;
     };
     nixpkgs-fmt.enable = false;
+    oxfmt = {
+      enable = true;
+      priority = 80;
+    };
+    pedantix = {
+      enable = true;
+      settings.attrs = {
+        blank-lines = 0;
+        flatten = true;
+        merge = true;
+      };
+    };
     prettier = {
       enable = true;
-      priority = 100;
-      includes = ["*"];
       excludes = [
         # keep-sorted start
         "*.*ignore"
@@ -56,6 +60,8 @@
         "justfile"
         # keep-sorted end
       ];
+      includes = ["*"];
+      priority = 100;
     };
     ruff-check = {
       enable = true;
@@ -95,32 +101,21 @@
       settings = {
         extends = "default";
         rules = {
-          line-length = "disable";
           comments = "disable";
+          line-length = "disable";
           truthy = "disable";
         };
       };
     };
     zizmor.enable = true;
   };
-
+  projectRootFile = "flake.nix";
   settings = {
     "allow-missing-formatter" = true;
     excludes = ["**/skills/**"];
     formatter = {
-      toml-sort = {
-        options = [
-          "--sort-table-keys"
-          "--sort-inline-tables"
-        ];
-      };
       cspell-sort = {
         command = "${pkgs.lib.getExe pkgs.yq-go}";
-        options = [
-          "-i"
-          ".words|= sort_by(downcase)|.ignorePaths|=sort_by(downcase)"
-        ];
-        no-positional-arg-support = true;
         includes = [
           # keep-sorted start
           "**/.CSpell*"
@@ -132,9 +127,13 @@
           "cspell*"
           # keep-sorted end
         ];
+        no-positional-arg-support = true;
+        options = [
+          "-i"
+          ".words|= sort_by(downcase)|.ignorePaths|=sort_by(downcase)"
+        ];
         priority = 9;
       };
-
       prettypst-default = {
         command = "${pkgs.lib.getExe pkgs.prettypst}";
         includes = ["*.typ"];
@@ -145,7 +144,6 @@
         ];
         priority = 2;
       };
-
       prettypst-otbs = {
         command = "${pkgs.lib.getExe pkgs.prettypst}";
         includes = ["*.typ"];
@@ -156,14 +154,12 @@
         ];
         priority = 3;
       };
-
       sort-markdown-tables = {
         command = "smt";
         includes = ["*.md"];
-        priority = 2;
         options = ["-i"];
+        priority = 2;
       };
-
       tombi-format = {
         command = "${pkgs.lib.getExe pkgs.tombi}";
         includes = ["*.toml"];
@@ -173,7 +169,10 @@
         ];
         priority = 11;
       };
-
+      toml-sort.options = [
+        "--sort-inline-tables"
+        "--sort-table-keys"
+      ];
       yamlfix = {
         command = "${pkgs.lib.getExe pkgs.yamlfix}";
         includes = [
@@ -184,21 +183,20 @@
         ];
         priority = 8;
       };
-
       yq-key-sort = {
         command = "${pkgs.lib.getExe pkgs.yq-go}";
-        options = [
-          "-i"
-          "-P"
-          "sort_keys(..)"
-        ];
-        no-positional-arg-support = true;
         includes = [
           # keep-sorted start
           "*.json"
           "*.yaml"
           "*.yml"
           # keep-sorted end
+        ];
+        no-positional-arg-support = true;
+        options = [
+          "-P"
+          "-i"
+          "sort_keys(..)"
         ];
         priority = 0;
       };
