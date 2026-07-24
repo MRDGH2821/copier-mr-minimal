@@ -5,19 +5,13 @@
   system,
   ...
 }: let
-  mcpOpencodeConfig = import ./mcp.nix {inherit pkgs inputs;};
-  skillsShellHook = import ./skills.nix {inherit pkgs inputs;};
   gitHooksCheck = flake.checks.${system}.pre-commit-check;
   inherit (gitHooksCheck) shellHook enabledPackages;
 in
   pkgs.mkShell {
     shellHook = ''
-
-      ln -sfn ${mcpOpencodeConfig} opencode.json
-      mkdir -p .vscode
-
+      ${pkgs.lib.getExe inputs.llm-agents.packages.${system}.apm} install
       ${shellHook}
-      ${skillsShellHook}
     '';
     buildInputs = enabledPackages;
     packages = with pkgs; [
