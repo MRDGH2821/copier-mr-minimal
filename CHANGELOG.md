@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.30.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.29.1..v0.30.0) - 2026-07-26
+
+### Features
+
+- **(treefmt)** enable formatters - ([f24dd00](https://github.com/MRDGH2821/copier-mr-minimal/commit/f24dd00096b0cbf6014590f55109cf25031eeac6)) - MRDGH2821
+- **(treefmt)** enable formatters in template - ([6631c03](https://github.com/MRDGH2821/copier-mr-minimal/commit/6631c031ce964e7c2496ade336d2565fb374ae01)) - MRDGH2821
+
+### Miscellaneous Chores
+
+- **(cspell)** update word list in template - ([783897c](https://github.com/MRDGH2821/copier-mr-minimal/commit/783897c1398ff4c3b70c86ad81d8d31eae86c844)) - MRDGH2821
+
+---
+
 ## [0.29.1](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.29.0..v0.29.1) - 2026-07-24
 
 ### Bug Fixes
