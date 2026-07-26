@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.31.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.30.0..v0.31.0) - 2026-07-26
+
+### Features
+
+- remove llm packages - ([28fde06](https://github.com/MRDGH2821/copier-mr-minimal/commit/28fde065227827137266808a0b1cfb20110dd9f6)) - MRDGH2821
+
+---
+
 ## [0.30.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.29.1..v0.30.0) - 2026-07-26
 
 ### Features
