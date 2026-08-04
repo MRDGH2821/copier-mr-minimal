@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.33.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.32.0..v0.33.0) - 2026-08-04
+
+### Features
+
+- add smt formatter - ([a6031f1](https://github.com/MRDGH2821/copier-mr-minimal/commit/a6031f15e170339db5cfbb1ea73c8bc70562209f)) - MRDGH2821
+
+---
+
 ## [0.32.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.31.0..v0.32.0) - 2026-08-03
 
 ### Bug Fixes
