@@ -83,6 +83,10 @@
     rustfmt.enable = true;
     shellcheck.enable = true;
     shfmt.enable = true;
+    sort-markdown-tables = {
+      enable = true;
+      priority = 3;
+    };
     sqlfluff.enable = true;
     sqlfluff-lint.enable = true;
     statix.enable = true;
@@ -162,12 +166,6 @@
           "otbs"
         ];
         priority = 3;
-      };
-      sort-markdown-tables = {
-        command = "smt";
-        includes = ["*.md"];
-        options = ["-i"];
-        priority = 2;
       };
       tombi-format = {
         command = "${lib.getExe pkgs.tombi}";

@@ -7,6 +7,7 @@
     imports = [
       ./treefmt.nix
       inputs.pedantix.treefmtModules.default
+      inputs.smt.treefmtModules.default
     ];
   };
 in
