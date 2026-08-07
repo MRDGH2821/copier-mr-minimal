@@ -1,5 +1,6 @@
 {
   inputs,
+  lib,
   pkgs,
   ...
 }:
@@ -14,7 +15,7 @@ inputs.git-hooks.lib.${pkgs.stdenv.hostPlatform.system}.run {
         "--pre-commit"
       ];
       enable = true;
-      entry = "${pkgs.lib.getExe pkgs.betterleaks}";
+      entry = "${lib.getExe pkgs.betterleaks}";
       name = "betterleaks";
       pass_filenames = false;
       stages = ["pre-commit"];
@@ -26,7 +27,7 @@ inputs.git-hooks.lib.${pkgs.stdenv.hostPlatform.system}.run {
         "--file"
       ];
       enable = true;
-      entry = "${pkgs.lib.getExe pkgs.cocogitto}";
+      entry = "${lib.getExe pkgs.cocogitto}";
       name = "Cocogitto commits check";
       stages = ["commit-msg"];
     };
@@ -51,7 +52,7 @@ inputs.git-hooks.lib.${pkgs.stdenv.hostPlatform.system}.run {
         ".git/COMMIT_EDITMSG"
       ];
       enable = true;
-      entry = "${pkgs.lib.getExe pkgs.cspell}";
+      entry = "${lib.getExe pkgs.cspell}";
       name = "Check commit message spelling";
       stages = ["commit-msg"];
     };
@@ -61,6 +62,12 @@ inputs.git-hooks.lib.${pkgs.stdenv.hostPlatform.system}.run {
       files = "\\.rej$";
       language = "fail";
       name = "forbidden files";
+    };
+    ls-lint = {
+      enable = true;
+      entry = "${lib.getExe pkgs.ls-lint}";
+      name = "ls-lint";
+      stages = ["pre-commit"];
     };
     ripsecrets.enable = true;
   };
