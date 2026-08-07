@@ -45,6 +45,8 @@
     "pedantix",
     "pkgs",
     "prek",
+    "pycache",
+    "pytest",
     "shfmt",
     "statix",
     "stdenv",
@@ -55,6 +57,7 @@
     "tombi",
     "topo",
     "treefmt",
+    "venv",
     "vercel",
     "yamlfix",
     "zizmor"
