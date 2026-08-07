@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.34.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.33.0..v0.34.0) - 2026-08-07
+
+### Bug Fixes
+
+- fix file names - ([a52b2d3](https://github.com/MRDGH2821/copier-mr-minimal/commit/a52b2d33590997d616d00aa1b13b43a14884fb61)) - MRDGH2821
+
+### Features
+
+- add ls-lint hook - ([bc0d82e](https://github.com/MRDGH2821/copier-mr-minimal/commit/bc0d82ef961219c6db7ab75ee9baad2a14663ff7)) - MRDGH2821
+- add ls-lint hook in template - ([a30282b](https://github.com/MRDGH2821/copier-mr-minimal/commit/a30282b3d70651a997cfcd21d19edba343417f86)) - MRDGH2821
+
+---
+
 ## [0.33.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.32.0..v0.33.0) - 2026-08-04
 
 ### Features
