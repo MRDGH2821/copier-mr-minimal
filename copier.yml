@@ -23,7 +23,7 @@ _tasks:
   - command: command -v nix > /dev/null 2>&1 && echo "✓ Nix is installed" || echo "✗ Nix not found! Please install from here - https://nixos.org/"
     when: "{{ _copier_operation == 'copy' }}"
   - command: uvx --from apm-cli apm install
-    when: "{{ use_skills and _copier_operation == 'copy' }}"
+    when: "{{ use_skills and _copier_operation == 'update' }}"
   - command: uvx --from lic-cli lic
     when: "{{ _copier_operation == 'copy' }}"
 ci:
