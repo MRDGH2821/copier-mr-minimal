@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.34.1](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.34.0..v0.34.1) - 2026-08-11
+
+### Bug Fixes
+
+- **(copier)** install skills on update - ([c361560](https://github.com/MRDGH2821/copier-mr-minimal/commit/c361560ae21975bc6515e4444986cf92c224c482)) - MRDGH2821
+- **(nix)** add fallback for lib - ([0edac59](https://github.com/MRDGH2821/copier-mr-minimal/commit/0edac59b664082c166970b6078790dc23eeea0ba)) - MRDGH2821
+
+### Miscellaneous Chores
+
+- **(cspell)** add words in template - ([5466e86](https://github.com/MRDGH2821/copier-mr-minimal/commit/5466e86576a721195c3582039ebcc6e2644daa04)) - MRDGH2821
+
+---
+
 ## [0.34.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.33.0..v0.34.0) - 2026-08-07
 
 ### Bug Fixes
