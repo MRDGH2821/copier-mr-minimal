@@ -1,11 +1,12 @@
 {
+  flake,
   inputs,
   pkgs,
   ...
 }: let
   treefmtEval = inputs.treefmt.lib.evalModule pkgs {
     imports = [
-      ./treefmt.nix
+      flake.modules.tools.treefmt
       inputs.pedantix.treefmtModules.default
       inputs.smt.treefmtModules.default
     ];
