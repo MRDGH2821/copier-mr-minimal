@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.36.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.35.0..v0.36.0) - 2026-08-21
+
+### Documentation
+
+- require prompter name in AI work logs - ([26704ac](https://github.com/MRDGH2821/copier-mr-minimal/commit/26704acc1597b6eba615239d36d95bfa968a8e43)) - MRDGH2821
+
+### Features
+
+- sync AGENTS, linting, apm, and GitLab CI with source learnings - ([f30f7f0](https://github.com/MRDGH2821/copier-mr-minimal/commit/f30f7f0f419e1cb4c2570367db1df80dd81b1678)) - MRDGH2821
+
+### Miscellaneous Chores
+
+- **(nix)** drop GitLab binary cache from the template - ([2f51155](https://github.com/MRDGH2821/copier-mr-minimal/commit/2f511559a2d25c92c611ee73995744d5cafeb235)) - MRDGH2821
+
+---
+
 ## [0.35.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.34.1..v0.35.0) - 2026-08-21
 
 ### Miscellaneous Chores
