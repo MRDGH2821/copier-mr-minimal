@@ -45,31 +45,6 @@
     };
     prettier = {
       enable = true;
-      excludes = [
-        # keep-sorted start
-        "*.*ignore"
-        "*.aac"
-        "*.docx"
-        "*.envrc"
-        "*.jinja"
-        "*.jpg"
-        "*.lock"
-        "*.mp4"
-        "*.nix"
-        "*.pdf"
-        "*.png"
-        "*.pptx"
-        "*.py"
-        "*.toml"
-        "*.txt"
-        "*.typ"
-        ".envrc"
-        "LICENCE"
-        "LICENSE"
-        "justfile"
-        # keep-sorted end
-      ];
-      includes = ["*"];
       priority = 100;
     };
     ruff-check = {

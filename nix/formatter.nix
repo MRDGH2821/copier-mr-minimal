@@ -16,6 +16,6 @@ in
     passthru =
       (old.passthru or {})
       // {
-        check = treefmtEval.config.build.check inputs.self;
+        check = treefmtEval.config.build.check flake;
       };
   })
