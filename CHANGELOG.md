@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file. See [conven
 
 ---
 
+## [0.35.0](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.34.1..v0.35.0) - 2026-08-21
+
+### Miscellaneous Chores
+
+- update watch dir & conditional steps - ([af5817c](https://github.com/MRDGH2821/copier-mr-minimal/commit/af5817c7351000d60fda2a69dec7414ac2f8cd1f)) - MRDGH2821
+
+### Refactoring
+
+- **(nix)** align host and template with blueprint module patterns - ([2388a24](https://github.com/MRDGH2821/copier-mr-minimal/commit/2388a2429bc7a220d556cf9c84e856633c3d2e7c)) - MRDGH2821
+- simplify syntax - ([3534ec2](https://github.com/MRDGH2821/copier-mr-minimal/commit/3534ec2d9f6790035111a67bbc643b814a38057f)) - MRDGH2821
+
+---
+
 ## [0.34.1](https://github.com/MRDGH2821/copier-mr-minimal/compare/v0.34.0..v0.34.1) - 2026-08-11
 
 ### Bug Fixes
