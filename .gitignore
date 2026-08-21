@@ -19,9 +19,6 @@ opencode.json
 .env.*
 !.env.sample
 
-# Nix CI signing private key (never commit)
-.gitlab/nix-cache.secret
-
 # Others
 # keep-sorted start
 *.local

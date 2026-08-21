@@ -135,7 +135,6 @@ For example:
 - Prefer Blueprint args in Nix files: `flake` (shorthand for `inputs.self`), `perSystem`, `pkgs`, `system`
 - Consume same-flake packages via `perSystem.self.<name>` (e.g. `perSystem.self.formatter.check`) instead of path-importing Blueprint-loaded files
 - Flake layout lives under `nix/` (`formatter.nix`, `devshell.nix`, `checks/`, `modules/`)
-- Optional Nix CI cache keys (GitLab): [`docs/setup/nix-ci-cache.md`](docs/setup/nix-ci-cache.md)
 - Use `--help` or a `help` subcommand before asking the user for tool details
 
 ## Linting and Formatting
