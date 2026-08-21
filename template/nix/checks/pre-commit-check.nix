@@ -61,7 +61,7 @@ inputs.git-hooks.lib.${pkgs.stdenv.hostPlatform.system}.run {
     ripsecrets.enable = true;
     typos = {
       enable = true;
-      settings.configPath = "./.typos.toml";
+      settings.configPath = "./typos.toml";
       stages = [
         "commit-msg"
         "pre-commit"

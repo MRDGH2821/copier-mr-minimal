@@ -1,8 +1,10 @@
 ---
 _exclude:
+  # keep-sorted start
   - "*.py[co]"
   - "{% if ci != 'github' %}.github{% endif %}"
   - "{% if ci != 'gitlab' %}.gitlab-ci.yml{% endif %}"
+  - "{% if ci != 'gitlab' %}.gitlab{% endif %}"
   - "{% if not use_agents %}AGENTS.md{% endif %}"
   - "{% if not use_skills %}.agents/skills{% endif %}"
   - "{% if not use_skills %}apm.yml{% endif %}"
@@ -15,6 +17,7 @@ _exclude:
   - copier.yml
   - megalinter-reports
   - ~*
+  # keep-sorted end
 _min_copier_version: 9.0.0
 _subdirectory: template
 _tasks:
@@ -22,8 +25,6 @@ _tasks:
     when: "{{ _copier_operation == 'copy' }}"
   - command: command -v nix > /dev/null 2>&1 && echo "✓ Nix is installed" || echo "✗ Nix not found! Please install from here - https://nixos.org/"
     when: "{{ _copier_operation == 'copy' }}"
-  - command: uvx --from apm-cli apm install
-    when: "{{ use_skills and _copier_operation == 'update' }}"
   - command: uvx --from lic-cli lic
     when: "{{ _copier_operation == 'copy' }}"
 ci:

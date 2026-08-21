@@ -14,15 +14,21 @@ Co-authored-by: <Model Name> via <Tool> <noreply@provider-domain>
 
 **Provider noreply addresses:**
 
-| Provider                | noreply address         |
-| ----------------------- | ----------------------- |
-| Anthropic (Claude)      | `noreply@anthropic.com` |
-| OpenAI (GPT / o-series) | `noreply@openai.com`    |
-| Google (Gemini)         | `noreply@google.com`    |
-| Microsoft (Copilot)     | `noreply@microsoft.com` |
-| Mistral                 | `noreply@mistral.ai`    |
-| Meta (Llama)            | `noreply@meta.com`      |
-| xAI (Grok)              | `noreply@x.ai`          |
+<!-- smt -->
+
+| Provider                | noreply address          |
+| ----------------------- | ------------------------ |
+| Anthropic (Claude)      | `noreply@anthropic.com`  |
+| Cursor                  | `cursoragent@cursor.com` |
+| Google (Gemini)         | `noreply@google.com`     |
+| Meta (Llama)            | `noreply@meta.com`       |
+| Microsoft (Copilot)     | `noreply@microsoft.com`  |
+| Mistral                 | `noreply@mistral.ai`     |
+| OpenAI (GPT / o-series) | `noreply@openai.com`     |
+| xAI (Grok)              | `noreply@x.ai`           |
+
+If a provider is not listed above, use the provider's official noreply address.
+Multiple co-authors can be listed by repeating the `Co-authored-by` line for each author.
 
 **Examples:**
 
@@ -35,7 +41,7 @@ Co-authored-by: Claude Sonnet 4.6 via opencode <noreply@anthropic.com>
 ```txt
 fix(cspell): resolve configuration issue
 
-Co-authored-by: GPT-4o via Cursor <noreply@openai.com>
+Co-authored-by: Composer via Cursor <cursoragent@cursor.com>
 ```
 
 **Rules:**
@@ -46,11 +52,49 @@ Co-authored-by: GPT-4o via Cursor <noreply@openai.com>
 - One trailer per AI model involved
 - **Never omit this trailer** when the commit was AI-assisted — this is how git history stays honest
 
+## Setup: skills and MCP
+
+Before substantive work, ensure project skills and MCP servers are installed.
+
+1. From the repository root, run either:
+
+   ```sh
+   apm install
+   ```
+
+   or, if `apm` is not on `PATH`:
+
+   ```sh
+   uvx --from apm-cli apm install
+   ```
+
+2. **Reload the agent** (new chat / restart the agent session) so installed skills and MCP servers are picked up.
+
+Configuration lives in `apm.yml`. Do not skip this when skills or MCP tools are missing or stale.
+
 ## Project Context
 
-- **Project Type**: Template repository for minimal project setup
-- **Key Technologies**: pre-commit hooks, MegaLinter, prek
-- **Purpose**: Provides a standardized starting point for new projects with quality checks
+- **Project Type**: Copier template for minimal project setup
+- **Key Technologies**: Nix flake + [Blueprint](https://numtide.github.io/blueprint/) (`nix/`), git-hooks.nix with `prek`, MegaLinter, treefmt-nix, cocogitto, Copier, direnv
+- **Purpose**: Standardized starting point for new projects with quality checks and a reproducible Nix env
+
+## Branch naming strategy
+
+Since many people will be contributing to this repository, we use a branching strategy that allows for parallel development while keeping the main branch stable.
+
+Use the following branching strategy:
+
+`<human first name>/<work type>/<work name>`
+
+For example:
+
+- `john/feat/add-packages`
+- `jane/fix/ui-bugs`
+- `joy/refactor/payment`
+
+`<human first name>` - will be derived from `git config user.name` or the author's first name. Ask the author for their first name if it's not available.
+`<work type>` - the type of work being done (e.g., `feat`, `fix`, `refactor`). Should match commit types from conventional commits.
+`<work name>` - the name of the work being done (e.g., `add-packages`, `ui-bugs`, `payment`)
 
 ## General Guidelines
 
@@ -85,19 +129,23 @@ Co-authored-by: GPT-4o via Cursor <noreply@openai.com>
 - Place any other relevant documents (prompts, examples, references) in the `.agents` folder
 - This provides transparency and helps track AI contributions to the project
 
-## Dev Environment Tips
+## Dev Environment
 
-- Use `--help` or `help` subcommand to get help on a command. It can even reveal hints on how to proceed ahead or optimize the number of steps.
-- Check tool documentation before asking the user for configuration details
+- Enter the env with **direnv** (`.envrc` uses `use flake` and watches `nix/`) or `nix develop`
+- Prefer Blueprint args in Nix files: `flake` (shorthand for `inputs.self`), `perSystem`, `pkgs`, `system`
+- Consume same-flake packages via `perSystem.self.<name>` (e.g. `perSystem.self.formatter.check`) instead of path-importing Blueprint-loaded files
+- Flake layout lives under `nix/` (`formatter.nix`, `devshell.nix`, `checks/`, `modules/`)
+- Optional Nix CI cache keys (GitLab): [`docs/setup/nix-ci-cache.md`](docs/setup/nix-ci-cache.md)
+- Use `--help` or a `help` subcommand before asking the user for tool details
 
 ## Linting and Formatting
 
 ### MegaLinter
 
 - Configuration is in `.mega-linter.yml`
-- Run locally with: `npx mega-linter-runner --flavor documentation`
+- Run locally with: `bunx mega-linter-runner`
 - Check reports in `megalinter-reports/` directory
-- Not all linters need to pass - some are informational
+- Not all linters need to pass — some are informational
 
 ### CSpell (Spell Checking)
 
@@ -106,10 +154,11 @@ Co-authored-by: GPT-4o via Cursor <noreply@openai.com>
 - Don't disable spell checking without good reason
 - Both file content and commit messages are spell-checked
 
-### treefmt
+### treefmt / `nix fmt`
 
-- Run `treefmt -vv` before every commit to format all supported file types (markdown, JSON, YAML, etc.)
-- Must be run manually — it is not a pre-commit hook
+- Format with `nix fmt` (Blueprint + treefmt-nix wrapper from `nix/formatter.nix`)
+- Verify with `nix flake check` (includes the formatting check)
+- Config modules live under `nix/modules/tools/treefmt.nix` (plus imported pedantix/smt modules)
 
 ## Commit Messages
 
@@ -136,8 +185,8 @@ chore(cspell): add technical terms to dictionary
 
 - Read the error message — it usually points directly to the fix
 - Try to fix the issue and retry the commit; do not skip hooks
-- Fix formatting issues first (treefmt, whitespace)
-- Then address spell checking and linting
+- Fix formatting with `nix fmt` first, then spell checking and linting
+- Hooks are managed via git-hooks.nix / `prek` (see `nix/checks/pre-commit-check.nix`)
 
 **Spell check failures:**
 
@@ -145,15 +194,20 @@ chore(cspell): add technical terms to dictionary
 - Use proper capitalization for proper nouns
 - Don't add obvious typos to the dictionary
 
-**Template syntax errors:**
+**Template / Copier issues:**
 
 - Ensure template syntax is valid before committing
 - Check for missing closing tags or brackets
-- Test template rendering if applicable
+- Test template rendering if applicable (`copier copy` / `copier update`)
+
+**Missing skills or MCP tools:**
+
+- Run `apm install` or `uvx --from apm-cli apm install`, then reload the agent
 
 ### Getting Help
 
 - Review existing configuration files for examples
+- Blueprint folder layout: <https://numtide.github.io/blueprint/main/getting-started/folder_structure/>
 
 ## Best Practices
 
@@ -169,10 +223,11 @@ chore(cspell): add technical terms to dictionary
 - Prefer tools that don't require heavy installation
 - Document installation steps clearly
 - Consider cross-platform compatibility
-- Update relevant configuration files
+- Update relevant configuration files (flake inputs, `apm.yml`, Copier excludes as needed)
 
 ### Testing Changes
 
 - Verify the project structure is correct
+- Prefer `nix flake check` where Nix is involved
 - Test on a clean environment if possible
 - Ensure documentation is updated
