@@ -25,7 +25,9 @@ date '+%Y-%m-%d' # e.g. 2026-03-16
 
 **Step 2 — Open your entry immediately:**
 
-Append a new entry header with the current ISO timestamp and the user's prompt:
+Append a new entry header with the current ISO timestamp, the user's prompt, and the prompter's name.
+
+Resolve the prompter name from `git config user.name`. If that is empty or unavailable, ask the user for their name before continuing.
 
 ```markdown
 ## HH:MM:SS+TZ
@@ -33,6 +35,10 @@ Append a new entry header with the current ISO timestamp and the user's prompt:
 ### Prompt
 
 > <exact user request, verbatim or faithfully paraphrased>
+
+### Prompter
+
+<name from `git config user.name`, or as provided by the user>
 
 ### Model
 
@@ -63,6 +69,10 @@ Append the `### Outcome` section:
 ### Prompt
 
 > Add tool-runner skill with Bun/Node fallback chains
+
+### Prompter
+
+Jane Doe
 
 ### Model
 

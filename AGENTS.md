@@ -122,6 +122,7 @@ For example:
 - Use the naming format: `YYYY-MM-DD.md` (e.g., `2024-12-15.md`)
 - Each documentation file should include:
   - The prompt or request that initiated the work
+  - The **prompter** name, placed immediately below the prompt — take it from `git config user.name`, or ask the user if that is empty/unavailable
   - Description of what was done
   - Which AI model was used (e.g., Claude Sonnet 4.5, GPT-4, etc.)
 - If more prompts are provided on the same day, append them to the existing log file with timestamps
